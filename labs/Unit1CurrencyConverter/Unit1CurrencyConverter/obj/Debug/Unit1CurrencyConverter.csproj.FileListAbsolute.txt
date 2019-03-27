@@ -1,0 +1,14 @@
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\unit1\currencyConverter\Unit1CurrencyConverter\Unit1CurrencyConverter\bin\Debug\Unit1CurrencyConverter.exe.config
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\unit1\currencyConverter\Unit1CurrencyConverter\Unit1CurrencyConverter\bin\Debug\Unit1CurrencyConverter.exe
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\unit1\currencyConverter\Unit1CurrencyConverter\Unit1CurrencyConverter\bin\Debug\Unit1CurrencyConverter.pdb
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\unit1\currencyConverter\Unit1CurrencyConverter\Unit1CurrencyConverter\obj\Debug\Unit1CurrencyConverter.csprojAssemblyReference.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\unit1\currencyConverter\Unit1CurrencyConverter\Unit1CurrencyConverter\obj\Debug\Unit1CurrencyConverter.csproj.CoreCompileInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\unit1\currencyConverter\Unit1CurrencyConverter\Unit1CurrencyConverter\obj\Debug\Unit1CurrencyConverter.exe
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\unit1\currencyConverter\Unit1CurrencyConverter\Unit1CurrencyConverter\obj\Debug\Unit1CurrencyConverter.pdb
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\unit1\Unit1CurrencyConverter\Unit1CurrencyConverter\bin\Debug\Unit1CurrencyConverter.exe.config
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\unit1\Unit1CurrencyConverter\Unit1CurrencyConverter\bin\Debug\Unit1CurrencyConverter.exe
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\unit1\Unit1CurrencyConverter\Unit1CurrencyConverter\bin\Debug\Unit1CurrencyConverter.pdb
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\unit1\Unit1CurrencyConverter\Unit1CurrencyConverter\obj\Debug\Unit1CurrencyConverter.csprojAssemblyReference.cache
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\unit1\Unit1CurrencyConverter\Unit1CurrencyConverter\obj\Debug\Unit1CurrencyConverter.csproj.CoreCompileInputs.cache
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\unit1\Unit1CurrencyConverter\Unit1CurrencyConverter\obj\Debug\Unit1CurrencyConverter.exe
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\unit1\Unit1CurrencyConverter\Unit1CurrencyConverter\obj\Debug\Unit1CurrencyConverter.pdb

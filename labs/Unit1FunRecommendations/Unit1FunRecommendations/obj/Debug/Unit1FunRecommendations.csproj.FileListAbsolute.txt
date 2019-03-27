@@ -1,0 +1,7 @@
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\unit1\Unit1FunRecommendations\Unit1FunRecommendations\bin\Debug\Unit1FunRecommendations.exe.config
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\unit1\Unit1FunRecommendations\Unit1FunRecommendations\bin\Debug\Unit1FunRecommendations.exe
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\unit1\Unit1FunRecommendations\Unit1FunRecommendations\bin\Debug\Unit1FunRecommendations.pdb
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\unit1\Unit1FunRecommendations\Unit1FunRecommendations\obj\Debug\Unit1FunRecommendations.csprojAssemblyReference.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\unit1\Unit1FunRecommendations\Unit1FunRecommendations\obj\Debug\Unit1FunRecommendations.csproj.CoreCompileInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\unit1\Unit1FunRecommendations\Unit1FunRecommendations\obj\Debug\Unit1FunRecommendations.exe
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\unit1\Unit1FunRecommendations\Unit1FunRecommendations\obj\Debug\Unit1FunRecommendations.pdb
