@@ -92,6 +92,36 @@ namespace ConsoleApp1
             userWantsToRepeatExercise = null;
             Console.Clear();
 
+            //Exercise 9
+            do
+            {
+                Console.WriteLine("Exercise 9 - multilingual hello world");
+                Console.WriteLine("Enter a language (englsh, spanish, dutch):");
+                string userLanguage9 = Console.ReadLine();
+                switch (userLanguage9.ToLower())
+                {
+                    case "english":
+                        Console.WriteLine("Hello, world!");
+                        break;
+                    case "spanish":
+                        Console.WriteLine("Hola mundo!");
+                        break;
+                    case "dutch":
+                        Console.WriteLine("Hallo wereld!");
+                        break;
+                    default:
+                        Console.WriteLine("huh?");
+                        break;
+                }
+
+                Console.WriteLine("\n\nDo you wish to do the exercise again? y/n");
+                userWantsToRepeatExercise = Console.ReadLine();
+
+            } while (userWantsToRepeatExercise == "y");
+            Console.WriteLine("Goodbye!");
+            userWantsToRepeatExercise = null;
+            Console.Clear();
+
             //Exercise 13
             do
             {
@@ -131,6 +161,17 @@ namespace ConsoleApp1
             Console.WriteLine("Goodbye!");
             Console.Clear();
 
+            //Exercise 16 - need to test
+
+            for (int i = 0; i < 10; i++)
+            {
+                int innerCounter = i;
+                for (int j = 0; j < innerCounter; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine("\n");
+            }
 
             Console.ReadKey();
         }
