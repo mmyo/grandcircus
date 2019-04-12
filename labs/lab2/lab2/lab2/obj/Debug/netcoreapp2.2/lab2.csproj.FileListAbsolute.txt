@@ -1,0 +1,11 @@
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab2\lab2\lab2\bin\Debug\netcoreapp2.2\lab2.deps.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab2\lab2\lab2\bin\Debug\netcoreapp2.2\lab2.runtimeconfig.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab2\lab2\lab2\bin\Debug\netcoreapp2.2\lab2.runtimeconfig.dev.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab2\lab2\lab2\bin\Debug\netcoreapp2.2\lab2.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab2\lab2\lab2\bin\Debug\netcoreapp2.2\lab2.pdb
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab2\lab2\lab2\obj\Debug\netcoreapp2.2\lab2.csprojAssemblyReference.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab2\lab2\lab2\obj\Debug\netcoreapp2.2\lab2.csproj.CoreCompileInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab2\lab2\lab2\obj\Debug\netcoreapp2.2\lab2.AssemblyInfoInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab2\lab2\lab2\obj\Debug\netcoreapp2.2\lab2.AssemblyInfo.cs
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab2\lab2\lab2\obj\Debug\netcoreapp2.2\lab2.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab2\lab2\lab2\obj\Debug\netcoreapp2.2\lab2.pdb
