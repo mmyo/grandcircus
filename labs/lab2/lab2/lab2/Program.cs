@@ -14,15 +14,23 @@ namespace lab2
                 Console.Clear();
                 Console.WriteLine("Welcome to GC Room Detail Generator Thing\n");
 
-                Console.Write("Enter length: ");
-                double length = double.Parse(Console.ReadLine());
+                try
+                {
+                    Console.Write("Enter length: ");
+                    double length = double.Parse(Console.ReadLine());
 
-                Console.Write("Enter width: ");
-                double width = double.Parse(Console.ReadLine());
+                    Console.Write("Enter width: ");
+                    double width = double.Parse(Console.ReadLine());
 
-                Console.WriteLine("Area: " + length * width);
+                    Console.WriteLine("Area: " + length * width);
 
-                Console.WriteLine("Perimeter: " + (2 * length + 2 * width));
+                    Console.WriteLine("Perimeter: " + (2 * length + 2 * width));
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("\nRuh roh, try again\n\n" + ex.ToString());
+                    //throw;
+                }             
 
                 Console.Write("\nDo you want to continue? y/n: ");
                 userWantsToContinue = Console.ReadLine();
