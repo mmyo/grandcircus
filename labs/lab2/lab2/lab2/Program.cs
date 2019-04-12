@@ -13,6 +13,7 @@ namespace lab2
             {
                 Console.Clear();
                 Console.WriteLine("Welcome to GC Room Detail Generator Thing\n");
+
                 Console.Write("Enter length: ");
                 double length = double.Parse(Console.ReadLine());
 
@@ -23,7 +24,7 @@ namespace lab2
 
                 Console.WriteLine("Perimeter: " + (2 * length + 2 * width));
 
-                Console.Write("\nDo you want to continue? y/n");
+                Console.Write("\nDo you want to continue? y/n: ");
                 userWantsToContinue = Console.ReadLine();
             } while (userWantsToContinue == "y");
 
