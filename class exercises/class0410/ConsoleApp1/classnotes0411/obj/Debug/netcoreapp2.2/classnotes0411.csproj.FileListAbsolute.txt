@@ -9,3 +9,14 @@ C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\classexercises\class0410\Cons
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\classexercises\class0410\ConsoleApp1\classnotes0411\obj\Debug\netcoreapp2.2\classnotes0411.dll
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\classexercises\class0410\ConsoleApp1\classnotes0411\obj\Debug\netcoreapp2.2\classnotes0411.pdb
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\classexercises\class0410\ConsoleApp1\classnotes0411\obj\Debug\netcoreapp2.2\classnotes0411.csprojAssemblyReference.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0410\ConsoleApp1\classnotes0411\bin\Debug\netcoreapp2.2\classnotes0411.deps.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0410\ConsoleApp1\classnotes0411\bin\Debug\netcoreapp2.2\classnotes0411.runtimeconfig.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0410\ConsoleApp1\classnotes0411\bin\Debug\netcoreapp2.2\classnotes0411.runtimeconfig.dev.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0410\ConsoleApp1\classnotes0411\bin\Debug\netcoreapp2.2\classnotes0411.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0410\ConsoleApp1\classnotes0411\bin\Debug\netcoreapp2.2\classnotes0411.pdb
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0410\ConsoleApp1\classnotes0411\obj\Debug\netcoreapp2.2\classnotes0411.csprojAssemblyReference.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0410\ConsoleApp1\classnotes0411\obj\Debug\netcoreapp2.2\classnotes0411.csproj.CoreCompileInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0410\ConsoleApp1\classnotes0411\obj\Debug\netcoreapp2.2\classnotes0411.AssemblyInfoInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0410\ConsoleApp1\classnotes0411\obj\Debug\netcoreapp2.2\classnotes0411.AssemblyInfo.cs
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0410\ConsoleApp1\classnotes0411\obj\Debug\netcoreapp2.2\classnotes0411.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0410\ConsoleApp1\classnotes0411\obj\Debug\netcoreapp2.2\classnotes0411.pdb
