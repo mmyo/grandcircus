@@ -5,10 +5,8 @@ namespace lab2
     class Program
     {
         static void Main(string[] args)
-        {           
-
+        {
             string userWantsToContinue = null;
-
             do
             {
                 Console.Clear();
@@ -16,33 +14,29 @@ namespace lab2
 
                 try
                 {
-                    Console.Write("Enter length: ");
+                    Console.Write("Enter room length: ");
                     double length = double.Parse(Console.ReadLine());
 
-                    Console.Write("Enter width: ");
+                    Console.Write("Enter room width: ");
                     double width = double.Parse(Console.ReadLine());
 
                     Console.WriteLine("\nArea: " + length * width);
-
                     Console.WriteLine("Perimeter: " + (2 * length + 2 * width));
 
-                    string userWantsToCalculateVolume = null;
-
                     Console.Write("\nDo you want to calcuate volume? y/n: ");
-                    userWantsToCalculateVolume = Console.ReadLine();
+                    string userWantsToCalculateVolume = Console.ReadLine();
 
                     if (userWantsToCalculateVolume == "y")
                     {
-                        Console.Write("\nHeight: ");
+                        Console.Write("\nEnter room height: ");
                         double height = double.Parse(Console.ReadLine());
 
                         Console.WriteLine("Volume: " + (length * width * height) + " unit(s) cubed");
                     }
 
-                    string userWantsToDrawBox = null;
-
+                    //string userWantsToDrawBox = null;
                     Console.Write("\nDo you want to draw the room (from above)? y/n: ");
-                    userWantsToDrawBox = Console.ReadLine();
+                    string userWantsToDrawBox = Console.ReadLine();
                     
 
                     if (userWantsToDrawBox == "y")
@@ -63,14 +57,13 @@ namespace lab2
                 catch (Exception ex)
                 {
                     Console.WriteLine("\nRuh roh, try again\n\n" + ex.ToString());
-                    //throw;
                 }             
 
                 Console.Write("\nDo you want to continue? y/n: ");
                 userWantsToContinue = Console.ReadLine();
+
             } while (userWantsToContinue == "y");
 
-            //Console.ReadKey();
         }
     }
 }
