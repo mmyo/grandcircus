@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\myo\\OneDrive - KNEX\\Documents\\grandcircus\\classexercises\\class0410\\ConsoleApp1\\ConsoleApp3\\exercise17.csproj",
+      "projectUniqueName": "C:\\Users\\myo\\OneDrive - Knex\\Documents\\grandcircus\\class exercises\\class0410\\ConsoleApp1\\ConsoleApp3\\exercise17.csproj",
       "projectName": "exercise17",
-      "projectPath": "C:\\Users\\myo\\OneDrive - KNEX\\Documents\\grandcircus\\classexercises\\class0410\\ConsoleApp1\\ConsoleApp3\\exercise17.csproj",
+      "projectPath": "C:\\Users\\myo\\OneDrive - Knex\\Documents\\grandcircus\\class exercises\\class0410\\ConsoleApp1\\ConsoleApp3\\exercise17.csproj",
       "packagesPath": "C:\\Users\\myo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\myo\\OneDrive - KNEX\\Documents\\grandcircus\\classexercises\\class0410\\ConsoleApp1\\ConsoleApp3\\obj\\",
+      "outputPath": "C:\\Users\\myo\\OneDrive - Knex\\Documents\\grandcircus\\class exercises\\class0410\\ConsoleApp1\\ConsoleApp3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

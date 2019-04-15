@@ -26,15 +26,29 @@ namespace lab2
 
                     Console.WriteLine("Perimeter: " + (2 * length + 2 * width));
 
+                    string userWantsToCalculateVolume = null;
+
+                    Console.Write("\nDo you want to calcuate volume? y/n: ");
+                    userWantsToCalculateVolume = Console.ReadLine();
+
+                    if (userWantsToCalculateVolume == "y")
+                    {
+                        Console.Write("\nHeight: ");
+                        double height = double.Parse(Console.ReadLine());
+
+                        Console.WriteLine("Volume: " + (length * width * height) + " unit(s) cubed");
+                    }
+
                     string userWantsToDrawBox = null;
 
-                    Console.Write("\nDo you want to draw the room? y/n: ");
+                    Console.Write("\nDo you want to draw the room (from above)? y/n: ");
                     userWantsToDrawBox = Console.ReadLine();
-
-                    Console.WriteLine("\nHere's a " + length + " by " + width + " room:\n");
+                    
 
                     if (userWantsToDrawBox == "y")
                     {
+                        Console.WriteLine("\nHere's a " + length + " by " + width + " room:\n");
+
                         for (int j = 0; j < width; j++)
                         {
                             for (int i = 0; i < length; i++)
