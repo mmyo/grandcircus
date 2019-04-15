@@ -25,6 +25,26 @@ namespace lab2
                     Console.WriteLine("Area: " + length * width);
 
                     Console.WriteLine("Perimeter: " + (2 * length + 2 * width));
+
+                    string userWantsToDrawBox = null;
+
+                    Console.Write("\nDo you want to draw the room? y/n: ");
+                    userWantsToDrawBox = Console.ReadLine();
+
+                    Console.WriteLine("\nHere's a " + length + " by " + width + " room:\n");
+
+                    if (userWantsToDrawBox == "y")
+                    {
+                        for (int j = 0; j < width; j++)
+                        {
+                            for (int i = 0; i < length; i++)
+                            {
+                                Console.Write("* ");
+                            }
+                            Console.Write("\n");
+                        }
+                    }             
+                    
                 }
                 catch (Exception ex)
                 {
