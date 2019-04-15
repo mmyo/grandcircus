@@ -22,7 +22,7 @@ namespace lab2
                     Console.Write("Enter width: ");
                     double width = double.Parse(Console.ReadLine());
 
-                    Console.WriteLine("Area: " + length * width);
+                    Console.WriteLine("\nArea: " + length * width);
 
                     Console.WriteLine("Perimeter: " + (2 * length + 2 * width));
 
