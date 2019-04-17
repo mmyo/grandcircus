@@ -20,8 +20,8 @@ namespace lab2
                     Console.Write("Enter room width: ");
                     double width = double.Parse(Console.ReadLine());
 
-                    Console.WriteLine("\nArea: " + length * width);
-                    Console.WriteLine("Perimeter: " + (2 * length + 2 * width));
+                    Console.WriteLine("\nArea: " + CalculateRoomArea(length,width));
+                    Console.WriteLine("Perimeter: " + CalculateRoomPerimeter(length, width));
 
                     Console.Write("\nDo you want to calcuate volume? y/n: ");
                     string userWantsToCalculateVolume = Console.ReadLine();
@@ -31,7 +31,7 @@ namespace lab2
                         Console.Write("\nEnter room height: ");
                         double height = double.Parse(Console.ReadLine());
 
-                        Console.WriteLine("Volume: " + (length * width * height) + " unit(s) cubed");
+                        Console.WriteLine("Volume: " + CalculateRoomVolume(length, width, height) + " unit(s) cubed");
                     }
 
                     //string userWantsToDrawBox = null;
@@ -64,6 +64,21 @@ namespace lab2
 
             } while (userWantsToContinue == "y");
 
+        }
+
+        static double CalculateRoomArea(double length, double width)
+        {
+            return length * width;
+        }
+
+        static double CalculateRoomPerimeter(double length, double width)
+        {
+            return 2 * length + 2 * width;
+        }
+
+        static double CalculateRoomVolume(double length, double width, double height)
+        {
+            return length * width * height;
         }
     }
 }

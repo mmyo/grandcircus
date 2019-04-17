@@ -19,10 +19,10 @@ namespace class0415_functionpassbyref
 
         }
 
-        static int GimmeTheLengthOfTheString(string theThing)
+        static int GimmeTheLengthOfTheString(string theWord)
         {
-            int length;
-            return length = theThing.Length; 
+    
+            return theWord.Length; 
         }
 
     }
