@@ -1,0 +1,11 @@
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\labs\lab3\lucero\bin\Debug\netcoreapp2.2\lucero.deps.json
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\labs\lab3\lucero\bin\Debug\netcoreapp2.2\lucero.runtimeconfig.json
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\labs\lab3\lucero\bin\Debug\netcoreapp2.2\lucero.runtimeconfig.dev.json
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\labs\lab3\lucero\bin\Debug\netcoreapp2.2\lucero.dll
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\labs\lab3\lucero\bin\Debug\netcoreapp2.2\lucero.pdb
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\labs\lab3\lucero\obj\Debug\netcoreapp2.2\lucero.csprojAssemblyReference.cache
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\labs\lab3\lucero\obj\Debug\netcoreapp2.2\lucero.csproj.CoreCompileInputs.cache
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\labs\lab3\lucero\obj\Debug\netcoreapp2.2\lucero.AssemblyInfoInputs.cache
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\labs\lab3\lucero\obj\Debug\netcoreapp2.2\lucero.AssemblyInfo.cs
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\labs\lab3\lucero\obj\Debug\netcoreapp2.2\lucero.dll
+C:\Users\myo\OneDrive - Knex\Documents\grandcircus\labs\lab3\lucero\obj\Debug\netcoreapp2.2\lucero.pdb

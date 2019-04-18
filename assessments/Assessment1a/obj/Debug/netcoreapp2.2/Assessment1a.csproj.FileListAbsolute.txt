@@ -1,0 +1,11 @@
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment1a\bin\Debug\netcoreapp2.2\Assessment1a.deps.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment1a\bin\Debug\netcoreapp2.2\Assessment1a.runtimeconfig.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment1a\bin\Debug\netcoreapp2.2\Assessment1a.runtimeconfig.dev.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment1a\bin\Debug\netcoreapp2.2\Assessment1a.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment1a\bin\Debug\netcoreapp2.2\Assessment1a.pdb
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment1a\obj\Debug\netcoreapp2.2\Assessment1a.csprojAssemblyReference.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment1a\obj\Debug\netcoreapp2.2\Assessment1a.csproj.CoreCompileInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment1a\obj\Debug\netcoreapp2.2\Assessment1a.AssemblyInfoInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment1a\obj\Debug\netcoreapp2.2\Assessment1a.AssemblyInfo.cs
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment1a\obj\Debug\netcoreapp2.2\Assessment1a.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment1a\obj\Debug\netcoreapp2.2\Assessment1a.pdb
