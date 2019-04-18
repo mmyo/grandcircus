@@ -1,0 +1,11 @@
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab3\lab3-number-odd-even\bin\Debug\netcoreapp2.2\lab3-number-odd-even.deps.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab3\lab3-number-odd-even\bin\Debug\netcoreapp2.2\lab3-number-odd-even.runtimeconfig.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab3\lab3-number-odd-even\bin\Debug\netcoreapp2.2\lab3-number-odd-even.runtimeconfig.dev.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab3\lab3-number-odd-even\bin\Debug\netcoreapp2.2\lab3-number-odd-even.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab3\lab3-number-odd-even\bin\Debug\netcoreapp2.2\lab3-number-odd-even.pdb
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab3\lab3-number-odd-even\obj\Debug\netcoreapp2.2\lab3-number-odd-even.csprojAssemblyReference.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab3\lab3-number-odd-even\obj\Debug\netcoreapp2.2\lab3-number-odd-even.csproj.CoreCompileInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab3\lab3-number-odd-even\obj\Debug\netcoreapp2.2\lab3-number-odd-even.AssemblyInfoInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab3\lab3-number-odd-even\obj\Debug\netcoreapp2.2\lab3-number-odd-even.AssemblyInfo.cs
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab3\lab3-number-odd-even\obj\Debug\netcoreapp2.2\lab3-number-odd-even.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab3\lab3-number-odd-even\obj\Debug\netcoreapp2.2\lab3-number-odd-even.pdb

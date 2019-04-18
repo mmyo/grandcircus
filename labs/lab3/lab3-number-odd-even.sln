@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab3-number-odd-even", "lab3-number-odd-even\lab3-number-odd-even.csproj", "{B31E4339-3E36-44CC-AAD0-8113020BF427}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B31E4339-3E36-44CC-AAD0-8113020BF427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B31E4339-3E36-44CC-AAD0-8113020BF427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B31E4339-3E36-44CC-AAD0-8113020BF427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B31E4339-3E36-44CC-AAD0-8113020BF427}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {630D41AE-D2EA-4D9C-AD1F-35B7A61ABA46}
+	EndGlobalSection
+EndGlobal
