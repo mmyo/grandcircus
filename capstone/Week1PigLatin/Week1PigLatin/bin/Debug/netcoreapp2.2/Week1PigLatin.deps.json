@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.2": {
-      "Assessment1a/1.0.0": {
+      "Week1PigLatin/1.0.0": {
         "runtime": {
-          "Assessment1a.dll": {}
+          "Week1PigLatin.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Assessment1a/1.0.0": {
+    "Week1PigLatin/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

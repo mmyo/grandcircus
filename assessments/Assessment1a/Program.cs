@@ -50,19 +50,19 @@ namespace Assessment1a
         {
             double remainder = grade % 2;
 
-            if (grade > 65 && remainder > 0)
+            if (IsPassing(grade) && remainder > 0)
             {
                 return "Passing and odd";
             }
-            else if (grade > 65 && remainder == 0)
+            else if (IsPassing(grade) && remainder == 0)
             {
                 return "Passing and even";
             }
-            else if (grade <= 65 && remainder > 0)
+            else if (!IsPassing(grade) && remainder > 0)
             {
                 return "Failing and odd";
             }
-            else if (grade <= 65 && remainder == 0)
+            else if (!IsPassing(grade) && remainder == 0)
             {
                 return "Failing and even";
             }
