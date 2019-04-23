@@ -36,7 +36,7 @@ namespace Week1PigLatin
                         break;
                     }                                
                 }                   
-                return word.Substring(firstVowelIndex,word.Length-firstVowelIndex) + word.Substring(0,firstVowelIndex) + "ay";
+                return word.Substring(firstVowelIndex) + word.Substring(0,firstVowelIndex) + "ay";
             }
         }
     }
