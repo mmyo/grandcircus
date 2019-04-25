@@ -25,9 +25,9 @@ namespace exercise31
                 }
                 else
                 {
-                    Console.WriteLine($"\n{userIndex} is not a valid index");
+                    Console.WriteLine("Not a valid index");
                 }
-                
+
                 Console.Write("\nDo you want to try again? y/n: ");
                 userWantsToContinue = Console.ReadLine();
 

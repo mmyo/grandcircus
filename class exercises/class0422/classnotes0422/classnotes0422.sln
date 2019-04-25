@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "classnotes0424-dictionaries
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "classnotes0424-queue-stack", "classnotes0424-queue-stack\classnotes0424-queue-stack.csproj", "{649B17C6-3C05-41A5-9BBB-23D4D4DC277F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exercise33", "exercise33\exercise33.csproj", "{AAF55CBA-F126-4184-8E40-16B10737D805}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "exercise33", "exercise33\exercise33.csproj", "{AAF55CBA-F126-4184-8E40-16B10737D805}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exercise34", "exercise34\exercise34.csproj", "{6C73A587-464D-49AE-A053-52AFC81EBE87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{AAF55CBA-F126-4184-8E40-16B10737D805}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAF55CBA-F126-4184-8E40-16B10737D805}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAF55CBA-F126-4184-8E40-16B10737D805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C73A587-464D-49AE-A053-52AFC81EBE87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C73A587-464D-49AE-A053-52AFC81EBE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C73A587-464D-49AE-A053-52AFC81EBE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C73A587-464D-49AE-A053-52AFC81EBE87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
