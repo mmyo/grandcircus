@@ -11,15 +11,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "classnotes0422-two_dimensio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fizzbuzz-della", "fizzbuzz-della\fizzbuzz-della.csproj", "{05C35A57-E64E-44D4-AAC0-77A2A90B3EC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exercise24", "exercise24\exercise24.csproj", "{17272A07-FA51-43EF-ADEC-8A26500EF2A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "exercise24", "exercise24\exercise24.csproj", "{17272A07-FA51-43EF-ADEC-8A26500EF2A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exercise31", "exercise31\exercise31.csproj", "{CB811CF5-87BA-4738-B887-932554B069E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "exercise31", "exercise31\exercise31.csproj", "{CB811CF5-87BA-4738-B887-932554B069E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "classnotes0424", "classnotes0424\classnotes0424.csproj", "{E6D168E9-35C1-472C-887C-A7C53AF79634}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "classnotes0424", "classnotes0424\classnotes0424.csproj", "{E6D168E9-35C1-472C-887C-A7C53AF79634}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exercise32", "exercise32\exercise32.csproj", "{08B56646-598B-453E-B946-5C77E966D069}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "exercise32", "exercise32\exercise32.csproj", "{08B56646-598B-453E-B946-5C77E966D069}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "classnotes0424-collections", "classnotes0424-collections\classnotes0424-collections.csproj", "{4CFB7696-FE80-41B7-8B52-B09D36594728}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "classnotes0424-collections", "classnotes0424-collections\classnotes0424-collections.csproj", "{4CFB7696-FE80-41B7-8B52-B09D36594728}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "classnotes0424-dictionaries", "classnote0424-dictionaries\classnotes0424-dictionaries.csproj", "{93E88AB7-7F94-4490-A849-54ABAD220718}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "classnotes0424-queue-stack", "classnotes0424-queue-stack\classnotes0424-queue-stack.csproj", "{649B17C6-3C05-41A5-9BBB-23D4D4DC277F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +67,14 @@ Global
 		{4CFB7696-FE80-41B7-8B52-B09D36594728}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CFB7696-FE80-41B7-8B52-B09D36594728}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CFB7696-FE80-41B7-8B52-B09D36594728}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93E88AB7-7F94-4490-A849-54ABAD220718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93E88AB7-7F94-4490-A849-54ABAD220718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93E88AB7-7F94-4490-A849-54ABAD220718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93E88AB7-7F94-4490-A849-54ABAD220718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{649B17C6-3C05-41A5-9BBB-23D4D4DC277F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{649B17C6-3C05-41A5-9BBB-23D4D4DC277F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{649B17C6-3C05-41A5-9BBB-23D4D4DC277F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{649B17C6-3C05-41A5-9BBB-23D4D4DC277F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
