@@ -27,7 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "classnotes0424-queue-stack"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "exercise33", "exercise33\exercise33.csproj", "{AAF55CBA-F126-4184-8E40-16B10737D805}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exercise34", "exercise34\exercise34.csproj", "{6C73A587-464D-49AE-A053-52AFC81EBE87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "exercise34", "exercise34\exercise34.csproj", "{6C73A587-464D-49AE-A053-52AFC81EBE87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exercise35", "exercise35\exercise35.csproj", "{064587AA-6D46-462C-A83D-E74FFA447A5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "classnotes0425", "classnotes0425\classnotes0425.csproj", "{4C85A4CF-5A56-469E-915D-EB087E350754}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +91,14 @@ Global
 		{6C73A587-464D-49AE-A053-52AFC81EBE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C73A587-464D-49AE-A053-52AFC81EBE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C73A587-464D-49AE-A053-52AFC81EBE87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{064587AA-6D46-462C-A83D-E74FFA447A5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{064587AA-6D46-462C-A83D-E74FFA447A5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{064587AA-6D46-462C-A83D-E74FFA447A5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{064587AA-6D46-462C-A83D-E74FFA447A5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C85A4CF-5A56-469E-915D-EB087E350754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C85A4CF-5A56-469E-915D-EB087E350754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C85A4CF-5A56-469E-915D-EB087E350754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C85A4CF-5A56-469E-915D-EB087E350754}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
