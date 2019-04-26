@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\myo\\OneDrive - KNEX\\Documents\\grandcircus\\class exercises\\class0422\\classnotes0422\\classnotes0425\\classnotes0425-object-oriented-programming.csproj",
-      "projectName": "classnotes0425-object-oriented-programming",
-      "projectPath": "C:\\Users\\myo\\OneDrive - KNEX\\Documents\\grandcircus\\class exercises\\class0422\\classnotes0422\\classnotes0425\\classnotes0425-object-oriented-programming.csproj",
+      "projectUniqueName": "C:\\Users\\myo\\OneDrive - KNEX\\Documents\\grandcircus\\labs\\lab89\\lab89_students\\lab89_students\\lab89_students.csproj",
+      "projectName": "lab89_students",
+      "projectPath": "C:\\Users\\myo\\OneDrive - KNEX\\Documents\\grandcircus\\labs\\lab89\\lab89_students\\lab89_students\\lab89_students.csproj",
       "packagesPath": "C:\\Users\\myo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\myo\\OneDrive - KNEX\\Documents\\grandcircus\\class exercises\\class0422\\classnotes0422\\classnotes0425\\obj\\",
+      "outputPath": "C:\\Users\\myo\\OneDrive - KNEX\\Documents\\grandcircus\\labs\\lab89\\lab89_students\\lab89_students\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
