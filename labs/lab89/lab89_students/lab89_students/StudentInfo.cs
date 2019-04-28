@@ -12,6 +12,8 @@ namespace lab89_students
         
         public string Food { get; set; }
 
+        public string Color { get; set; }
+
 
     }
 }

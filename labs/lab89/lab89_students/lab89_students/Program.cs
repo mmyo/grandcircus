@@ -19,10 +19,10 @@ namespace lab89_students
                 Console.WriteLine($"{item.Name}, {item.Hometown}, {item.Food}");
             }
 
-            Console.Write($"Which student? Enter 0-{studentList.Count-1}: ");
+            Console.Write($"\nWhich student? Enter 0-{studentList.Count-1}: ");
             int studentRequestedByUser = int.Parse(Console.ReadLine());
 
-            Console.WriteLine($"\nStudent {studentRequestedByUser} is {studentList[studentRequestedByUser].Name}");
+            Console.WriteLine($"\nStudent {studentRequestedByUser} is {studentList[studentRequestedByUser].Name}");          
 
             Console.Write($"\nWhat do you want to know about {studentList[studentRequestedByUser].Name}? (hometown/food): ");
             string userWantsToKnow = Console.ReadLine();
@@ -37,6 +37,32 @@ namespace lab89_students
                     break;
                 default:
                     break;
+            }
+
+            //update food or hometown
+
+            
+            Console.Write("\nDo you want to add another student? y/n: ");
+            string userWantsToAddAnotherStudent = Console.ReadLine();
+            while (userWantsToAddAnotherStudent.Equals("y", StringComparison.OrdinalIgnoreCase))
+            {
+                //add validation
+                Console.Write("\nEnter name: ");
+                string newStudentName = Console.ReadLine();
+                Console.Write("Enter hometown: ");
+                string newStudentHometown = Console.ReadLine();
+                Console.Write("Enter favorite food: ");
+                string newStudentFood = Console.ReadLine();
+
+                AddStudent(newStudentName, newStudentHometown, newStudentFood, studentList);
+
+                Console.Write("\nDo you want to add another student? y/n: ");
+                userWantsToAddAnotherStudent = Console.ReadLine();
+            }
+
+            foreach (var item in studentList)
+            {
+                Console.WriteLine($"{item.Name}, {item.Hometown}, {item.Food}");
             }
 
             Console.ReadLine();
@@ -74,10 +100,18 @@ namespace lab89_students
             for (int i = 0; i < studentsDataArray.GetLength(0); i++)
             {
                 studentList.Add(new StudentInfo { Name = studentsDataArray[i, 0], Hometown = studentsDataArray[i, 1], Food = studentsDataArray[i, 2] });
-
             }
-
             return studentList;
         }
+
+        public static void AddStudent(string name, string hometown, string food, List<StudentInfo> studentList)
+        {
+
+            var newStudent = new StudentInfo { Name = name, Hometown = hometown, Food = food };
+
+            studentList.Add(newStudent);
+            Console.WriteLine($"{newStudent.Name} added.");
+        }
+
     }
 }
