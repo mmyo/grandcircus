@@ -98,7 +98,7 @@ namespace lab89_students
             string userWantsToAddAnotherStudent = null;
             do
             {
-                //add validation
+
                 Console.Write("\nEnter name: ");
                 string newStudentName = Console.ReadLine();
                 Console.Write("Enter hometown: ");
@@ -130,24 +130,33 @@ namespace lab89_students
         {
             Console.Write($"\nWhich student would you like to learn more about? \nEnter 0-{ studentList.Count - 1}: ");
             int.TryParse(Console.ReadLine(), out int studentRequestedByUser);
- 
-            Console.Write($"\nWhat do you want to know about {studentList[studentRequestedByUser].Name}? (hometown/food/color): ");
-            string userWantsToKnow = Console.ReadLine();
 
-            switch (userWantsToKnow.ToLower())
+            try
             {
-                case "hometown":
-                    Console.WriteLine($"\n{studentList[studentRequestedByUser].Name}'s hometown is: {studentList[studentRequestedByUser].Hometown}");
-                    break;
-                case "food":
-                    Console.WriteLine($"\n{studentList[studentRequestedByUser].Name}'s favorite food is: {studentList[studentRequestedByUser].Food}");
-                    break;
-                case "color":
-                    Console.WriteLine($"\n{studentList[studentRequestedByUser].Name}'s favorite color is: {studentList[studentRequestedByUser].Color}");
-                    break;
-                default:
-                    break;
+                Console.Write($"\nWhat do you want to know about {studentList[studentRequestedByUser].Name}? (hometown/food/color): ");
+                string userWantsToKnow = Console.ReadLine();
+
+                switch (userWantsToKnow.ToLower())
+                {
+                    case "hometown":
+                        Console.WriteLine($"\n{studentList[studentRequestedByUser].Name}'s hometown is: {studentList[studentRequestedByUser].Hometown}");
+                        break;
+                    case "food":
+                        Console.WriteLine($"\n{studentList[studentRequestedByUser].Name}'s favorite food is: {studentList[studentRequestedByUser].Food}");
+                        break;
+                    case "color":
+                        Console.WriteLine($"\n{studentList[studentRequestedByUser].Name}'s favorite color is: {studentList[studentRequestedByUser].Color}");
+                        break;
+                    default:
+                        break;
+                }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An exception has happened. Take cover.");
+                //throw;
+            }
+ 
         }
 
         public static void DisplayAllStudents(List<StudentInfo> studentList)
