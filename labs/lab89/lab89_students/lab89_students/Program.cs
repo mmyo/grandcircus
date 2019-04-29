@@ -9,37 +9,44 @@ namespace lab89_students
         {
 
             string[,] studentsDataArray = CreateStudentArray();
-
             List<StudentInfo> studentList = new List<StudentInfo>();
-
             FillObjectListFromTwoDimArray(studentsDataArray, studentList);
 
-            Console.Write($"Welcome to our C# class");
-
-            var userMenuSelection = DisplayMainMenu();
-
-            switch (userMenuSelection)
+            int userMenuSelection = 0;
+            do
             {
-                case 1:
-                    DisplayAllStudents(studentList);
-                    break;
-                case 2:
-                    LookUpStudentInfo(studentList);
-                    break;
-                case 3:
-                    AddStudent(studentList);
-                    break;
+                Console.Clear();
+                Console.Write($"Welcome to our C# class");
+                Console.WriteLine("What would you like to do?");
+                Console.WriteLine("1 - See all students");
+                Console.WriteLine("2 - See student info");
+                Console.WriteLine("3 - Add student");
+                Console.WriteLine("4 - Exit");
+                Console.Write("Enter a number: ");
 
-                default:
-                    break;
-            }
+                int.TryParse(Console.ReadLine(), out userMenuSelection);
 
-            //update food or hometown
-            userMenuSelection = DisplayMainMenu();
+                switch (userMenuSelection)
+                {
+                    case 1:
+                        DisplayAllStudents(studentList);
+                        Console.ReadLine();
+                        break; 
+                    case 2:
+                        LookUpStudentInfo(studentList);
+                        Console.ReadLine();
+                        break;
+                    case 3:
+                        AddStudent(studentList);
+                        break;
+                    default:
+                        break;
+                }
+            } while (userMenuSelection == 1 || userMenuSelection == 2 || userMenuSelection == 3);
 
-
-
+            Console.WriteLine("Bye!");
             Console.ReadLine();
+
         }
 
         public static string[,] CreateStudentArray( )
@@ -121,7 +128,7 @@ namespace lab89_students
 
         public static void LookUpStudentInfo(List<StudentInfo> studentList)
         {
-            Console.WriteLine($"\nWhich student would you like to learn more about ? Enter 0 -{ studentList.Count - 1}: ");
+            Console.Write($"\nWhich student would you like to learn more about? \nEnter 0-{ studentList.Count - 1}: ");
             int studentRequestedByUser = int.Parse(Console.ReadLine());
             Console.WriteLine($"\nStudent {studentRequestedByUser} is {studentList[studentRequestedByUser].Name}");
 
@@ -143,6 +150,8 @@ namespace lab89_students
 
         public static void DisplayAllStudents(List<StudentInfo> studentList)
         {
+            Console.WriteLine("\nStudent List:\n");
+
             foreach (var item in studentList)
             {
                 Console.WriteLine($"{item.Name}, {item.Hometown}, {item.Food}");
