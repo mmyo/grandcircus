@@ -33,6 +33,7 @@ namespace lab89_students
                         Console.ReadLine();
                         break; 
                     case 2:
+                        DisplayAllStudents(studentList);
                         LookUpStudentInfo(studentList);
                         Console.ReadLine();
                         break;
@@ -46,7 +47,6 @@ namespace lab89_students
 
             Console.WriteLine("Bye!");
             Console.ReadLine();
-
         }
 
         public static string[,] CreateStudentArray( )
@@ -129,9 +129,8 @@ namespace lab89_students
         public static void LookUpStudentInfo(List<StudentInfo> studentList)
         {
             Console.Write($"\nWhich student would you like to learn more about? \nEnter 0-{ studentList.Count - 1}: ");
-            int studentRequestedByUser = int.Parse(Console.ReadLine());
-            Console.WriteLine($"\nStudent {studentRequestedByUser} is {studentList[studentRequestedByUser].Name}");
-
+            int.TryParse(Console.ReadLine(), out int studentRequestedByUser);
+ 
             Console.Write($"\nWhat do you want to know about {studentList[studentRequestedByUser].Name}? (hometown/food): ");
             string userWantsToKnow = Console.ReadLine();
 
