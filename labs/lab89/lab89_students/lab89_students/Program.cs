@@ -12,58 +12,32 @@ namespace lab89_students
 
             List<StudentInfo> studentList = new List<StudentInfo>();
 
-            studentList = FillObjectListFromTwoDimArray(studentsDataArray, studentList);
+            FillObjectListFromTwoDimArray(studentsDataArray, studentList);
 
-            foreach (var item in studentList)
+            Console.Write($"Welcome to our C# class");
+
+            var userMenuSelection = DisplayMainMenu();
+
+            switch (userMenuSelection)
             {
-                Console.WriteLine($"{item.Name}, {item.Hometown}, {item.Food}");
-            }
-
-            Console.Write($"\nWhich student? Enter 0-{studentList.Count-1}: ");
-            int studentRequestedByUser = int.Parse(Console.ReadLine());
-
-            Console.WriteLine($"\nStudent {studentRequestedByUser} is {studentList[studentRequestedByUser].Name}");          
-
-            Console.Write($"\nWhat do you want to know about {studentList[studentRequestedByUser].Name}? (hometown/food): ");
-            string userWantsToKnow = Console.ReadLine();
-
-            switch (userWantsToKnow.ToLower())
-            {
-                case "hometown":
-                    Console.WriteLine($"\n{studentList[studentRequestedByUser].Name}'s hometown is: {studentList[studentRequestedByUser].Hometown}");
+                case 1:
+                    DisplayAllStudents(studentList);
                     break;
-                case "food":
-                    Console.WriteLine($"\n{studentList[studentRequestedByUser].Name}'s favorite food is: {studentList[studentRequestedByUser].Food}");
+                case 2:
+                    LookUpStudentInfo(studentList);
                     break;
+                case 3:
+                    AddStudent(studentList);
+                    break;
+
                 default:
                     break;
             }
 
             //update food or hometown
+            userMenuSelection = DisplayMainMenu();
 
-            
-            Console.Write("\nDo you want to add another student? y/n: ");
-            string userWantsToAddAnotherStudent = Console.ReadLine();
-            while (userWantsToAddAnotherStudent.Equals("y", StringComparison.OrdinalIgnoreCase))
-            {
-                //add validation
-                Console.Write("\nEnter name: ");
-                string newStudentName = Console.ReadLine();
-                Console.Write("Enter hometown: ");
-                string newStudentHometown = Console.ReadLine();
-                Console.Write("Enter favorite food: ");
-                string newStudentFood = Console.ReadLine();
 
-                AddStudent(newStudentName, newStudentHometown, newStudentFood, studentList);
-
-                Console.Write("\nDo you want to add another student? y/n: ");
-                userWantsToAddAnotherStudent = Console.ReadLine();
-            }
-
-            foreach (var item in studentList)
-            {
-                Console.WriteLine($"{item.Name}, {item.Hometown}, {item.Food}");
-            }
 
             Console.ReadLine();
         }
@@ -104,13 +78,75 @@ namespace lab89_students
             return studentList;
         }
 
-        public static void AddStudent(string name, string hometown, string food, List<StudentInfo> studentList)
+        public static int DisplayMainMenu()
         {
+            int selection;
+            do
+            {
+                Console.WriteLine("What would you like to do?");
+                Console.WriteLine("1 - See all students");
+                Console.WriteLine("2 - See student info");
+                Console.WriteLine("3 - Add student");
+                Console.WriteLine("4 - Exit");
+                Console.Write("Enter a number: ");
 
-            var newStudent = new StudentInfo { Name = name, Hometown = hometown, Food = food };
+            } while (!(int.TryParse(Console.ReadLine(), out selection) && selection > 0 && selection <=4) );
 
-            studentList.Add(newStudent);
-            Console.WriteLine($"{newStudent.Name} added.");
+            return selection;
+
+        }
+
+        public static void AddStudent(List<StudentInfo> studentList)
+        {
+            string userWantsToAddAnotherStudent = null;
+            do
+            {
+                //add validation
+                Console.Write("\nEnter name: ");
+                string newStudentName = Console.ReadLine();
+                Console.Write("Enter hometown: ");
+                string newStudentHometown = Console.ReadLine();
+                Console.Write("Enter favorite food: ");
+                string newStudentFood = Console.ReadLine();
+
+                var newStudent = new StudentInfo { Name = newStudentName, Hometown = newStudentHometown, Food = newStudentFood };
+                studentList.Add(newStudent);
+                Console.WriteLine($"{newStudent.Name} added.");
+
+                Console.Write("\nDo you want to add another student? y/n: ");
+                userWantsToAddAnotherStudent = Console.ReadLine();
+            } while (userWantsToAddAnotherStudent.Equals("y", StringComparison.OrdinalIgnoreCase));
+
+        }
+
+        public static void LookUpStudentInfo(List<StudentInfo> studentList)
+        {
+            Console.WriteLine($"\nWhich student would you like to learn more about ? Enter 0 -{ studentList.Count - 1}: ");
+            int studentRequestedByUser = int.Parse(Console.ReadLine());
+            Console.WriteLine($"\nStudent {studentRequestedByUser} is {studentList[studentRequestedByUser].Name}");
+
+            Console.Write($"\nWhat do you want to know about {studentList[studentRequestedByUser].Name}? (hometown/food): ");
+            string userWantsToKnow = Console.ReadLine();
+
+            switch (userWantsToKnow.ToLower())
+            {
+                case "hometown":
+                    Console.WriteLine($"\n{studentList[studentRequestedByUser].Name}'s hometown is: {studentList[studentRequestedByUser].Hometown}");
+                    break;
+                case "food":
+                    Console.WriteLine($"\n{studentList[studentRequestedByUser].Name}'s favorite food is: {studentList[studentRequestedByUser].Food}");
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public static void DisplayAllStudents(List<StudentInfo> studentList)
+        {
+            foreach (var item in studentList)
+            {
+                Console.WriteLine($"{item.Name}, {item.Hometown}, {item.Food}");
+            }
         }
 
     }
