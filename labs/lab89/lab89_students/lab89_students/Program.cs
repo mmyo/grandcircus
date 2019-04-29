@@ -24,13 +24,13 @@ namespace lab89_students
                 {
                     case 1:
                         DisplayAllStudents(studentList);
-                        Console.WriteLine("\n... press any key to continue ...");
+                        Console.WriteLine("\npress any key to continue ...");
                         Console.ReadKey();
                         break; 
                     case 2:
                         DisplayAllStudents(studentList);
                         LookUpStudentInfo(studentList);
-                        Console.WriteLine("\n... press any key to continue ...");
+                        Console.WriteLine("\npress any key to continue ...");
                         Console.ReadKey();
                         break;
                     case 3:
@@ -129,7 +129,8 @@ namespace lab89_students
         public static void LookUpStudentInfo(List<StudentInfo> studentList)
         {
             Console.Write($"\nWhich student would you like to learn more about? \nEnter 0-{ studentList.Count - 1}: ");
-            int.TryParse(Console.ReadLine(), out int studentRequestedByUser);
+            int studentRequestedByUser = -1;
+            int.TryParse(Console.ReadLine(), out studentRequestedByUser);
 
             try
             {
@@ -153,7 +154,7 @@ namespace lab89_students
             }
             catch (Exception ex)
             {
-                Console.WriteLine("An exception has happened. Take cover.");
+                Console.WriteLine($"\nAn exception has happened. Take cover. \nMessage: {ex.Message}");
                 //throw;
             }
  
