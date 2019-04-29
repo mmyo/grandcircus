@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace lab89_students
 {
@@ -162,9 +163,13 @@ namespace lab89_students
 
         public static void DisplayAllStudents(List<StudentInfo> studentList)
         {
+            //alphabetize list
+
+            var studentListSorted = studentList.OrderBy(studentInfo => studentInfo.Name);
+
             Console.WriteLine("\nStudent List:\n");
 
-            foreach (var item in studentList)
+            foreach (var item in studentListSorted)
             {
                 Console.WriteLine($"{item.Name}");
             }
