@@ -14,6 +14,5 @@ namespace lab89_students
 
         public string Color { get; set; }
 
-
     }
 }

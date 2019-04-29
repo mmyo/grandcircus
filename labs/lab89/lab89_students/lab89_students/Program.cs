@@ -16,13 +16,7 @@ namespace lab89_students
             do
             {
                 Console.Clear();
-                Console.Write($"Welcome to our C# class");
-                Console.WriteLine("What would you like to do?");
-                Console.WriteLine("1 - See all students");
-                Console.WriteLine("2 - See student info");
-                Console.WriteLine("3 - Add student");
-                Console.WriteLine("4 - Exit");
-                Console.Write("Enter a number: ");
+                DisplayMainMenu();
 
                 int.TryParse(Console.ReadLine(), out userMenuSelection);
 
@@ -30,12 +24,14 @@ namespace lab89_students
                 {
                     case 1:
                         DisplayAllStudents(studentList);
-                        Console.ReadLine();
+                        Console.WriteLine("\n... press any key to continue ...");
+                        Console.ReadKey();
                         break; 
                     case 2:
                         DisplayAllStudents(studentList);
                         LookUpStudentInfo(studentList);
-                        Console.ReadLine();
+                        Console.WriteLine("\n... press any key to continue ...");
+                        Console.ReadKey();
                         break;
                     case 3:
                         AddStudent(studentList);
@@ -85,21 +81,15 @@ namespace lab89_students
             return studentList;
         }
 
-        public static int DisplayMainMenu()
+        public static void DisplayMainMenu()
         {
-            int selection;
-            do
-            {
-                Console.WriteLine("What would you like to do?");
-                Console.WriteLine("1 - See all students");
-                Console.WriteLine("2 - See student info");
-                Console.WriteLine("3 - Add student");
-                Console.WriteLine("4 - Exit");
-                Console.Write("Enter a number: ");
-
-            } while (!(int.TryParse(Console.ReadLine(), out selection) && selection > 0 && selection <=4) );
-
-            return selection;
+            Console.WriteLine("Welcome to our C# class");
+            Console.WriteLine("What would you like to do?");
+            Console.WriteLine("1 - See all students");
+            Console.WriteLine("2 - See student info");
+            Console.WriteLine("3 - Add student");
+            Console.WriteLine("4 - Exit");
+            Console.Write("Enter a number: ");
 
         }
 
@@ -115,13 +105,23 @@ namespace lab89_students
                 string newStudentHometown = Console.ReadLine();
                 Console.Write("Enter favorite food: ");
                 string newStudentFood = Console.ReadLine();
+                Console.Write("Enter favorite color: ");
+                string newStudentColor = Console.ReadLine();
 
-                var newStudent = new StudentInfo { Name = newStudentName, Hometown = newStudentHometown, Food = newStudentFood };
-                studentList.Add(newStudent);
-                Console.WriteLine($"{newStudent.Name} added.");
+                if (string.IsNullOrEmpty(newStudentName) || string.IsNullOrEmpty(newStudentHometown) || string.IsNullOrEmpty(newStudentFood) || string.IsNullOrEmpty(newStudentColor))
+                {
+                    Console.WriteLine("New student not added. All fields must be filled out.");        
+                }
+                else
+                {
+                    var newStudent = new StudentInfo { Name = newStudentName, Hometown = newStudentHometown, Food = newStudentFood, Color = newStudentColor };
+                    studentList.Add(newStudent);
+                    Console.WriteLine($"{newStudent.Name} added.");
+                }
 
                 Console.Write("\nDo you want to add another student? y/n: ");
                 userWantsToAddAnotherStudent = Console.ReadLine();
+
             } while (userWantsToAddAnotherStudent.Equals("y", StringComparison.OrdinalIgnoreCase));
 
         }
@@ -131,7 +131,7 @@ namespace lab89_students
             Console.Write($"\nWhich student would you like to learn more about? \nEnter 0-{ studentList.Count - 1}: ");
             int.TryParse(Console.ReadLine(), out int studentRequestedByUser);
  
-            Console.Write($"\nWhat do you want to know about {studentList[studentRequestedByUser].Name}? (hometown/food): ");
+            Console.Write($"\nWhat do you want to know about {studentList[studentRequestedByUser].Name}? (hometown/food/color): ");
             string userWantsToKnow = Console.ReadLine();
 
             switch (userWantsToKnow.ToLower())
@@ -141,6 +141,9 @@ namespace lab89_students
                     break;
                 case "food":
                     Console.WriteLine($"\n{studentList[studentRequestedByUser].Name}'s favorite food is: {studentList[studentRequestedByUser].Food}");
+                    break;
+                case "color":
+                    Console.WriteLine($"\n{studentList[studentRequestedByUser].Name}'s favorite color is: {studentList[studentRequestedByUser].Color}");
                     break;
                 default:
                     break;
@@ -153,7 +156,7 @@ namespace lab89_students
 
             foreach (var item in studentList)
             {
-                Console.WriteLine($"{item.Name}, {item.Hometown}, {item.Food}");
+                Console.WriteLine($"{item.Name}");
             }
         }
 
