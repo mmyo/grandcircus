@@ -164,7 +164,6 @@ namespace lab89_students
         public static void DisplayAllStudents(List<StudentInfo> studentList)
         {
             //alphabetize list
-
             var studentListSorted = studentList.OrderBy(studentInfo => studentInfo.Name);
 
             Console.WriteLine("\nStudent List:\n");
