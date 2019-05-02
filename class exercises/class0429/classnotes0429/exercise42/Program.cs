@@ -2,22 +2,28 @@
 
 namespace exercise42
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-
-            var userPoint = new Point();
+            var userPoint = new _3dPoint();
 
             Console.Write("Enter an X coordinate: ");
-            userPoint.X = double.Parse(Console.ReadLine());
+            userPoint.PointX = double.Parse(Console.ReadLine());
 
             Console.Write("Enter a Y coordinate: ");
-            userPoint.Y = double.Parse(Console.ReadLine());
+            userPoint.PointY = double.Parse(Console.ReadLine());
 
-            Console.WriteLine($"You have created a point object ({userPoint.X}, {userPoint.Y})");
+            Console.WriteLine($"You have created a point object ({userPoint.PointX}, {userPoint.PointY})");
 
             Console.WriteLine($"Distance from 0,0 is: {userPoint.CalculateDistance()}");
+
+            Console.WriteLine("Enter second X: ");
+            userPoint.SecondX = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter second Y: ");
+            userPoint.SecondY = double.Parse(Console.ReadLine());
+
+            Console.WriteLine($"The midpoint is {userPoint.CalculateMidpoint()}");
 
             Console.ReadLine();
         }

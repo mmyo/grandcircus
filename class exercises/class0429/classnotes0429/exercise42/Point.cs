@@ -4,16 +4,11 @@ using System.Text;
 
 namespace exercise42
 {
-    class Point
+    public class Point
     {
-        public double X { set; get; }
+        public double PointX { set; get; }
 
-        public double Y { set; get; }
+        public double PointY { set; get; }
 
-        public double CalculateDistance()
-        {
-            return Math.Sqrt( (X * X) + (Y * Y) );
-            
-        }
     }
 }

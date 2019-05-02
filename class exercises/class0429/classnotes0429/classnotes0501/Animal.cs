@@ -4,20 +4,11 @@ using System.Text;
 
 namespace classnotes0501
 {
-    class Animal
+    public abstract class AnimalBase
     {
         public string Name { get; set; }
         public int Age { get; set; }
 
-        public Animal(string name)
-        {
-            Name = name;
-        }
-
-        public Animal(string name, int age)
-        {
-            Name = name;
-            Age = age;
-        }
+    
     }
 }

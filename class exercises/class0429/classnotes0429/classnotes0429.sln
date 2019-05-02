@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "classnotes0501", "classnote
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "classnotes0501-roomobjects", "classnotes0501-roomobjects\classnotes0501-roomobjects.csproj", "{23116003-A8FB-47BE-B7B3-B45A12568F3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exercise0501-class", "exercise0501-class\exercise0501-class.csproj", "{CC476C17-C08B-4720-9708-B6359701A911}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bonus13", "bonus13\bonus13.csproj", "{00343DD7-DA3D-4D79-B833-9BF3F6D3E2B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{23116003-A8FB-47BE-B7B3-B45A12568F3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23116003-A8FB-47BE-B7B3-B45A12568F3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23116003-A8FB-47BE-B7B3-B45A12568F3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC476C17-C08B-4720-9708-B6359701A911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC476C17-C08B-4720-9708-B6359701A911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC476C17-C08B-4720-9708-B6359701A911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC476C17-C08B-4720-9708-B6359701A911}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00343DD7-DA3D-4D79-B833-9BF3F6D3E2B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00343DD7-DA3D-4D79-B833-9BF3F6D3E2B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00343DD7-DA3D-4D79-B833-9BF3F6D3E2B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00343DD7-DA3D-4D79-B833-9BF3F6D3E2B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
