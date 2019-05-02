@@ -8,5 +8,13 @@ namespace bonus13
     {
         public int MagicalEnergy { get; set; }
 
+        public override void Play()
+        {
+            Console.WriteLine($"Name: {Name}");
+            Console.WriteLine($"Strength: {Strength}");
+            Console.WriteLine($"Intelligence: {Intelligence}");
+            Console.WriteLine($"Magical Energy: {MagicalEnergy}");
+        }
+
     }
 }

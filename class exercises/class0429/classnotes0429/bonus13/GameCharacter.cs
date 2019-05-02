@@ -10,10 +10,11 @@ namespace bonus13
         public int Strength { get; set; }
         public int Intelligence { get; set; }
 
-        public void Play()
+        public virtual void Play()
         {
-            Console.WriteLine($"Name: {Name}, Strength: {Strength}, Intelligence: {Intelligence}.)");
-
+            Console.WriteLine($"Name: {Name}");
+            Console.WriteLine($"Strength: {Strength}");
+            Console.WriteLine($"Intelligence: {Intelligence}");
         }
 
     }
