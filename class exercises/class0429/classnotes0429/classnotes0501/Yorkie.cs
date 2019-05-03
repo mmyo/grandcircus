@@ -14,7 +14,7 @@ namespace classnotes0501
 
         public override string Bark()
         {
-            base.Bark();
+            //base.Bark();
             return "yip!"; 
         }
 
