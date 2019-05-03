@@ -6,8 +6,8 @@ namespace classnotes0501
 {
     public class Poodle : DogBase
     {
-        public Poodle(string name, int age, bool isFurTangled)
-            :base(name, age)
+        public Poodle(string name, int age, string color, bool isFurTangled)
+            :base(name, age, color)
         {
             IsFurTangled = isFurTangled;
         }

@@ -6,7 +6,7 @@ namespace classnotes0501
 {
     public abstract class DogBase : AnimalBase
     {
-        public DogBase(string name, int age)
+        public DogBase(string name, int age, string color)
         {
             Name = name;
             Age = age;
@@ -14,9 +14,9 @@ namespace classnotes0501
 
         public string Color { get; set; }
 
-        public string Bark()
+        public virtual string Bark()
         {
-            return "yip!";
+            return "woof!";
         }
 
         protected string Howl()

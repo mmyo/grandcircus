@@ -18,9 +18,9 @@ namespace exercise42
 
             Console.WriteLine($"Distance from 0,0 is: {userPoint.CalculateDistance()}");
 
-            Console.WriteLine("Enter second X: ");
+            Console.Write("Enter second X: ");
             userPoint.SecondX = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter second Y: ");
+            Console.Write("Enter second Y: ");
             userPoint.SecondY = double.Parse(Console.ReadLine());
 
             Console.WriteLine($"The midpoint is {userPoint.CalculateMidpoint()}");

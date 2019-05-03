@@ -4,7 +4,7 @@ using System.Text;
 
 namespace exercise42
 {
-    class _3dPoint : Point
+    class _3dPoint : PointBase
     {
         public double SecondX { get; set; }
 
