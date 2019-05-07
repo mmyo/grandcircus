@@ -4,7 +4,8 @@ using System.Text;
 
 namespace exercise55
 {
-    class HummingBird
+    class HummingBird : BirdBase
     {
+        public string FavoriteNectar { get; set; }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace exercise55
 {
-    class BirdBase
+    class BirdBase : AnimalBase
     {
         public bool CanFly { get; set; }
     }
