@@ -1,0 +1,11 @@
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab11\lab11_movies\lab11_movies\bin\Debug\netcoreapp2.2\lab11_movies.deps.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab11\lab11_movies\lab11_movies\bin\Debug\netcoreapp2.2\lab11_movies.runtimeconfig.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab11\lab11_movies\lab11_movies\bin\Debug\netcoreapp2.2\lab11_movies.runtimeconfig.dev.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab11\lab11_movies\lab11_movies\bin\Debug\netcoreapp2.2\lab11_movies.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab11\lab11_movies\lab11_movies\bin\Debug\netcoreapp2.2\lab11_movies.pdb
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab11\lab11_movies\lab11_movies\obj\Debug\netcoreapp2.2\lab11_movies.csprojAssemblyReference.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab11\lab11_movies\lab11_movies\obj\Debug\netcoreapp2.2\lab11_movies.csproj.CoreCompileInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab11\lab11_movies\lab11_movies\obj\Debug\netcoreapp2.2\lab11_movies.AssemblyInfoInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab11\lab11_movies\lab11_movies\obj\Debug\netcoreapp2.2\lab11_movies.AssemblyInfo.cs
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab11\lab11_movies\lab11_movies\obj\Debug\netcoreapp2.2\lab11_movies.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab11\lab11_movies\lab11_movies\obj\Debug\netcoreapp2.2\lab11_movies.pdb
