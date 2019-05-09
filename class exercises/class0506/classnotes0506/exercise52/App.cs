@@ -4,43 +4,43 @@ using System.Text;
 
 namespace exercise52
 {
-    class App
+    public class App
     {
         public static void Run()
         {
-            var square = new Square();
-            square.Side = 4;
-            Console.WriteLine($"Square area: {square.GetArea()}");
-            Console.WriteLine($"Square perimeter: {square.GetPerimeter()}");
-            Console.WriteLine();
-
-            var triangle = new Triangle();
-            triangle.Length1 = 5;
-            triangle.Length2 = 5;
-            triangle.Length3 = 5;
-            Console.WriteLine($"Triangle area: {triangle.GetArea()}");
-            Console.WriteLine($"Triangle perimeter: {triangle.GetPerimeter()}");
-            Console.WriteLine();
-
-            var circle = new Circle();
-            circle.Radius = 24;
-            Console.WriteLine($"Circle area: {circle.GetArea()}");
-            Console.WriteLine($"Circle perimeter: {circle.GetPerimeter()}");
-            Console.WriteLine();
-
             var shapeList = new List<ShapeBase>();
-            shapeList.Add(square);
-            shapeList.Add(triangle);
-            shapeList.Add(circle);
-            
-            Console.WriteLine($"Total area: {GetShapesTotalArea(shapeList)}");
-            Console.WriteLine($"Total perimeter: {GetShapesTotalPerimeter(shapeList)}");
-            Console.WriteLine();
+            var quitApp = "N";
 
-            Console.WriteLine($"Average area of {shapeList.Count} shapes: {GetShapesTotalArea(shapeList) / shapeList.Count}");
-            Console.WriteLine($"Average perimeter of {shapeList.Count} shapes: {GetShapesTotalPerimeter(shapeList) / shapeList.Count}");
+            do
+            {
+                Console.Clear();
+                var userSelection = Menu.DisplayMainMenu();
 
-            Console.ReadLine();
+                switch (userSelection)
+                {
+                    case 1:
+                        Menu.AddSquareMenu(shapeList);
+                        break;
+                    case 2:
+                        Menu.AddTriangleMenu(shapeList);
+                        break;
+                    case 3:
+                        Menu.AddCircleMenu(shapeList);
+                        break;
+                    case 4:
+                        CalculateAreaAndPerimeter(shapeList);
+                        break;
+                    case 5:
+                        DisplayAllShapes(shapeList);
+                        break;
+                    default:
+                        quitApp = "y";
+                        Console.WriteLine("\nBye");
+                        break;
+                }
+                Console.ReadLine();
+
+            } while (quitApp.Equals("n", StringComparison.OrdinalIgnoreCase));     
         }
 
         public static double GetShapesTotalArea(List<ShapeBase> shapeList)
@@ -65,6 +65,25 @@ namespace exercise52
             }
 
             return totalPerimeter;
+        }
+
+        public static void CalculateAreaAndPerimeter(List<ShapeBase> shapeList)
+        {
+            Console.WriteLine($"There are {shapeList.Count} shape(s) in list");
+            Console.WriteLine($"\nTotal area of {shapeList.Count} shapes: {GetShapesTotalArea(shapeList)}");
+            Console.WriteLine($"Total perimeter of {shapeList.Count} shapes: {GetShapesTotalPerimeter(shapeList)}");
+            Console.WriteLine($"\nAverage area of {shapeList.Count} shapes: {GetShapesTotalArea(shapeList) / shapeList.Count}");
+            Console.WriteLine($"Average perimeter of {shapeList.Count} shapes: {GetShapesTotalPerimeter(shapeList) / shapeList.Count}");
+        }
+
+        public static void DisplayAllShapes(List<ShapeBase> shapeList)
+        {
+            Console.WriteLine($"There are {shapeList.Count} shape(s) in list:");
+
+            foreach (var shape in shapeList)
+            {
+                Console.WriteLine($"{shape.GetType()} | Perimeter: {shape.GetPerimeter()} | Area: {shape.GetArea()}");
+            }
         }
     }
 }

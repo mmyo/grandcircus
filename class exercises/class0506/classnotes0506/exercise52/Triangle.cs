@@ -12,6 +12,12 @@ namespace exercise52
 
         public double Length3 { get; set; }
 
+        public Triangle(double length1, double length2, double length3)
+        {
+            Length1 = length1;
+            Length2 = length2;
+            Length3 = length3;
+        }
 
         public override double GetArea()
         {

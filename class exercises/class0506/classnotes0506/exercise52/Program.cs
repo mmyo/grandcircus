@@ -7,7 +7,6 @@ namespace exercise52
         static void Main(string[] args)
         {
             App.Run();
-
         }
     }
 }
