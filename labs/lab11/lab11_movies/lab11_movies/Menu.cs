@@ -63,5 +63,13 @@ namespace lab11_movies
                 }
             }
         }
+
+        public static void SeeAllMovieCategories(HashSet<string> categoryList)
+        {
+            foreach (var category in categoryList)
+            {
+                Console.WriteLine(category);
+            }
+        }
     }
 }

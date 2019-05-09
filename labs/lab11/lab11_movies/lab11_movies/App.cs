@@ -9,11 +9,17 @@ namespace lab11_movies
         public static void Run()
         {
             var movieList = InitializeMovieList();
+            //string[] movieCategories = new string[] { };
+            //var movieCategories = new List<string>();
+            HashSet<string> movieCategories = new HashSet<string>();
 
             switch (Menu.DisplayMainMenu())
             {
                 case 1: //see all movies
                     Menu.SeeAllMovies(movieList);
+                    Console.WriteLine();
+                    UpdateMoviesCategories(movieList, movieCategories);
+                    Menu.SeeAllMovieCategories(movieCategories);
                     break;
                 case 2: //see all movies in category
                     Menu.SeeAllMovies(movieList, Menu.ChooseMovieCategoryMenu());
@@ -21,6 +27,8 @@ namespace lab11_movies
                 case 3: //add movie
                     Menu.AddMovieMenu(movieList);
                     Menu.SeeAllMovies(movieList);
+                    Menu.SeeAllMovieCategories(movieCategories);
+
                     break;
                 case 4: //exit
                     Console.WriteLine("Bye");
@@ -46,6 +54,14 @@ namespace lab11_movies
             movieList.Add(new Movie("Titanic", "Drama"));
 
             return movieList;
+        }
+
+        public static void UpdateMoviesCategories(List<Movie> movieList, HashSet<string> movieCategories)
+        {
+            foreach (var movie in movieList)
+            {
+                movieCategories.Add(movie.Category);  
+            }
         }
 
     }
