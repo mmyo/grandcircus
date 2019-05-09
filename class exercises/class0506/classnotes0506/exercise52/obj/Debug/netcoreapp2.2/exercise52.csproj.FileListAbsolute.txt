@@ -8,3 +8,4 @@ C:\Users\myo\OneDrive - Knex\Documents\grandcircus\class exercises\class0506\cla
 C:\Users\myo\OneDrive - Knex\Documents\grandcircus\class exercises\class0506\classnotes0506\exercise52\obj\Debug\netcoreapp2.2\exercise52.AssemblyInfo.cs
 C:\Users\myo\OneDrive - Knex\Documents\grandcircus\class exercises\class0506\classnotes0506\exercise52\obj\Debug\netcoreapp2.2\exercise52.dll
 C:\Users\myo\OneDrive - Knex\Documents\grandcircus\class exercises\class0506\classnotes0506\exercise52\obj\Debug\netcoreapp2.2\exercise52.pdb
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0506\classnotes0506\exercise52\obj\Debug\netcoreapp2.2\exercise52.csprojAssemblyReference.cache

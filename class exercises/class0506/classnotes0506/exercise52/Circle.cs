@@ -4,16 +4,16 @@ using System.Text;
 
 namespace exercise52
 {
-    public class Circle : IArea, IPerimeter
+    public class Circle : ShapeBase
     {
         public double Radius { get; set; }
 
-        public double GetArea()
+        public override double GetArea()
         {
             return Radius * Radius * Math.PI;
         }
 
-        public double GetPerimeter()
+        public override double GetPerimeter()
         {
             return 2 * Math.PI * Radius;
         }

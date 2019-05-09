@@ -4,16 +4,16 @@ using System.Text;
 
 namespace exercise52
 {
-    public class Square : IArea, IPerimeter
+    public class Square : ShapeBase
     {
         public double Side { get; set; }
 
-        public double GetArea()
+        public override double GetArea()
         {
             return Side * Side;
         }
 
-        public double GetPerimeter()
+        public override double GetPerimeter()
         {
             return 4 * Side;
         }
