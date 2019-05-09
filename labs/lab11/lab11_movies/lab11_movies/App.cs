@@ -4,7 +4,7 @@ using System.Text;
 
 namespace lab11_movies
 {
-    class App
+    public class App
     {
         public static void Run()
         {
@@ -39,10 +39,13 @@ namespace lab11_movies
             movieList.Add(new Movie("Jaws", "Drama"));
             movieList.Add(new Movie("It", "Horror"));
             movieList.Add(new Movie("Toy Story", "Animated"));
-            movieList.Add(new Movie("Star Wars", "Scifi"));
+            movieList.Add(new Movie("Spider-Man: Into The Spiderverse", "Animated"));
+            movieList.Add(new Movie("Iron Man", "Scifi"));
+            movieList.Add(new Movie("Godfather", "Drama"));
+            movieList.Add(new Movie("Carrie", "Horror"));
+            movieList.Add(new Movie("Titanic", "Drama"));
 
             return movieList;
-
         }
 
     }

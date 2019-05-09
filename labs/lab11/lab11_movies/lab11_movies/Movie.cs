@@ -4,7 +4,7 @@ using System.Text;
 
 namespace lab11_movies
 {
-    class Movie
+    public class Movie
     {
         private string _title;
 

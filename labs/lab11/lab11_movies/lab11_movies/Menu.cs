@@ -4,7 +4,7 @@ using System.Text;
 
 namespace lab11_movies
 {
-    class Menu
+    public class Menu
     {
         public static int DisplayMainMenu()
         {
@@ -57,7 +57,7 @@ namespace lab11_movies
 
             foreach (var movie in moviesList)
             {
-                if (movie.Category == category)
+                if (movie.Category.Equals(category, StringComparison.OrdinalIgnoreCase))
                 {
                     Console.WriteLine(movie.Title);
                 }
