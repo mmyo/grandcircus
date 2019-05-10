@@ -9,35 +9,42 @@ namespace lab11_movies
         public static void Run()
         {
             var movieList = InitializeMovieList();
-            //string[] movieCategories = new string[] { };
-            //var movieCategories = new List<string>();
-            HashSet<string> movieCategories = new HashSet<string>();
+            var categoriesList = InitializeCategoriesList(movieList);
+            var quitApp = false;
 
-            switch (Menu.DisplayMainMenu())
+            do
             {
-                case 1: //see all movies
-                    Menu.SeeAllMovies(movieList);
-                    Console.WriteLine();
-                    UpdateMoviesCategories(movieList, movieCategories);
-                    Menu.SeeAllMovieCategories(movieCategories);
-                    break;
-                case 2: //see all movies in category
-                    Menu.SeeAllMovies(movieList, Menu.ChooseMovieCategoryMenu());
-                    break;
-                case 3: //add movie
-                    Menu.AddMovieMenu(movieList);
-                    Menu.SeeAllMovies(movieList);
-                    Menu.SeeAllMovieCategories(movieCategories);
+                Console.Clear();
 
-                    break;
-                case 4: //exit
-                    Console.WriteLine("Bye");
-                    break;          
-                default:
-                    Console.WriteLine("Did not understand. Bye.");
-                    break;
-            }
-            Console.ReadLine();
+                switch (Menu.DisplayMainMenu())
+                {
+                    case MenuEnums.DisplayAllMovies:
+                        Console.WriteLine();
+                        Menu.DisplayAllMovies(movieList);
+                        break;
+                    case MenuEnums.SearchMoviesByCategory:
+                        Console.WriteLine();
+                        Menu.DisplayAllCategories(movieList, categoriesList);
+                        Menu.DisplayAllMovies(movieList, Menu.ChooseMovieCategoryMenu());
+                        break;
+                    case MenuEnums.DisplayAllCategories: 
+                        Console.WriteLine();
+                        Menu.DisplayAllCategories(movieList, categoriesList);
+                        break;
+                    case MenuEnums.AddMovie: 
+                        Console.WriteLine();
+                        Menu.AddMovieMenu(movieList);
+                        break;
+                    case MenuEnums.Exit: 
+                        quitApp = true;
+                        Console.WriteLine("\nBye");
+                        break;
+                    default:
+                        Console.WriteLine("\nDid not understand. Try Again.");
+                        break;
+                }
+                Console.ReadLine();
+            } while (quitApp.Equals(false));       
         }
 
         public static List<Movie> InitializeMovieList()
@@ -56,13 +63,14 @@ namespace lab11_movies
             return movieList;
         }
 
-        public static void UpdateMoviesCategories(List<Movie> movieList, HashSet<string> movieCategories)
+        public static HashSet<string> InitializeCategoriesList(List<Movie> movieList)
         {
-            foreach (var movie in movieList)
-            {
-                movieCategories.Add(movie.Category);  
-            }
-        }
+            HashSet<string> categoriesList = new HashSet<string>();
 
+            Menu.UpdateMoviesCategoriesList(movieList, categoriesList);
+
+            return categoriesList;
+
+        }
     }
 }

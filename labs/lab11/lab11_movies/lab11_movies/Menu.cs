@@ -6,21 +6,22 @@ namespace lab11_movies
 {
     public class Menu
     {
-        public static int DisplayMainMenu()
+        public static Enum DisplayMainMenu()
         {
             Console.WriteLine("Welcome to the Movie List");
             Console.WriteLine("What would you like to do?");
             Console.WriteLine("1 - See all movies");
-            Console.WriteLine("2 - See all movies in a category");
-            Console.WriteLine("3 - Add movie");
-            Console.WriteLine("4 - Exit");
+            Console.WriteLine("2 - Search movies by category");
+            Console.WriteLine("3 - See all categories");
+            Console.WriteLine("4 - Add movie");
+            Console.WriteLine("5 - Exit");
             Console.Write("Enter a number: ");
 
-            if (int.TryParse(Console.ReadLine(), out int userSelection) && userSelection >= 1 && userSelection <=4)
+            if (Enum.TryParse<MenuEnums>(Console.ReadLine(), out var userSelection))
             {
                 return userSelection;
             }
-            return 0;
+            return null;
         }
 
         public static string ChooseMovieCategoryMenu()
@@ -40,11 +41,13 @@ namespace lab11_movies
             var category = Console.ReadLine();
 
             moviesList.Add(new Movie(title, category));
+            Console.WriteLine($"Movie added");
+        
         }
 
-        public static void SeeAllMovies(List<Movie> moviesList)
+        public static void DisplayAllMovies(List<Movie> moviesList)
         {
-            Console.WriteLine($"There are {moviesList.Count} total:");
+            Console.WriteLine($"There are {moviesList.Count} movie(s) in the list:");
 
             foreach (var movie in moviesList)
             {
@@ -52,9 +55,8 @@ namespace lab11_movies
             }
         }
 
-        public static void SeeAllMovies(List<Movie> moviesList, string category)
+        public static void DisplayAllMovies(List<Movie> moviesList, string category)
         {
-
             foreach (var movie in moviesList)
             {
                 if (movie.Category.Equals(category, StringComparison.OrdinalIgnoreCase))
@@ -62,14 +64,28 @@ namespace lab11_movies
                     Console.WriteLine(movie.Title);
                 }
             }
+
         }
 
-        public static void SeeAllMovieCategories(HashSet<string> categoryList)
+        public static void DisplayAllCategories(List<Movie> movieList, HashSet<string> categoryList)
         {
+
+            UpdateMoviesCategoriesList(movieList, categoryList);
+            Console.WriteLine("Here is the list of categories:");
+
             foreach (var category in categoryList)
             {
                 Console.WriteLine(category);
             }
+
+        }
+
+        public static void UpdateMoviesCategoriesList(List<Movie> movieList, HashSet<string> categoriesList)
+        {
+            foreach (var movie in movieList)
+            {
+                categoriesList.Add(movie.Category);
+            }       
         }
     }
 }
