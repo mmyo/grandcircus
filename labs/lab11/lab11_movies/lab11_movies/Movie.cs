@@ -6,9 +6,9 @@ namespace lab11_movies
 {
     public class Movie
     {
-        private string _title;
+        //private string _title;
 
-        private string _category;
+        //private string _category;
 
         public Movie(string title, string category)
         {
