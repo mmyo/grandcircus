@@ -4,7 +4,7 @@ using System.Text;
 
 namespace lab11_movies
 {
-    public abstract class Menu
+    public class Menu
     {
         public static Enum DisplayMainMenu()
         {
