@@ -16,7 +16,7 @@ namespace lab11_movies
             Console.WriteLine("4 - See all categories");
             Console.WriteLine("5 - Add movie");
             Console.WriteLine("6 - Exit");
-            Console.Write("Enter a number: ");
+            Console.Write("Enter a number 1-6: ");
 
             if (Enum.TryParse<MenuEnums>(Console.ReadLine(), out var userSelection))
             {
@@ -62,7 +62,7 @@ namespace lab11_movies
             }
         }
 
-        public static void DisplayAllMovies(List<Movie> moviesList, bool YearAscending)
+        public static void DisplayAllMovies(List<Movie> moviesList, bool OrderByYearAscending)
         {
 
             Console.WriteLine($"There are {moviesList.Count} movie(s) in the list (oldest to newest):\n");
@@ -77,36 +77,32 @@ namespace lab11_movies
         {
             Console.WriteLine(); //just formatting
 
+            bool moviesFound = false;
+
             foreach (var movie in moviesList)
             {
                 if (movie.Category.Equals(category, StringComparison.OrdinalIgnoreCase))
                 {
                     Console.WriteLine($"{movie.Title} ({movie.Year}, {movie.Category})");
+                    moviesFound = true;
                 }
             }
 
+            if (moviesFound == false)
+            {
+                Console.WriteLine($"No movies found with {category} category.");
+            }
         }
 
-        public static void DisplayAllCategories(List<Movie> movieList, HashSet<string> categoryList)
+        public static void DisplayAllCategories(List<string> categoryList)
         {
-
-            UpdateMoviesCategoriesList(movieList, categoryList);
-
             Console.WriteLine("Here is the list of categories:");
-
             foreach (var category in categoryList)
             {
                 Console.WriteLine(category);
             }
-
+            Console.WriteLine();
         }
 
-        public static void UpdateMoviesCategoriesList(List<Movie> movieList, HashSet<string> categoriesList)
-        {
-            foreach (var movie in movieList)
-            {
-                categoriesList.Add(movie.Category);
-            }          
-        }
     }
 }

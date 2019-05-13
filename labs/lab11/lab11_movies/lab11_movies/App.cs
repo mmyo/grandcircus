@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace lab11_movies
 {
@@ -9,13 +9,12 @@ namespace lab11_movies
         public static void Run()
         {
             var movieList = InitializeMovieList();
-            var categoriesList = InitializeCategoriesList(movieList);
+            
             var quitApp = false;
 
             do
             {
                 Console.Clear();
-
                 switch (Menu.DisplayMainMenu())
                 {
                     case MenuEnums.DisplayAllMovies:
@@ -24,12 +23,12 @@ namespace lab11_movies
                         break;
                     case MenuEnums.SearchMoviesByCategory:
                         Console.WriteLine();
-                        Menu.DisplayAllCategories(movieList, categoriesList);
+                        Menu.DisplayAllCategories(CreateUniqueCategoryList(movieList));
                         Menu.SearchMoviesByCategory(movieList, Menu.ChooseMovieCategoryMenu());
                         break;
                     case MenuEnums.DisplayAllCategories: 
                         Console.WriteLine();
-                        Menu.DisplayAllCategories(movieList, categoriesList);
+                        Menu.DisplayAllCategories(CreateUniqueCategoryList(movieList));
                         break;
                     case MenuEnums.AddMovie: 
                         Console.WriteLine();
@@ -47,7 +46,9 @@ namespace lab11_movies
                         Console.WriteLine("\nDid not understand. Try Again.");
                         break;
                 }
-                Console.ReadLine();
+                Console.WriteLine("\n... press any key to continue ...");
+                Console.ReadKey();
+
             } while (quitApp.Equals(false));       
         }
 
@@ -74,14 +75,15 @@ namespace lab11_movies
             return movieList;
         }
 
-        public static HashSet<string> InitializeCategoriesList(List<Movie> movieList)
+        public static List<string> CreateUniqueCategoryList(List<Movie> movieList)
         {
             HashSet<string> categoriesList = new HashSet<string>();
+            foreach (var movie in movieList)
+            {
+                categoriesList.Add(movie.Category);
+            }
 
-            Menu.UpdateMoviesCategoriesList(movieList, categoriesList);
-
-            return categoriesList;
-
+            return categoriesList.ToList();
         }
     }
 }
