@@ -16,9 +16,18 @@ namespace lab11_movies
             Category = category;
         }
 
+        public Movie(string title, string category, int year)
+        {
+            Title = title;
+            Category = category;
+            Year = year;
+        }
+
         public string Title { get; set; }
 
         public string Category { get; set; }
+
+        public int Year { get; set; }
 
     }
 }

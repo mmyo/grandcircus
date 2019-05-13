@@ -25,7 +25,7 @@ namespace lab11_movies
                     case MenuEnums.SearchMoviesByCategory:
                         Console.WriteLine();
                         Menu.DisplayAllCategories(movieList, categoriesList);
-                        Menu.DisplayAllMovies(movieList, Menu.ChooseMovieCategoryMenu());
+                        Menu.SearchMoviesByCategory(movieList, Menu.ChooseMovieCategoryMenu());
                         break;
                     case MenuEnums.DisplayAllCategories: 
                         Console.WriteLine();
@@ -51,14 +51,21 @@ namespace lab11_movies
         {
             List<Movie> movieList = new List<Movie>();
 
-            movieList.Add(new Movie("Jaws", "Drama"));
-            movieList.Add(new Movie("It", "Horror"));
-            movieList.Add(new Movie("Toy Story", "Animated"));
-            movieList.Add(new Movie("Spider-Man: Into The Spiderverse", "Animated"));
-            movieList.Add(new Movie("Iron Man", "Scifi"));
-            movieList.Add(new Movie("Godfather", "Drama"));
-            movieList.Add(new Movie("Carrie", "Horror"));
-            movieList.Add(new Movie("Titanic", "Drama"));
+            movieList.Add(new Movie("Jaws", "Drama", 1975));
+            movieList.Add(new Movie("It", "Horror", 1990));
+            movieList.Add(new Movie("Toy Story", "Animated", 1995));
+            movieList.Add(new Movie("Spider-Man: Into The Spiderverse", "Animated", 2018));
+            movieList.Add(new Movie("Iron Man", "Scifi", 2008));
+            movieList.Add(new Movie("Godfather", "Drama", 1972));
+            movieList.Add(new Movie("Carrie", "Horror", 1976));
+            movieList.Add(new Movie("Titanic", "Drama", 1997));
+            movieList.Add(new Movie("Spirited Away", "Animated - Japanese", 2001));
+            movieList.Add(new Movie("The Avengers", "Action", 2012));
+            movieList.Add(new Movie("Jerry Macguire", "Drama", 1996));
+            movieList.Add(new Movie("Zoolander", "Comedy", 2001));
+            movieList.Add(new Movie("Avatar", "Action", 2009));
+
+            movieList.Sort((x, y) => string.Compare(x.Title, y.Title));
 
             return movieList;
         }

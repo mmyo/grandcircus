@@ -40,30 +40,36 @@ namespace lab11_movies
             Console.Write("Category: ");
             var category = Console.ReadLine();
 
-            moviesList.Add(new Movie(title, category));
+            Console.Write("Year: ");
+            int.TryParse(Console.ReadLine(), out int year);
+
+            moviesList.Add(new Movie(title, category, year));
+            moviesList.Sort((x, y) => string.Compare(x.Title, y.Title));
+
             Console.WriteLine($"Movie added");
         
         }
 
         public static void DisplayAllMovies(List<Movie> moviesList)
         {
-            moviesList.Sort((x, y) => string.Compare(x.Title, y.Title));
 
-            Console.WriteLine($"There are {moviesList.Count} movie(s) in the list:");
+            Console.WriteLine($"There are {moviesList.Count} movie(s) in the list:\n");
 
             foreach (var movie in moviesList)
             {
-                Console.WriteLine(movie.Title);
+                Console.WriteLine($"{movie.Title} ({movie.Year}, {movie.Category})");
             }
         }
 
-        public static void DisplayAllMovies(List<Movie> moviesList, string category)
+        public static void SearchMoviesByCategory(List<Movie> moviesList, string category)
         {
+            Console.WriteLine(); //just formatting
+
             foreach (var movie in moviesList)
             {
                 if (movie.Category.Equals(category, StringComparison.OrdinalIgnoreCase))
                 {
-                    Console.WriteLine(movie.Title);
+                    Console.WriteLine($"{movie.Title} ({movie.Year}, {movie.Category})");
                 }
             }
 
