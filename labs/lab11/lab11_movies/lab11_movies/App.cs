@@ -39,6 +39,10 @@ namespace lab11_movies
                         quitApp = true;
                         Console.WriteLine("\nBye");
                         break;
+                    case MenuEnums.DisplayAllMoviesAscendingByYear:
+                        Console.WriteLine();
+                        Menu.DisplayAllMovies(movieList, true);
+                        break;
                     default:
                         Console.WriteLine("\nDid not understand. Try Again.");
                         break;

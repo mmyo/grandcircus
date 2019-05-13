@@ -7,9 +7,10 @@ namespace lab11_movies
     public enum MenuEnums
     {
         DisplayAllMovies = 1,
-        SearchMoviesByCategory = 2,
-        DisplayAllCategories = 3,
-        AddMovie = 4,
-        Exit = 5
+        SearchMoviesByCategory = 3,
+        DisplayAllCategories = 4,
+        AddMovie = 5,
+        Exit = 6,
+        DisplayAllMoviesAscendingByYear=2 
     }
 }
