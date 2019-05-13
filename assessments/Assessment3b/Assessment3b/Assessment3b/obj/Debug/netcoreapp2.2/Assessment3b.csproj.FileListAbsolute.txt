@@ -1,0 +1,11 @@
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment3b\Assessment3b\Assessment3b\bin\Debug\netcoreapp2.2\Assessment3b.deps.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment3b\Assessment3b\Assessment3b\bin\Debug\netcoreapp2.2\Assessment3b.runtimeconfig.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment3b\Assessment3b\Assessment3b\bin\Debug\netcoreapp2.2\Assessment3b.runtimeconfig.dev.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment3b\Assessment3b\Assessment3b\bin\Debug\netcoreapp2.2\Assessment3b.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment3b\Assessment3b\Assessment3b\bin\Debug\netcoreapp2.2\Assessment3b.pdb
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment3b\Assessment3b\Assessment3b\obj\Debug\netcoreapp2.2\Assessment3b.csprojAssemblyReference.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment3b\Assessment3b\Assessment3b\obj\Debug\netcoreapp2.2\Assessment3b.csproj.CoreCompileInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment3b\Assessment3b\Assessment3b\obj\Debug\netcoreapp2.2\Assessment3b.AssemblyInfoInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment3b\Assessment3b\Assessment3b\obj\Debug\netcoreapp2.2\Assessment3b.AssemblyInfo.cs
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment3b\Assessment3b\Assessment3b\obj\Debug\netcoreapp2.2\Assessment3b.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment3b\Assessment3b\Assessment3b\obj\Debug\netcoreapp2.2\Assessment3b.pdb
