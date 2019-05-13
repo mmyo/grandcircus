@@ -12,9 +12,6 @@ namespace classnotes0509
 
             //var move = int.Parse(response);
 
-
-
-
             var move = Enum.Parse<Move>(response);
 
             Turn(move);

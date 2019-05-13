@@ -47,6 +47,8 @@ namespace lab11_movies
 
         public static void DisplayAllMovies(List<Movie> moviesList)
         {
+            moviesList.Sort((x, y) => string.Compare(x.Title, y.Title));
+
             Console.WriteLine($"There are {moviesList.Count} movie(s) in the list:");
 
             foreach (var movie in moviesList)
@@ -67,10 +69,12 @@ namespace lab11_movies
 
         }
 
+
         public static void DisplayAllCategories(List<Movie> movieList, HashSet<string> categoryList)
         {
 
             UpdateMoviesCategoriesList(movieList, categoryList);
+
             Console.WriteLine("Here is the list of categories:");
 
             foreach (var category in categoryList)
@@ -85,7 +89,7 @@ namespace lab11_movies
             foreach (var movie in movieList)
             {
                 categoriesList.Add(movie.Category);
-            }       
+            }          
         }
     }
 }
