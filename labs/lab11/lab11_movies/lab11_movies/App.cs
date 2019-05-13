@@ -54,21 +54,22 @@ namespace lab11_movies
 
         public static List<Movie> InitializeMovieList()
         {
-            List<Movie> movieList = new List<Movie>();
-
-            movieList.Add(new Movie("Jaws", "Drama", 1975));
-            movieList.Add(new Movie("It", "Horror", 1990));
-            movieList.Add(new Movie("Toy Story", "Animated", 1995));
-            movieList.Add(new Movie("Spider-Man: Into The Spiderverse", "Animated", 2018));
-            movieList.Add(new Movie("Iron Man", "Scifi", 2008));
-            movieList.Add(new Movie("Godfather", "Drama", 1972));
-            movieList.Add(new Movie("Carrie", "Horror", 1976));
-            movieList.Add(new Movie("Titanic", "Drama", 1997));
-            movieList.Add(new Movie("Spirited Away", "Animated - Japanese", 2001));
-            movieList.Add(new Movie("The Avengers", "Action", 2012));
-            movieList.Add(new Movie("Jerry Macguire", "Drama", 1996));
-            movieList.Add(new Movie("Zoolander", "Comedy", 2001));
-            movieList.Add(new Movie("Avatar", "Action", 2009));
+            List<Movie> movieList = new List<Movie>
+            {
+                new Movie("Jaws", "Drama", 1975),
+                new Movie("It", "Horror", 1990),
+                new Movie("Toy Story", "Animated", 1995),
+                new Movie("Spider-Man: Into The Spiderverse", "Animated", 2018),
+                new Movie("Iron Man", "Scifi", 2008),
+                new Movie("Godfather", "Drama", 1972),
+                new Movie("Carrie", "Horror", 1976),
+                new Movie("Titanic", "Drama", 1997),
+                new Movie("Spirited Away", "Animated", 2001),
+                new Movie("The Avengers", "Action", 2012),
+                new Movie("Jerry Macguire", "Drama", 1996),
+                new Movie("Zoolander", "Comedy", 2001),
+                new Movie("Avatar", "Action", 2009)
+            };
 
             return movieList;
         }
