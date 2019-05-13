@@ -70,8 +70,6 @@ namespace lab11_movies
             movieList.Add(new Movie("Zoolander", "Comedy", 2001));
             movieList.Add(new Movie("Avatar", "Action", 2009));
 
-            movieList.Sort((x, y) => string.Compare(x.Title, y.Title));
-
             return movieList;
         }
 

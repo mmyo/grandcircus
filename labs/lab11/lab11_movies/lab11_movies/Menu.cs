@@ -45,6 +45,8 @@ namespace lab11_movies
 
         public static void DisplayAllMovies(List<Movie> moviesList)
         {
+            moviesList.Sort((x, y) => string.Compare(x.Title, y.Title));
+
             Console.WriteLine($"There are {moviesList.Count} movie(s) in the list (a-z):\n");
 
             foreach (var movie in moviesList)
