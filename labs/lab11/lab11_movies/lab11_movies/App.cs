@@ -24,7 +24,7 @@ namespace lab11_movies
                     case MenuEnums.SearchMoviesByCategory:
                         Console.WriteLine();
                         Menu.DisplayAllCategories(CreateUniqueCategoryList(movieList));
-                        Menu.SearchMoviesByCategory(movieList, Menu.ChooseMovieCategoryMenu());
+                        Menu.SearchMoviesByCategory(movieList);
                         break;
                     case MenuEnums.DisplayAllCategories: 
                         Console.WriteLine();
@@ -77,7 +77,8 @@ namespace lab11_movies
 
         public static List<string> CreateUniqueCategoryList(List<Movie> movieList)
         {
-            HashSet<string> categoriesList = new HashSet<string>();
+            HashSet<string> categoriesList = new HashSet<string>(); 
+
             foreach (var movie in movieList)
             {
                 categoriesList.Add(movie.Category);

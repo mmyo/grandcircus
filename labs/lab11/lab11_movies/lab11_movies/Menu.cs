@@ -18,19 +18,11 @@ namespace lab11_movies
             Console.WriteLine("6 - Exit");
             Console.Write("Enter a number 1-6: ");
 
-            if (Enum.TryParse<MenuEnums>(Console.ReadLine(), out var userSelection))
+            if (Enum.TryParse<MenuEnums>(Console.ReadLine(), out var userMenuSelection))
             {
-                return userSelection;
+                return userMenuSelection;
             }
             return null;
-        }
-
-        public static string ChooseMovieCategoryMenu()
-        {
-            Console.Write("Which movie category: ");
-
-            return Console.ReadLine();
-
         }
 
         public static void AddMovieMenu(List<Movie> moviesList)
@@ -53,7 +45,6 @@ namespace lab11_movies
 
         public static void DisplayAllMovies(List<Movie> moviesList)
         {
-
             Console.WriteLine($"There are {moviesList.Count} movie(s) in the list (a-z):\n");
 
             foreach (var movie in moviesList)
@@ -73,15 +64,15 @@ namespace lab11_movies
             }
         }
 
-        public static void SearchMoviesByCategory(List<Movie> moviesList, string category)
+        public static void SearchMoviesByCategory(List<Movie> moviesList)
         {
-            Console.WriteLine(); //just formatting
-
-            bool moviesFound = false;
+            bool moviesFound = false;    
+            Console.Write("Which movie category: ");
+            var userSelectedCategory = Console.ReadLine();
 
             foreach (var movie in moviesList)
             {
-                if (movie.Category.Equals(category, StringComparison.OrdinalIgnoreCase))
+                if (movie.Category.Equals(userSelectedCategory, StringComparison.OrdinalIgnoreCase))
                 {
                     Console.WriteLine($"{movie.Title} ({movie.Year}, {movie.Category})");
                     moviesFound = true;
@@ -90,13 +81,15 @@ namespace lab11_movies
 
             if (moviesFound == false)
             {
-                Console.WriteLine($"No movies found with {category} category.");
+                Console.WriteLine($"No movies found with {userSelectedCategory} category.");
             }
         }
 
         public static void DisplayAllCategories(List<string> categoryList)
         {
-            Console.WriteLine("Here is the list of categories:");
+            categoryList.Sort();
+
+            Console.WriteLine("Here is the list of categories (a-z):\n");
             foreach (var category in categoryList)
             {
                 Console.WriteLine(category);

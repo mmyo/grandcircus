@@ -11,12 +11,6 @@ namespace lab11_movies
 
         //private string _category;
 
-        public Movie(string title, string category)
-        {
-            Title = title;
-            Category = category;
-        }
-
         public Movie(string title, string category, int year)
         {
             Title = title;
