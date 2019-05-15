@@ -6,6 +6,21 @@ namespace lab13_roshambo
 {
     public class Player1Rock : Player
     {
+        //Roshambo = RoshamboEnum.Rock;
+        //public new Enum Roshambo
+        //{
+        //    get
+        //    {
+        //        return Roshambo;
+        //    }
+        //    set
+        //    {
+        //        value = RoshamboEnum.Rock;
+        //    }
+        //}
+
+        //public Enum Roshambo { get; set; } = RoshamboEnum.Rock;
+
 
         public override Enum GenerateRoshambo()
         {

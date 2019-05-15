@@ -6,6 +6,8 @@ namespace lab13_roshambo
 {
     public class Player2Random : Player
     {
+        //public Enum Roshambo { get; set; }
+
         public override Enum GenerateRoshambo()
         {
             Random random = new Random();
