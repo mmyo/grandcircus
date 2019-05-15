@@ -6,7 +6,35 @@ namespace lab13_roshambo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            Player1Rock player1 = new Player1Rock();
+
+            Player2Random player2 = new Player2Random();
+
+            Console.Write($"Player1: {player1.Roshambo=RoshamboEnum.Rock}, Player2: {player2.Roshambo=RoshamboEnum.Scissors} ... ");
+            RoshamboApp.EvaluateWinner(player1, player2);
+
+            Console.Write($"Player1: {player1.Roshambo = RoshamboEnum.Paper}, Player2: {player2.Roshambo = RoshamboEnum.Rock} ... ");
+            RoshamboApp.EvaluateWinner(player1, player2);
+
+            Console.Write($"Player1: {player1.Roshambo = RoshamboEnum.Rock}, Player2: {player2.Roshambo = RoshamboEnum.Paper} ... ");
+            RoshamboApp.EvaluateWinner(player1, player2);
+
+            Console.Write($"Player1: {player1.Roshambo = RoshamboEnum.Scissors}, Player2: {player2.Roshambo = RoshamboEnum.Rock} ... ");
+            RoshamboApp.EvaluateWinner(player1, player2);
+
+            Console.Write($"Player1: {player1.Roshambo = RoshamboEnum.Rock}, Player2: {player2.Roshambo = RoshamboEnum.Rock} ... ");
+            RoshamboApp.EvaluateWinner(player1, player2);
+
+            Console.Write($"Player1: {player1.Roshambo = RoshamboEnum.Paper}, Player2: {player2.Roshambo = RoshamboEnum.Paper} ... ");
+            RoshamboApp.EvaluateWinner(player1, player2);
+
+            Console.Write($"Player1: {player1.Roshambo = RoshamboEnum.Scissors}, Player2: {player2.Roshambo = RoshamboEnum.Scissors} ... ");
+            RoshamboApp.EvaluateWinner(player1, player2);
+
+            Console.ReadLine();
         }
+
+
     }
 }

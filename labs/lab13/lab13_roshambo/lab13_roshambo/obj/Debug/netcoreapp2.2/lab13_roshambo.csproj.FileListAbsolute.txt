@@ -1,0 +1,11 @@
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab13\lab13_roshambo\lab13_roshambo\bin\Debug\netcoreapp2.2\lab13_roshambo.deps.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab13\lab13_roshambo\lab13_roshambo\bin\Debug\netcoreapp2.2\lab13_roshambo.runtimeconfig.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab13\lab13_roshambo\lab13_roshambo\bin\Debug\netcoreapp2.2\lab13_roshambo.runtimeconfig.dev.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab13\lab13_roshambo\lab13_roshambo\bin\Debug\netcoreapp2.2\lab13_roshambo.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab13\lab13_roshambo\lab13_roshambo\bin\Debug\netcoreapp2.2\lab13_roshambo.pdb
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab13\lab13_roshambo\lab13_roshambo\obj\Debug\netcoreapp2.2\lab13_roshambo.csprojAssemblyReference.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab13\lab13_roshambo\lab13_roshambo\obj\Debug\netcoreapp2.2\lab13_roshambo.csproj.CoreCompileInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab13\lab13_roshambo\lab13_roshambo\obj\Debug\netcoreapp2.2\lab13_roshambo.AssemblyInfoInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab13\lab13_roshambo\lab13_roshambo\obj\Debug\netcoreapp2.2\lab13_roshambo.AssemblyInfo.cs
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab13\lab13_roshambo\lab13_roshambo\obj\Debug\netcoreapp2.2\lab13_roshambo.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab13\lab13_roshambo\lab13_roshambo\obj\Debug\netcoreapp2.2\lab13_roshambo.pdb
