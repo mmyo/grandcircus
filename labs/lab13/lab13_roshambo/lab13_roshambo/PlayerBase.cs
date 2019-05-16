@@ -10,6 +10,8 @@ namespace lab13_roshambo
 
         public Enum Roshambo { get; set; }
 
+        public List<Enum> ThingsICanBeat { get; set; }
+
         public int WinsCount { get; set; }
 
         public int LossesCount { get; set; }

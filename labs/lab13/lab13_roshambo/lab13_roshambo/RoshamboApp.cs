@@ -8,12 +8,16 @@ namespace lab13_roshambo
     {
         public static void Run()
         {
-            var winnersList = new List<PlayerBase>();
+            //var winnersList = new List<PlayerBase>();
             var playerUser = new PlayerUser();
             playerUser = PlayerSelectionMenu.DisplayMenu();
-            //PlayRound(playerUser);
-            //var selectedOpponent = OpponentSelectionMenu.DisplayMenu();
+            playerUser.ThingsICanBeat = DetermineWhatICanBeat(playerUser);
+
+            Console.WriteLine();
             var opponent = OpponentSelectionMenu.CreateOpponent(OpponentSelectionMenu.DisplayMenu());
+
+            Console.WriteLine();
+
             EvaluateWinner(playerUser, opponent);
     
         }
@@ -45,27 +49,67 @@ namespace lab13_roshambo
             }
         }
 
-        public static void EvaluateWinner(PlayerBase player1, PlayerBase player2)
+        public static void EvaluateWinner(PlayerBase player1, PlayerBase opponent)
         {
-            if (player1.Roshambo.Equals(player2.Roshambo))
-            {
-                Console.WriteLine($"{player1.Name}: {player1.Roshambo}, \n{player2.Name}: {player2.Roshambo}, \ntie");
-                player1.TiesCount++;
-            }
-            else if ((player1.Roshambo.Equals(RoshamboEnum.Rock) && player2.Roshambo.Equals(RoshamboEnum.Scissors)) 
-                || (player1.Roshambo.Equals(RoshamboEnum.Paper) && player2.Roshambo.Equals(RoshamboEnum.Rock))
-                || (player1.Roshambo.Equals(RoshamboEnum.Scissors) && player2.Roshambo.Equals(RoshamboEnum.Paper)))
 
+            if (player1.Roshambo.Equals(opponent.Roshambo))
             {
-                Console.WriteLine($"{player1.Name}: {player1.Roshambo}, \n{player2.Name}: {player2.Roshambo}, \n{player1.Name} wins");
+                Console.WriteLine($"You: {player1.Roshambo}");
+                Console.WriteLine($"Opponent: {opponent.Roshambo}");
+                Console.WriteLine("tie");
+                return;
+            }
+            else
+            {
+                foreach (var whatICanBeat in player1.ThingsICanBeat)
+                {
+                    if (whatICanBeat.Equals(opponent.Roshambo))
+                    {
+                        Console.WriteLine($"You: {player1.Roshambo}");
+                        Console.WriteLine($"Opponent: {opponent.Roshambo}");
+                        Console.WriteLine($"You win!");
+                        return;
+                    }
+                }
+            }          
 
-            }
-            else if ((player1.Roshambo.Equals(RoshamboEnum.Rock) && player2.Roshambo.Equals(RoshamboEnum.Paper)) 
-                || (player1.Roshambo.Equals(RoshamboEnum.Scissors) && player2.Roshambo.Equals(RoshamboEnum.Rock))
-                || (player1.Roshambo.Equals(RoshamboEnum.Paper) && player2.Roshambo.Equals(RoshamboEnum.Scissors)))
+            Console.WriteLine($"You: {player1.Roshambo}");
+            Console.WriteLine($"Opponent: {opponent.Roshambo}");
+            Console.WriteLine($"Computer wins");
+
+        }
+
+        public static List<Enum> DetermineWhatICanBeat(PlayerBase player)
+        {
+            var iCanBeatTheseList = new List<Enum>();
+
+            switch (player.Roshambo)
             {
-                Console.WriteLine($"{player1.Name}: {player1.Roshambo}, \n{player2.Name}: {player2.Roshambo}, \n{player2.Name} wins");
+                case RoshamboEnum.Rock:
+                    iCanBeatTheseList.Add(RoshamboEnum.Scissors);
+                    iCanBeatTheseList.Add(RoshamboEnum.Lizard);    
+                    break;
+                case RoshamboEnum.Paper:
+                    iCanBeatTheseList.Add(RoshamboEnum.Rock);
+                    iCanBeatTheseList.Add(RoshamboEnum.Spock);
+                    break;
+                case RoshamboEnum.Scissors:
+                    iCanBeatTheseList.Add(RoshamboEnum.Paper);
+                    iCanBeatTheseList.Add(RoshamboEnum.Lizard);
+                    break;
+                case RoshamboEnum.Lizard:
+                    iCanBeatTheseList.Add(RoshamboEnum.Spock);
+                    iCanBeatTheseList.Add(RoshamboEnum.Paper);
+                    break;
+                case RoshamboEnum.Spock:
+                    iCanBeatTheseList.Add(RoshamboEnum.Scissors);
+                    iCanBeatTheseList.Add(RoshamboEnum.Rock);
+                    break;
+                default:
+                    break;
             }
+
+            return iCanBeatTheseList;
         }
 
         public static void Test()

@@ -11,7 +11,7 @@ namespace lab13_roshambo
         public Enum GenerateRoshambo()
         {
             Random random = new Random();
-            int randomNum = random.Next(1, 3);
+            int randomNum = random.Next(1, 6);
             Roshambo = (RoshamboEnum)randomNum;
             return Roshambo;
         }

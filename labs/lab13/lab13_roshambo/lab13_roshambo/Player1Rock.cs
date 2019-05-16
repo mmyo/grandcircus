@@ -12,5 +12,6 @@ namespace lab13_roshambo
             Roshambo = RoshamboEnum.Rock;
             return Roshambo;
         }
+
     }
 }

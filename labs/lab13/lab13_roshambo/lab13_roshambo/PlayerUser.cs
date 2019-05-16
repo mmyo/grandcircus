@@ -9,6 +9,7 @@ namespace lab13_roshambo
         public Enum GenerateRoshambo()
         {
             return null;
+            //call method to select roshambo
         }
     }
 }
