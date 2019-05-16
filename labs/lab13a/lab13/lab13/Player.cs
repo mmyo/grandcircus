@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace lab13_roshambo
+namespace lab13
 {
     public abstract class Player
     {
@@ -11,6 +11,5 @@ namespace lab13_roshambo
         public Enum Roshambo { get; set; }
 
         public abstract Enum GenerateRoshambo();
-
     }
 }

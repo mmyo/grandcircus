@@ -4,11 +4,11 @@ using System.Text;
 
 namespace lab13_roshambo
 {
-    public class Player2Random : Player
+    public class Player2Random : PlayerBase, IPlayer
     {
         //public Enum Roshambo { get; set; }
 
-        public override Enum GenerateRoshambo()
+        public Enum GenerateRoshambo()
         {
             Random random = new Random();
             int randomNum = random.Next(1, 3);

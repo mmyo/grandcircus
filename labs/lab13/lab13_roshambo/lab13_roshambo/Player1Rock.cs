@@ -4,25 +4,10 @@ using System.Text;
 
 namespace lab13_roshambo
 {
-    public class Player1Rock : Player
+    public class Player1Rock : PlayerBase, IPlayer
     {
-        //Roshambo = RoshamboEnum.Rock;
-        //public new Enum Roshambo
-        //{
-        //    get
-        //    {
-        //        return Roshambo;
-        //    }
-        //    set
-        //    {
-        //        value = RoshamboEnum.Rock;
-        //    }
-        //}
 
-        //public Enum Roshambo { get; set; } = RoshamboEnum.Rock;
-
-
-        public override Enum GenerateRoshambo()
+        public Enum GenerateRoshambo()
         {
             Roshambo = RoshamboEnum.Rock;
             return Roshambo;
