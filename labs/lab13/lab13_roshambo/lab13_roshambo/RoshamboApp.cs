@@ -112,6 +112,17 @@ namespace lab13_roshambo
             return iCanBeatTheseList;
         }
 
+        public Dictionary<Enum, Enum> InitializeRankings()
+        {
+            var rankingsDictionary = new Dictionary<Enum, Enum>();
+
+            //rankingsDictionary.Add()
+
+
+            return rankingsDictionary;
+        }
+
+
         public static void Test()
         {
             Player1Rock player1 = new Player1Rock();
