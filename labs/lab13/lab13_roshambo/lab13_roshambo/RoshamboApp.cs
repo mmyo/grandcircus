@@ -10,10 +10,12 @@ namespace lab13_roshambo
         {
             //var winnersList = new List<PlayerBase>();
             var playerUser = new PlayerUser();
+
             playerUser = PlayerSelectionMenu.DisplayMenu();
             playerUser.ThingsICanBeat = DetermineWhatICanBeat(playerUser);
 
             Console.WriteLine();
+
             var opponent = OpponentSelectionMenu.CreateOpponent(OpponentSelectionMenu.DisplayMenu());
 
             Console.WriteLine();
@@ -109,19 +111,42 @@ namespace lab13_roshambo
                     break;
             }
 
+
             return iCanBeatTheseList;
         }
+
+        //public static List<Enum> DetermineWhatUserCanBeat(PlayerBase user, Dictionary<Enum, Enum> rankingDictionary)
+        //{
+        //    var userCanBeatTheseList = new List<Enum>();
+
+        //    foreach (var ranking in rankingDictionary)
+        //    {
+        //        if (true)
+        //        {
+        //            userCanBeatTheseList.Add(ranking);
+        //        }
+        //    }
+
+        //    return userCanBeatTheseList;
+        //}
 
         public Dictionary<Enum, Enum> InitializeRankings()
         {
             var rankingsDictionary = new Dictionary<Enum, Enum>();
 
-            //rankingsDictionary.Add()
-
+            rankingsDictionary.Add(RoshamboEnum.Rock, RoshamboEnum.Scissors);
+            rankingsDictionary.Add(RoshamboEnum.Rock, RoshamboEnum.Lizard);
+            rankingsDictionary.Add(RoshamboEnum.Paper, RoshamboEnum.Rock);
+            rankingsDictionary.Add(RoshamboEnum.Paper, RoshamboEnum.Spock);
+            rankingsDictionary.Add(RoshamboEnum.Scissors, RoshamboEnum.Paper);
+            rankingsDictionary.Add(RoshamboEnum.Scissors, RoshamboEnum.Lizard);
+            rankingsDictionary.Add(RoshamboEnum.Lizard, RoshamboEnum.Spock);
+            rankingsDictionary.Add(RoshamboEnum.Lizard, RoshamboEnum.Paper);
+            rankingsDictionary.Add(RoshamboEnum.Spock, RoshamboEnum.Scissors);
+            rankingsDictionary.Add(RoshamboEnum.Spock, RoshamboEnum.Rock);
 
             return rankingsDictionary;
         }
-
 
         public static void Test()
         {
