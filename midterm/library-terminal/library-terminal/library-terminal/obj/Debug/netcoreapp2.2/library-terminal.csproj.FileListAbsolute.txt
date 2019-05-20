@@ -1,0 +1,11 @@
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\library-terminal\library-terminal\library-terminal\bin\Debug\netcoreapp2.2\library-terminal.deps.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\library-terminal\library-terminal\library-terminal\bin\Debug\netcoreapp2.2\library-terminal.runtimeconfig.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\library-terminal\library-terminal\library-terminal\bin\Debug\netcoreapp2.2\library-terminal.runtimeconfig.dev.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\library-terminal\library-terminal\library-terminal\bin\Debug\netcoreapp2.2\library-terminal.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\library-terminal\library-terminal\library-terminal\bin\Debug\netcoreapp2.2\library-terminal.pdb
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\library-terminal\library-terminal\library-terminal\obj\Debug\netcoreapp2.2\library-terminal.csprojAssemblyReference.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\library-terminal\library-terminal\library-terminal\obj\Debug\netcoreapp2.2\library-terminal.csproj.CoreCompileInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\library-terminal\library-terminal\library-terminal\obj\Debug\netcoreapp2.2\library-terminal.AssemblyInfoInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\library-terminal\library-terminal\library-terminal\obj\Debug\netcoreapp2.2\library-terminal.AssemblyInfo.cs
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\library-terminal\library-terminal\library-terminal\obj\Debug\netcoreapp2.2\library-terminal.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\library-terminal\library-terminal\library-terminal\obj\Debug\netcoreapp2.2\library-terminal.pdb
