@@ -8,7 +8,7 @@ namespace library_terminal
     {
         public static Enum DisplayMainMenu()
         {
-            Console.WriteLine("");
+            Console.WriteLine("1 - Display All Books");
             Console.WriteLine("");
 
             if (Enum.TryParse<MenuEnum>(Console.ReadLine(), out var userMenuSelection))

@@ -39,6 +39,8 @@ namespace library_terminal
                 var book = new Book();
                 book.Title = bookDetail[0];
                 book.Author = bookDetail[1];
+                book.Status = Enum.Parse<BookStatus>(bookDetail[2]);
+                book.DueDate = DateTime.Today;
                 //book.Status = Enum.Parse(BookStatus, bookDetail[2]);
                 inventoryList.Add(book);
             }
