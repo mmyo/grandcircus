@@ -8,12 +8,10 @@ namespace minesweeper
     {
         public List<Cell> ListOfCells { get; set; }
 
-
         public Board()
         {
             ListOfCells = new List<Cell>();
         }
-
        
     }
 
