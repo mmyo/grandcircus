@@ -1,0 +1,11 @@
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\minesweeper\minesweeper\bin\Debug\netcoreapp2.2\minesweeper.deps.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\minesweeper\minesweeper\bin\Debug\netcoreapp2.2\minesweeper.runtimeconfig.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\minesweeper\minesweeper\bin\Debug\netcoreapp2.2\minesweeper.runtimeconfig.dev.json
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\minesweeper\minesweeper\bin\Debug\netcoreapp2.2\minesweeper.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\minesweeper\minesweeper\bin\Debug\netcoreapp2.2\minesweeper.pdb
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\minesweeper\minesweeper\obj\Debug\netcoreapp2.2\minesweeper.csprojAssemblyReference.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\minesweeper\minesweeper\obj\Debug\netcoreapp2.2\minesweeper.csproj.CoreCompileInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\minesweeper\minesweeper\obj\Debug\netcoreapp2.2\minesweeper.AssemblyInfoInputs.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\minesweeper\minesweeper\obj\Debug\netcoreapp2.2\minesweeper.AssemblyInfo.cs
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\minesweeper\minesweeper\obj\Debug\netcoreapp2.2\minesweeper.dll
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\midterm\minesweeper\minesweeper\obj\Debug\netcoreapp2.2\minesweeper.pdb
