@@ -28,6 +28,8 @@ namespace minesweeper
                 }
             }
 
+            DrawBoard(board);
+
         }
 
         public static void GenerateGameBoard(Board board, int boardMax)
@@ -99,7 +101,18 @@ namespace minesweeper
 
         public static void DrawBoard(Cell[,] board)
         {
+            int rowLength = board.GetLength(0);
+            int colLength = board.GetLength(1);
 
+            for (int i = 0; i < rowLength; i++)
+            {
+                for (int j = 0; j < colLength; j++)
+                {
+                    Console.Write($"X ");
+                }
+                Console.Write(Environment.NewLine);
+            }
+            Console.ReadLine();
         }
 
   
