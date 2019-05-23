@@ -149,8 +149,8 @@ namespace minesweeper
                     }
                     else if (currentCell.UserGuessed == true && currentCell.IsMine == true)
                     {
-                        Console.BackgroundColor = ConsoleColor.Gray;
-                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.White;
                         Console.Write(" M ");
                         Console.ResetColor();
                     }
