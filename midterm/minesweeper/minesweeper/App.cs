@@ -11,24 +11,47 @@ namespace minesweeper
             //var gameBoard = new Board();
             //GenerateGameBoard(gameBoard, 4);
 
-            int boardMax = 4;
-            var board = GenerateGameBoardArray(boardMax);
+            int boardMax = 10;
+            var board = GenerateGameBoard(boardMax);
 
             //manually generate some mines
+            var listOfMines = new List<Cell>();
+            //randomly generate mine coordinates.at board[x,y] set Cell.IsMine=true 
+            board[0, 0].IsMine = true; 
+            board[1, 1].IsMine = true;
+            board[2, 2].IsMine = true;
+            board[3, 3].IsMine = true;
+            board[5, 5].IsMine = true;
+
+
+            //calculate proximity to mines
+            GenerateProximityCounter(board, board[0, 0]);
             GenerateProximityCounter(board, board[1, 1]);
-            GenerateProximityCounter(board, board[2, 3]);
-            GenerateProximityCounter(board, board[1, 0]);
+            GenerateProximityCounter(board, board[2, 2]);
+            GenerateProximityCounter(board, board[3, 3]);
+            GenerateProximityCounter(board, board[5, 5]);
 
+            DrawBoard(board, false, true);
 
-            for (int x = 0; x < boardMax; x++)
+            bool keepGuessing = true;
+            do
             {
-                for (int y = 0; y < boardMax; y++)
-                {
-                    Console.WriteLine($"{board[x,y].xCoordinate}, {board[x, y].yCoordinate}, {board[x,y].isMine}, {board[x, y].proximityCounter}");
-                }
-            }
+                Console.WriteLine("Guess: ");
+                Console.Write("X: ");
+                var userX = int.Parse(Console.ReadLine());
+                Console.Write("Y: ");
+                var userY = int.Parse(Console.ReadLine());
 
-            DrawBoard(board);
+                GuessCell(board, userX, userY);
+
+                Console.Write("\nGuess again? y/n: ");
+                if (Console.ReadLine() == "n")
+                {
+                    keepGuessing = false;
+                }
+
+            } while (keepGuessing == true);
+
 
         }
 
@@ -40,15 +63,15 @@ namespace minesweeper
 
                 for (int y = 0; y < boardMax; y++)
                 {
-                    var cell = new Cell() { xCoordinate = x };
-                    cell.yCoordinate = y;
+                    var cell = new Cell() { XCoordinate = x };
+                    cell.YCoordinate = y;
                     board.ListOfCells.Add(cell);
                 }
 
             }
         }
 
-        public static Cell[,] GenerateGameBoardArray(int boardMax)
+        public static Cell[,] GenerateGameBoard(int boardMax)
         {
             Cell[,] gameBoardArray = new Cell[boardMax, boardMax];
 
@@ -57,8 +80,8 @@ namespace minesweeper
 
                 for (int y = 0; y < boardMax; y++)
                 {
-                    var cell = new Cell() { xCoordinate = x };
-                    cell.yCoordinate = y;
+                    var cell = new Cell() { XCoordinate = x };
+                    cell.YCoordinate = y;
                     gameBoardArray[x, y] = cell;
                 }
 
@@ -71,9 +94,9 @@ namespace minesweeper
         {
             foreach (var cell in board)
             {
-                if (cell.xCoordinate == 1 && cell.yCoordinate == 1)
+                if (cell.XCoordinate == 1 && cell.YCoordinate == 1)
                 {
-                    cell.isMine = true;
+                    cell.IsMine = true;
                 }
             }
         }
@@ -81,41 +104,85 @@ namespace minesweeper
         public static void GenerateProximityCounter(Cell[,] board, Cell mine)
         {
 
-            for (int x = mine.xCoordinate -1 ; x <= mine.xCoordinate + 1 ; x++)
+            for (int x = mine.XCoordinate -1 ; x <= mine.XCoordinate + 1 ; x++)
             {
-                for (int y = mine.yCoordinate -1 ; y <= mine.yCoordinate + 1; y++)
+                for (int y = mine.YCoordinate -1 ; y <= mine.YCoordinate + 1; y++)
                 {
                     if (x >= 0 && y >= 0 && x < board.GetLength(0) && y < board.GetLength(1))
                     {
-                        board[x, y].proximityCounter++;
+                        board[x, y].ProximityCounter++;
 
                     }
                 }
             }
         }
 
-        public static void GuessCell(Cell[,] board)
+        public static void GuessCell(Cell[,] board, int userX, int userY)
         {
+            var cellGuessed = board[userX, userY];
+            cellGuessed.UserGuessed = true;
+            if (cellGuessed.IsMine == true)
+            {
+                Console.WriteLine("You hit a mine");
+            }
+            else
+            {
+                Console.WriteLine($"Mines nearby: {cellGuessed.ProximityCounter}");
+            }
 
         }
 
-        public static void DrawBoard(Cell[,] board)
+        public static void DrawBoard(Cell[,] board, bool listAllCoordinates, bool showAll)
         {
             int rowLength = board.GetLength(0);
             int colLength = board.GetLength(1);
 
-            for (int i = 0; i < rowLength; i++)
+            if (showAll == true)
             {
-                for (int j = 0; j < colLength; j++)
+                for (int i = rowLength - 1; i >= 0; i--)
                 {
-                    Console.Write($"X ");
+                    for (int j = 0; j < colLength; j++)
+                    {
+                        var currentCell = board[j, i];
+                        if (currentCell.IsMine == true)
+                        {
+                            Console.BackgroundColor = ConsoleColor.Gray;
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.Write(" M ");
+                            Console.ResetColor();
+                        }
+                        else if (currentCell.ProximityCounter > 0)
+                        {
+                            Console.BackgroundColor = ConsoleColor.White;
+                            Console.Write($" {currentCell.ProximityCounter} ");
+                            Console.ResetColor();
+
+                        }
+                        else
+                        {
+                            Console.BackgroundColor = ConsoleColor.White;
+                            Console.Write($"   ");
+                            Console.ResetColor();
+
+                        }
+                        //board[i,j].IsMine == true
+                    }
+                    Console.Write(Environment.NewLine);
                 }
-                Console.Write(Environment.NewLine);
             }
-            Console.ReadLine();
+
+           
+            if (listAllCoordinates.Equals(true))
+            {
+                for (int x = 0; x < board.GetLength(0); x++)
+                {
+                    for (int y = 0; y < board.GetLength(1); y++)
+                    {
+                        Console.WriteLine($"{board[x, y].XCoordinate}, {board[x, y].YCoordinate}, {board[x, y].IsMine}, {board[x, y].ProximityCounter}");
+                    }
+                }
+            }
         }
-
-  
-
+ 
     }
 }

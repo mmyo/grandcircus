@@ -6,12 +6,17 @@ namespace minesweeper
 {
     public class Cell
     {
-        public int xCoordinate { get; set; }
-        public int yCoordinate { get; set; }
-        public bool isMine { get; set; }
-        public int proximityCounter { get; set; }
-        public bool isVisible { get; set; }
-        public string overrideDiplayValue { get; set; }
-        public bool isFlagged { get; set; }
+        public int XCoordinate { get; set; }
+        public int YCoordinate { get; set; }
+        public bool IsMine { get; set; }
+        public int ProximityCounter { get; set; }
+        public bool UserGuessed { get; set; }
+        public string OverrideDisplayValue { get; set; }
+        public bool IsFlaggedByUser { get; set; }
+
+        public Cell()
+        {
+            IsMine = false;
+        }
     }
 }
