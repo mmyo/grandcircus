@@ -10,9 +10,13 @@ namespace minesweeper
         {
             
             var settings = new GameSettings();
-            var board = new Board(settings.DifficultyLevel);
-            settings.CalcBoardSizeAndNumberOfMines(settings.DifficultyLevel, board);
+            var board = new Board();
+            settings.CalcBoardSizeAndNumberOfMines(board);
             board.PopulateGameBoard();
+            //Console.WriteLine(board.BoardSize);
+            //Console.WriteLine(board.BoardArray.GetLength(0));
+            //Console.WriteLine(board.BoardArray.LongLength);
+            //Console.ReadLine();
             board.GenerateMines();
 
             bool keepGuessing = false;

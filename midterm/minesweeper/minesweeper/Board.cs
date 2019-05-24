@@ -15,31 +15,33 @@ namespace minesweeper
 
         //public Enum DifficultyLevel { get; set; }
 
-        public Board(Enum difficulty)
+        public Board()
         {          
                        
         }
 
-        public void CalcBoardSizeAndNumberOfMines(Enum difficulty)
-        {
-            switch (difficulty)
-            {
-                case DiffcultyLevel.Easy:
-                    BoardSize = 9;
-                    NumberOfMines = 10;
-                    break;
-                case DiffcultyLevel.Medium:
-                    BoardSize = 16;
-                    NumberOfMines = 40;
-                    break;
-                case DiffcultyLevel.Hard:
-                    BoardSize = 20;
-                    NumberOfMines = 99;
-                    break;
-                default:
-                    break;
-            }
-        }
+        //public void CalcBoardSizeAndNumberOfMines(Enum difficulty)
+        //{
+        //    switch (difficulty)
+        //    {
+        //        case DiffcultyLevel.Easy:
+        //            //BoardSize = 9;
+        //            //NumberOfMines = 10;
+        //            BoardSize = 4;
+        //            NumberOfMines = 10;
+        //            break;
+        //        case DiffcultyLevel.Medium:
+        //            BoardSize = 16;
+        //            NumberOfMines = 40;
+        //            break;
+        //        case DiffcultyLevel.Hard:
+        //            BoardSize = 20;
+        //            NumberOfMines = 99;
+        //            break;
+        //        default:
+        //            break;
+        //    }
+        //}
 
         public void PopulateGameBoard()
         {
@@ -65,7 +67,7 @@ namespace minesweeper
                     {
                         Console.BackgroundColor = ConsoleColor.Gray;
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write("| M ");
+                        Console.Write($"| M ");
                         Console.ResetColor();
                     }
                     else if (currentCell.ProximityCounter > 0)
@@ -88,20 +90,6 @@ namespace minesweeper
             }
         }
 
-        public void GenerateProximityCounter(Cell mine)
-        {
-            for (int x = mine.XCoordinate - 1; x <= mine.XCoordinate + 1; x++)
-            {
-                for (int y = mine.YCoordinate - 1; y <= mine.YCoordinate + 1; y++)
-                {
-                    if (x >= 0 && y >= 0 && x < BoardSize && y < BoardSize)
-                    {
-                        BoardArray[x, y].ProximityCounter++;
-                    }
-                }
-            }
-        }
-
         public void GenerateMines()
         {
             Random rand = new Random();
@@ -115,6 +103,98 @@ namespace minesweeper
 
                 GenerateProximityCounter(BoardArray[x, y]);
             }
+            //var testMine = new Cell();
+            //testMine.XCoordinate = 0;
+            //testMine.YCoordinate = 0;
+            //testMine.IsMine = true;
+            //BoardArray[testMine.XCoordinate, testMine.YCoordinate] = testMine;
+            //GenerateProximityCounter(testMine);
+
+            //var testMine2 = new Cell();
+            //testMine2.XCoordinate = 1;
+            //testMine2.YCoordinate = 0;
+            //testMine2.IsMine = true;
+            //BoardArray[testMine2.XCoordinate, testMine2.YCoordinate] = testMine2;
+            //GenerateProximityCounter(testMine2);
+
+            //var testMine3 = new Cell();
+            //testMine3.XCoordinate = 2;
+            //testMine3.YCoordinate = 0;
+            //testMine3.IsMine = true;
+            //BoardArray[testMine3.XCoordinate, testMine3.YCoordinate] = testMine3;
+            //GenerateProximityCounter(testMine3);
+
+            //var testMine4 = new Cell();
+            //testMine4.XCoordinate = 1;
+            //testMine4.YCoordinate = 2;
+            //testMine4.IsMine = true;
+            //BoardArray[testMine4.XCoordinate, testMine4.YCoordinate] = testMine4;
+            //GenerateProximityCounter(testMine4);
+
+        }
+
+        public void GenerateProximityCounter(Cell mine)
+        {
+            int[] x = new int[8];
+            int[] y = new int[8];
+
+            x[0] = mine.XCoordinate - 1;
+            y[0] = mine.YCoordinate - 1;
+
+            x[1] = mine.XCoordinate;
+            y[1] = mine.YCoordinate - 1;
+
+
+            x[2] = mine.XCoordinate + 1;
+            y[2] = mine.YCoordinate - 1;
+
+
+            x[3] = mine.XCoordinate - 1;
+            y[3] = mine.YCoordinate;
+
+
+            x[4] = mine.XCoordinate + 1;
+            y[4] = mine.YCoordinate;
+
+
+            x[5] = mine.XCoordinate - 1;
+            y[5] = mine.YCoordinate + 1;
+
+
+            x[6] = mine.XCoordinate;
+            y[6] = mine.YCoordinate + 1;
+
+
+            x[7] = mine.XCoordinate + 1;
+            y[7] = mine.YCoordinate + 1;
+
+            try
+            {
+                BoardArray[x[0], y[0]].ProximityCounter++;
+                BoardArray[x[1], y[1]].ProximityCounter++;
+                BoardArray[x[2], y[2]].ProximityCounter++;
+                BoardArray[x[3], y[3]].ProximityCounter++;
+                BoardArray[x[4], y[4]].ProximityCounter++;
+                BoardArray[x[5], y[5]].ProximityCounter++;
+                BoardArray[x[6], y[6]].ProximityCounter++;
+                BoardArray[x[7], y[7]].ProximityCounter++;
+            }
+            catch (Exception)
+            {
+                //throw;
+            }
+
+
+            //for (int x = mine.XCoordinate - 1; x <= mine.XCoordinate + 1; x++)
+            //{
+            //    for (int y = mine.YCoordinate - 1; y <= mine.YCoordinate + 1; y++)
+            //    {
+            //        if (x >= 0 && y >= 0 && x < BoardSize && y < BoardSize)
+            //        {
+            //            BoardArray[x, y].ProximityCounter++;
+            //        }
+            //    }
+            //}
         }
 
         public void DisplayBoard()

@@ -25,12 +25,14 @@ namespace minesweeper
 
         }
 
-        public void CalcBoardSizeAndNumberOfMines(Enum difficulty, Board board)
+        public void CalcBoardSizeAndNumberOfMines(Board board)
         {
-            switch (difficulty)
+            switch (DifficultyLevel)
             {
                 case DiffcultyLevel.Easy:
-                    board.BoardSize = 9;
+                    //board.BoardSize = 9;
+                    //board.NumberOfMines = 10;
+                    board.BoardSize = 5;
                     board.NumberOfMines = 10;
                     break;
                 case DiffcultyLevel.Medium:

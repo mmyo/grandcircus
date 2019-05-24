@@ -19,7 +19,6 @@ namespace minesweeper
 
             return userCoordinates;
            
-
         }
 
         public static void GuessCell(Board board, int[] userGuess)
