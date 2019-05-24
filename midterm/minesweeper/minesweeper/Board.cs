@@ -13,14 +13,11 @@ namespace minesweeper
 
         public int NumberOfMines { get; set; }
 
-        public Enum DifficultyLevel { get; set; }
+        //public Enum DifficultyLevel { get; set; }
 
         public Board(Enum difficulty)
-        {
-            CalcBoardSizeAndNumberOfMines(difficulty);
-            PopulateGameBoard();
-            GenerateMines();
-
+        {          
+                       
         }
 
         public void CalcBoardSizeAndNumberOfMines(Enum difficulty)
@@ -68,20 +65,20 @@ namespace minesweeper
                     {
                         Console.BackgroundColor = ConsoleColor.Gray;
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write(" M ");
+                        Console.Write("| M ");
                         Console.ResetColor();
                     }
                     else if (currentCell.ProximityCounter > 0)
                     {
                         Console.BackgroundColor = ConsoleColor.White;
-                        Console.Write($" {currentCell.ProximityCounter} ");
+                        Console.Write($"| {currentCell.ProximityCounter} ");
                         Console.ResetColor();
 
                     }
                     else
                     {
                         Console.BackgroundColor = ConsoleColor.White;
-                        Console.Write($"   ");
+                        Console.Write($"|   ");
                         Console.ResetColor();
 
                     }
@@ -135,28 +132,28 @@ namespace minesweeper
                     if (currentCell.UserGuessed == true && currentCell.ProximityCounter <= 0 && currentCell.IsMine == false)
                     {
 
-                        //Console.ForegroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Black;
                         //Console.BackgroundColor = ConsoleColor.Gray;
-                        Console.Write(" x ");
-                        //Console.ResetColor();
+                        Console.Write("| x ");
+                        Console.ResetColor();
                     }
                     else if (currentCell.UserGuessed == true && currentCell.ProximityCounter > 0 && currentCell.IsMine == false)
                     {
-                        //Console.BackgroundColor = ConsoleColor.Gray;
-                        Console.Write($" {currentCell.ProximityCounter} ");
-                        //Console.ResetColor();
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.Write($"| {currentCell.ProximityCounter} ");
+                        Console.ResetColor();
 
                     }
                     else if (currentCell.UserGuessed == true && currentCell.IsMine == true)
                     {
                         Console.BackgroundColor = ConsoleColor.Red;
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.Write(" M ");
+                        Console.Write("| M ");
                         Console.ResetColor();
                     }
                     else
                     {
-                        Console.Write("   ");
+                        Console.Write("|   ");
                         
                     }
                     //board[i,j].IsMine == true

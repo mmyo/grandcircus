@@ -17,6 +17,7 @@ namespace minesweeper
         public Cell()
         {
             IsMine = false;
+            UserGuessed = false;
         }
     }
 }

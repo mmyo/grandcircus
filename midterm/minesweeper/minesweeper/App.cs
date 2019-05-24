@@ -8,61 +8,39 @@ namespace minesweeper
     {
         public static void Game()
         {
+            
+            var settings = new GameSettings();
+            var board = new Board(settings.DifficultyLevel);
+            settings.CalcBoardSizeAndNumberOfMines(settings.DifficultyLevel, board);
+            board.PopulateGameBoard();
+            board.GenerateMines();
 
-            var gameBoard = new Board(SetDifficultyLevel());
-
-            bool keepGuessing = true;
+            bool keepGuessing = false;
             do
             {
+                //Display gameboard
                 Console.Clear();
-                gameBoard.DisplayEntireBoard();
+                board.DisplayEntireBoard();
                 Console.WriteLine();
-                gameBoard.DisplayBoard();
+                board.DisplayBoard();
 
-                Console.WriteLine("Guess: ");
-                Console.Write("X: ");
-                var userX = int.Parse(Console.ReadLine());
-                Console.Write("Y: ");
-                var userY = int.Parse(Console.ReadLine());
+                //User guesses
+                PlayRound.GuessCell(board, PlayRound.AskUser());
 
-                GuessCell(gameBoard, userX, userY);
+                //Redraw gameboard
+                Console.Clear();
+                board.DisplayEntireBoard();
+                Console.WriteLine();
+                board.DisplayBoard();
 
                 Console.Write("\nGuess again? y/n: ");
 
-                if (Console.ReadLine() == "n")
+                if (Console.ReadLine() == "y")
                 {
-                    keepGuessing = false;
+                    keepGuessing = true;
                 }
 
             } while (keepGuessing == true);
-
-        }
-
-        public static Enum SetDifficultyLevel()
-        {
-
-            Console.Write("Difficulty Level? (1,2,3) : ");
-
-            if (Enum.TryParse<DiffcultyLevel>(Console.ReadLine(), out var level))
-            {
-                return level;
-            }
-            return null;
-
-        }
-
-        public static void GuessCell(Board board, int userX, int userY)
-        {
-            var cellGuessed = board.BoardArray[userX, userY];
-            cellGuessed.UserGuessed = true;
-            if (cellGuessed.IsMine == true)
-            {
-                Console.WriteLine("You hit a mine");
-            }
-            else
-            {
-                Console.WriteLine($"Mines nearby: {cellGuessed.ProximityCounter}");
-            }
 
         }
  
