@@ -8,22 +8,20 @@ namespace minesweeper
     {
         public static void DisplayBoardSettings(Board board, GameSettings settings)
         {
-            Console.WriteLine($"{settings.DifficultyLevel}  |  {board.BoardArray.GetLength(0)} x {board.BoardArray.GetLength(1)}  |  {board.NumberOfMines} total mines\n");
-
+            Console.WriteLine($"{settings.DifficultyLevel}  |  {board.BoardArray.GetLength(0)} x {board.BoardArray.GetLength(1)}  |  {board.NumberOfMines} total mines");
         }
 
         public static void DisplayBoard(Board board, GameSettings settings)
         {
             Console.Clear();
+            DisplayBoardSettings(board, settings);
+
 
             if (settings.DebugMode == true)
             {
-                DisplayBoardSettings(board, settings);
                 DisplayEntireBoard(board);
                 Console.WriteLine();
             }
-
-            DisplayBoardSettings(board, settings);
 
             for (int i = board.BoardArray.GetLength(0) - 1; i >= 0; i--)
             {
@@ -54,6 +52,13 @@ namespace minesweeper
                         Console.BackgroundColor = ConsoleColor.Red;
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write("| M ");
+                        Console.ResetColor();
+                    }
+                    else if (currentCell.IsFlaggedByUser == true)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("| f ");
                         Console.ResetColor();
                     }
                     else

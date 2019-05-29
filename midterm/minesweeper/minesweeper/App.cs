@@ -6,36 +6,30 @@ namespace minesweeper
 {
     public class App
     {
+
         public static void Game()
-        {
-            
+        {          
             var settings = new GameSettings();
             var board = new Board();
             settings.CalcBoardSizeAndNumberOfMines(board);
             board.PopulateGameBoard();
             board.GenerateMines();
 
-            bool keepGuessing = false;
+            bool keepPlaying = true;
             do
             {
                 //Display gameboard
                 BoardDisplay.DisplayBoard(board, settings);
 
-                //User guesses
-                PlayRound.GuessCell(board, PlayRound.AskUser());
+                keepPlaying = PlayRound.UserMenu(board, settings);
 
-                //Redraw gameboard after guess
+                //Redraw gameboard after UserMenu selection
                 BoardDisplay.DisplayBoard(board, settings);
 
-                Console.Write("\nGuess again? y/n: ");
+            } while (keepPlaying == true);
 
-                if (Console.ReadLine() == "y")
-                {
-                    keepGuessing = true;
-                }
-
-            } while (keepGuessing == true);
-
+            Console.WriteLine("Thanks for playing!");
+            Console.ReadLine();
         }
  
     }

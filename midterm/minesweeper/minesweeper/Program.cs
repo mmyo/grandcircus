@@ -7,7 +7,6 @@ namespace minesweeper
         static void Main(string[] args)
         {
             App.Game();
-            Console.ReadLine();
         }
     }
 }
