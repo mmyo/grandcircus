@@ -13,29 +13,19 @@ namespace minesweeper
             var board = new Board();
             settings.CalcBoardSizeAndNumberOfMines(board);
             board.PopulateGameBoard();
-            //Console.WriteLine(board.BoardSize);
-            //Console.WriteLine(board.BoardArray.GetLength(0));
-            //Console.WriteLine(board.BoardArray.LongLength);
-            //Console.ReadLine();
             board.GenerateMines();
 
             bool keepGuessing = false;
             do
             {
                 //Display gameboard
-                Console.Clear();
-                board.DisplayEntireBoard();
-                Console.WriteLine();
-                board.DisplayBoard();
+                BoardDisplay.DisplayBoard(board, settings);
 
                 //User guesses
                 PlayRound.GuessCell(board, PlayRound.AskUser());
 
-                //Redraw gameboard
-                Console.Clear();
-                board.DisplayEntireBoard();
-                Console.WriteLine();
-                board.DisplayBoard();
+                //Redraw gameboard after guess
+                BoardDisplay.DisplayBoard(board, settings);
 
                 Console.Write("\nGuess again? y/n: ");
 

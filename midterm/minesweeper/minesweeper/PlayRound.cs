@@ -27,11 +27,14 @@ namespace minesweeper
             cellGuessed.UserGuessed = true;
             if (cellGuessed.IsMine == true)
             {
-                Console.WriteLine("You hit a mine");
+                Console.WriteLine("You hit a mine.");
+                Console.ReadKey();
             }
             else
             {
                 Console.WriteLine($"Mines nearby: {cellGuessed.ProximityCounter}");
+                Console.ReadKey();
+
             }
 
         }

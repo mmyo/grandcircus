@@ -25,14 +25,14 @@ namespace minesweeper
 
         }
 
+        public bool DebugMode { get; set; }
+        
         public void CalcBoardSizeAndNumberOfMines(Board board)
         {
             switch (DifficultyLevel)
             {
                 case DiffcultyLevel.Easy:
-                    //board.BoardSize = 9;
-                    //board.NumberOfMines = 10;
-                    board.BoardSize = 5;
+                    board.BoardSize = 9;
                     board.NumberOfMines = 10;
                     break;
                 case DiffcultyLevel.Medium:
