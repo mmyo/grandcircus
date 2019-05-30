@@ -26,6 +26,15 @@ namespace minesweeper
                 //Redraw gameboard after UserMenu selection
                 BoardDisplay.DisplayBoard(board, settings);
 
+                if (PlayRound.EvaluateIfUserWon(board))
+                {
+                    settings.RevealBoard = true;
+                    BoardDisplay.DisplayBoard(board, settings);
+                    Console.WriteLine("You won!");
+                    keepPlaying = false;
+                }
+
+
             } while (keepPlaying == true);
 
             Console.WriteLine("Thanks for playing!");

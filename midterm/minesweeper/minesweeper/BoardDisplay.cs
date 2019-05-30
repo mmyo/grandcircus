@@ -17,21 +17,21 @@ namespace minesweeper
             DisplayBoardSettings(board, settings);
 
 
-            if (settings.DebugMode == true)
+            if (settings.RevealBoard == true)
             {
-                DisplayEntireBoard(board);
+                DisplayRevealedBoard(board);
                 Console.WriteLine();
             }
 
-            for (int i = board.BoardArray.GetLength(0) - 1; i >= 0; i--)
+            for (int boardLength = board.BoardArray.GetLength(0) - 1; boardLength >= 0; boardLength--)
             {
                 Console.BackgroundColor = ConsoleColor.White;
 
-                for (int j = 0; j < board.BoardArray.GetLength(1); j++)
+                for (int boardHeight = 0; boardHeight < board.BoardArray.GetLength(1); boardHeight++)
                 {
                     Console.BackgroundColor = ConsoleColor.White;
 
-                    var currentCell = board.BoardArray[j, i];
+                    var currentCell = board.BoardArray[boardHeight, boardLength];
                     if (currentCell.UserGuessed == true && currentCell.ProximityCounter <= 0 && currentCell.IsMine == false)
                     {
 
@@ -66,21 +66,30 @@ namespace minesweeper
                         Console.Write("|   ");
 
                     }
-                    //board[i,j].IsMine == true
+                    //Console.Write($" { boardHeight + 1}");
+
                 }
+
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write($" { boardLength + 1}");
+                Console.ResetColor();
+
                 Console.Write(Environment.NewLine);
             }
+
             Console.ResetColor();
+
         }
 
-        public static void DisplayEntireBoard(Board board)
+        public static void DisplayRevealedBoard(Board board)
         {
 
-            for (int i = board.BoardArray.GetLength(0) - 1; i >= 0; i--)
+            for (int boardLength = board.BoardArray.GetLength(0) - 1; boardLength >= 0; boardLength--)
             {
-                for (int j = 0; j < board.BoardArray.GetLength(1); j++)
+                for (int boardHeight = 0; boardHeight < board.BoardArray.GetLength(1); boardHeight++)
                 {
-                    var currentCell = board.BoardArray[j, i];
+                    var currentCell = board.BoardArray[boardHeight, boardLength];
                     if (currentCell.IsMine == true)
                     {
                         Console.BackgroundColor = ConsoleColor.Gray;
@@ -105,6 +114,11 @@ namespace minesweeper
                     }
                     //board[i,j].IsMine == true
                 }
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write($" { boardLength + 1}");
+                Console.ResetColor();
+
                 Console.Write(Environment.NewLine);
             }
         }

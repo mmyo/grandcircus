@@ -25,13 +25,13 @@ namespace minesweeper
                     UnflagCell(board, EnterAndValidateCellCoordinates(board));
                     return true;
                 case "s":
-                    settings.DebugMode = true;
+                    settings.RevealBoard = true;
                     return true;
                 case "h":
-                    settings.DebugMode = false;
+                    settings.RevealBoard = false;
                     return true;
                 case "q":
-                    settings.DebugMode = true;
+                    settings.RevealBoard = true;
                     return false;
                 default:
                     return true;
@@ -45,9 +45,9 @@ namespace minesweeper
             try
             {
                 Console.Write("X: ");
-                userCoordinates[0] = int.Parse(Console.ReadLine());
+                userCoordinates[0] = int.Parse(Console.ReadLine()) - 1;
                 Console.Write("Y: ");
-                userCoordinates[1] = int.Parse(Console.ReadLine());
+                userCoordinates[1] = int.Parse(Console.ReadLine()) - 1;
             }
             catch (Exception)
             {
@@ -84,25 +84,33 @@ namespace minesweeper
             board.BoardArray[userEntry[0], userEntry[1]].IsFlaggedByUser = false;
         }
 
-        public static void EvaluateIfUserWon(Board board)
+        public static bool EvaluateIfUserWon(Board board)
         {
             //not working yet
-            foreach (var cell in board.BoardArray)
+            var countOfMinesFlagged = 0;
+            var countOfCellsMisflagged = 0;
+
+            foreach (var cell in board.ListOfMines)
             {
-                if (cell.IsMine == true && cell.IsFlaggedByUser == false)
+                if (cell.IsFlaggedByUser == true)
                 {
-                    break;
-                    //return false;
-                }
-                if (cell.IsFlaggedByUser == true && cell.IsMine == false)
-                {
-                    break;
-                    //return false;
+                    countOfMinesFlagged++;
                 }
             }
-            Console.WriteLine("You Won!");
-            Console.ReadLine();
-            //return true;
+            foreach (var cell in board.BoardArray)
+            {
+                if (cell.IsFlaggedByUser == true && cell.IsMine == false)
+                {
+                    countOfCellsMisflagged++;
+                }
+            }
+
+            if (countOfMinesFlagged == board.ListOfMines.Count && countOfCellsMisflagged == 0)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

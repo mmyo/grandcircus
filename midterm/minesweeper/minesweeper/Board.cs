@@ -13,6 +13,8 @@ namespace minesweeper
 
         public int NumberOfMines { get; set; }
 
+        public List<Cell> ListOfMines { get; set; }
+
         public void PopulateGameBoard()
         {
             BoardArray = new Cell[BoardSize, BoardSize];
@@ -29,6 +31,7 @@ namespace minesweeper
         public void GenerateMines()
         {
             Random rand = new Random();
+            ListOfMines = new List<Cell>();
 
             for (int i = 0; i < NumberOfMines; i++)
             {
@@ -37,7 +40,8 @@ namespace minesweeper
 
                 if (BoardArray[x, y].IsMine == false)
                 {
-                    BoardArray[x, y].IsMine = true;
+                    BoardArray[x, y].IsMine = true;              
+                    ListOfMines.Add(BoardArray[x,y]);
                     IncrementProxCounterForSurroundingCells(BoardArray[x, y]);
                 }
                 else
