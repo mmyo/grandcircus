@@ -33,7 +33,7 @@ namespace minesweeper
             {
                 case DiffcultyLevel.Easy:
                     board.BoardSize = 9;
-                    board.NumberOfMines = 2;
+                    board.NumberOfMines = 10;
                     break;
                 case DiffcultyLevel.Medium:
                     board.BoardSize = 16;

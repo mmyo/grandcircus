@@ -15,6 +15,7 @@ namespace minesweeper
         {
             Console.Clear();
             DisplayBoardSettings(board, settings);
+            Console.Write(Environment.NewLine);
 
 
             if (settings.RevealBoard == true)
@@ -22,6 +23,12 @@ namespace minesweeper
                 DisplayRevealedBoard(board);
                 Console.WriteLine();
             }
+
+            for (int i = 1; i <= board.BoardSize; i++)
+            {
+                Console.Write($"  {i} ");
+            }
+            Console.Write(Environment.NewLine);
 
             for (int boardLength = board.BoardArray.GetLength(0) - 1; boardLength >= 0; boardLength--)
             {
@@ -34,14 +41,15 @@ namespace minesweeper
                     var currentCell = board.BoardArray[boardHeight, boardLength];
                     if (currentCell.UserGuessed == true && currentCell.ProximityCounter <= 0 && currentCell.IsMine == false)
                     {
-
+                        Console.BackgroundColor = ConsoleColor.Gray;
                         Console.ForegroundColor = ConsoleColor.Black;
                         //Console.BackgroundColor = ConsoleColor.Gray;
-                        Console.Write("| x ");
+                        Console.Write("|   ");
                         Console.ResetColor();
                     }
                     else if (currentCell.UserGuessed == true && currentCell.ProximityCounter > 0 && currentCell.IsMine == false)
                     {
+                        Console.BackgroundColor = ConsoleColor.Gray;
                         Console.ForegroundColor = ConsoleColor.Black;
                         Console.Write($"| {currentCell.ProximityCounter} ");
                         Console.ResetColor();
@@ -77,13 +85,24 @@ namespace minesweeper
 
                 Console.Write(Environment.NewLine);
             }
-
+           
+            for (int i = 1; i <= board.BoardSize; i++)
+            {
+                Console.Write($"  {i} ");
+            }
             Console.ResetColor();
+            Console.Write(Environment.NewLine);
+            Console.Write(Environment.NewLine);
 
         }
 
         public static void DisplayRevealedBoard(Board board)
         {
+            for (int i = 1; i <= board.BoardSize; i++)
+            {
+                Console.Write($"  {i} ");
+            }
+            Console.Write(Environment.NewLine);
 
             for (int boardLength = board.BoardArray.GetLength(0) - 1; boardLength >= 0; boardLength--)
             {
@@ -92,22 +111,22 @@ namespace minesweeper
                     var currentCell = board.BoardArray[boardHeight, boardLength];
                     if (currentCell.IsMine == true)
                     {
-                        Console.BackgroundColor = ConsoleColor.Gray;
-                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.White;
                         Console.Write($"| M ");
                         Console.ResetColor();
                     }
                     else if (currentCell.ProximityCounter > 0)
                     {
-                        Console.BackgroundColor = ConsoleColor.White;
-                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.BackgroundColor = ConsoleColor.Gray;
+                        Console.ForegroundColor = ConsoleColor.Black;
                         Console.Write($"| {currentCell.ProximityCounter} ");
                         Console.ResetColor();
 
                     }
                     else
                     {
-                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.BackgroundColor = ConsoleColor.Gray;
                         Console.Write($"|   ");
                         Console.ResetColor();
 
@@ -117,6 +136,7 @@ namespace minesweeper
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Write($" { boardLength + 1}");
+
                 Console.ResetColor();
 
                 Console.Write(Environment.NewLine);
