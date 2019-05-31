@@ -117,7 +117,7 @@ namespace minesweeper
 
         public static bool EvaluateIfUserWon(Board board)
         {
-            //not working yet
+         
             var countOfMinesFlagged = 0;
             var countOfCellsMisflagged = 0;
 
@@ -156,6 +156,8 @@ namespace minesweeper
 
             do
             {
+                var tempCellList = new List<Cell>();
+
                 foreach (var cell in cellListToUncover)
                 {
                     cell.UserGuessed = true;
@@ -169,7 +171,7 @@ namespace minesweeper
                         {
                             if (x >= 0 && y >= 0 && x < board.BoardSize && y < board.BoardSize && board.BoardArray[x, y].IsMine != true)
                             {
-                                cellListToUncover.Add(board.BoardArray[x, y]);
+                                tempCellList.Add(board.BoardArray[x, y]);
                             }
                         }
                     }

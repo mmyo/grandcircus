@@ -8,7 +8,8 @@ namespace minesweeper
     {
         public GameSettings()
         {
-            DifficultyLevel = SetDifficultyLevel();
+            DifficultyLevel = DiffcultyLevel.Easy;
+            //DifficultyLevel = SetDifficultyLevel();
         }
 
         public Enum DifficultyLevel { get; set; }
@@ -19,7 +20,7 @@ namespace minesweeper
 
             if (Enum.TryParse<DiffcultyLevel>(Console.ReadLine(), out var level))
             {
-                return level;
+               return level;
             }
             return null;
 
