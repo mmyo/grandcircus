@@ -8,23 +8,26 @@ namespace minesweeper
     {
         public static void DisplayBoardSettings(Board board, GameSettings settings)
         {
-            Console.WriteLine($"{settings.DifficultyLevel}  |  {board.BoardArray.GetLength(0)} x {board.BoardArray.GetLength(1)}  |  {board.NumberOfMines} total mines");
+            Console.BackgroundColor = ConsoleColor.DarkGray;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"  {settings.DifficultyLevel}  |  {board.BoardArray.GetLength(0)} x {board.BoardArray.GetLength(1)}  |  {board.NumberOfMines} total mines  ");
+            Console.ResetColor();
+
+            Console.Write(Environment.NewLine);
         }
 
         public static void DisplayBoard(Board board, GameSettings settings)
         {
             Console.Clear();
             DisplayBoardSettings(board, settings);
-            Console.Write(Environment.NewLine);
-
 
             if (settings.RevealBoard == true)
             {
                 DisplayRevealedBoard(board);
-                Console.WriteLine();
+                
             }
 
-            for (int i = 1; i <= board.BoardSize; i++)
+            for (int i = 0; i < board.BoardSize; i++)
             {
                 Console.Write($"  {i} ");
             }
@@ -80,13 +83,13 @@ namespace minesweeper
 
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.Write($" { boardLength + 1}");
+                Console.Write($" { boardLength }");
                 Console.ResetColor();
 
                 Console.Write(Environment.NewLine);
             }
            
-            for (int i = 1; i <= board.BoardSize; i++)
+            for (int i = 0; i < board.BoardSize; i++)
             {
                 Console.Write($"  {i} ");
             }
@@ -98,7 +101,7 @@ namespace minesweeper
 
         public static void DisplayRevealedBoard(Board board)
         {
-            for (int i = 1; i <= board.BoardSize; i++)
+            for (int i = 0; i < board.BoardSize; i++)
             {
                 Console.Write($"  {i} ");
             }
@@ -135,7 +138,7 @@ namespace minesweeper
                 }
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.Write($" { boardLength + 1}");
+                Console.Write($" { boardLength }");
 
                 Console.ResetColor();
 

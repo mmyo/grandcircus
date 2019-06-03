@@ -9,34 +9,36 @@ namespace minesweeper
     {
         public static bool UserMenu(Board board, GameSettings settings)
         {
-            String coordinateRegexPattern = @"\d\s\d";
+            //String coordinateRegexPattern = @"\d\s\d";
 
             //Console.Write($"[g]uess [f]lag [u]nflag [s]how [h]ide [q]uit: ");
-            Console.WriteLine($"Guess [x y], [f]lag, [u]nflag, [s]how, [h]ide, [q]uit: ");
-
+            Console.WriteLine($"Options: [f]lag, [u]nflag, [s]how, [h]ide, [q]uit: ");
+            Console.Write("Guess [x y] or option: ");
             var userEntry = Console.ReadLine();
 
-            Match match = Regex.Match(userEntry, coordinateRegexPattern);
+            //Match match = Regex.Match(userEntry, coordinateRegexPattern);
 
-            if (match.Success)
-            {
-                var userCoordinates = ValidateAndCreateCoordinates(userEntry);
-                GuessCell(board, userCoordinates);
-                return true;
-            }
-            else
+            //if (match.Success)
+            //{
+            //    var userCoordinates = ValidateAndCreateCoordinates(userEntry);
+            //    GuessCell(board, userCoordinates);
+            //    return true;
+            //}
+            //else
             {
                 switch (userEntry)
                 {
                     //add new game option
-                    case "g":
-                        GuessCell(board, EnterAndValidateCellCoordinates(board));
-                        return true;
+                    //case "g":
+                    //    GuessCell(board, EnterAndValidateCellCoordinates(board));
+                    //    return true;
                     case "f":
-                        FlagCell(board, EnterAndValidateCellCoordinates(board));
+                        Console.Write("Enter coordinates to flag [x y]: ");
+                        FlagCell(board, CaptureAndValidateCoordinates(board, Console.ReadLine()));
                         return true;
                     case "u":
-                        UnflagCell(board, EnterAndValidateCellCoordinates(board));
+                        Console.Write("Enter coordinates to unflag [x y]: ");
+                        UnflagCell(board, CaptureAndValidateCoordinates(board, Console.ReadLine()));
                         return true;
                     case "s":
                         settings.RevealBoard = true;
@@ -48,11 +50,10 @@ namespace minesweeper
                         settings.RevealBoard = true;
                         return false;
                     default:
+                        GuessCell(board, CaptureAndValidateCoordinates(board, userEntry));
                         return true;
                 }
             }
-
-
         }
 
         public static int[] EnterAndValidateCellCoordinates(Board board)
@@ -62,9 +63,9 @@ namespace minesweeper
             try
             {
                 Console.Write("X: ");
-                userCoordinates[0] = int.Parse(Console.ReadLine()) - 1;
+                userCoordinates[0] = int.Parse(Console.ReadLine());
                 Console.Write("Y: ");
-                userCoordinates[1] = int.Parse(Console.ReadLine()) - 1;
+                userCoordinates[1] = int.Parse(Console.ReadLine());
             }
             catch (Exception)
             {
@@ -80,7 +81,7 @@ namespace minesweeper
 
             var cellGuessed = board.BoardArray[userEntry[0], userEntry[1]];
             cellGuessed.UserGuessed = true;
-            //UncoverNearbyCells(board, cellGuessed);
+            UncoverNearbyCells(board, cellGuessed);
             if (cellGuessed.IsMine == true)
             {
                 Console.WriteLine("You hit a mine.");
@@ -93,16 +94,45 @@ namespace minesweeper
             }         
         }
 
-        public static int[] ValidateAndCreateCoordinates(string userInput)
+        public static int[] CaptureAndValidateCoordinates(Board board, string userInput)
         {
-
-            String[] stringArry = userInput.Split(' ');
-            int[] userCoordinates = new int[2];
-            for (int i = 0; i < userCoordinates.Length; i++)
+            try
             {
-                userCoordinates[i] = int.Parse(stringArry[i]) - 1;
+                Match match = Regex.Match(userInput, @"\d\s\d");
+                String[] stringArry = userInput.Split(' ');
+                int[] userCoordinates = new int[2];
+
+                if (match.Success)
+                {
+                    for (int i = 0; i < userCoordinates.Length; i++)
+                    {
+                        userCoordinates[i] = int.Parse(stringArry[i]);
+                    }
+                    return userCoordinates;
+                }
             }
-            return userCoordinates;
+            catch (Exception)
+            {
+                Console.WriteLine("Input failed");
+                Console.ReadLine();
+            }
+
+            return null;
+
+            //if (match.Success)
+            //{
+            //    String[] stringArry = userInput.Split(' ');
+            //    int[] userCoordinates = new int[2];
+            //    for (int i = 0; i < userCoordinates.Length; i++)
+            //    {
+            //        userCoordinates[i] = int.Parse(stringArry[i]);
+            //    }
+            //    return userCoordinates;
+            //}
+            //else
+            //{
+            //    return null;
+            //}
         }
 
         public static void FlagCell(Board board, int[] userEntry)
@@ -151,34 +181,56 @@ namespace minesweeper
             //set cell.isvisible=true 
             //move +/-1 in each direction. if cell.ismine=false && cell.proximitycounter>0 then set cell.isvisible=true and add to new List<cell>
 
-            var cellListToUncover = new List<Cell>();
-            cellListToUncover.Add(userCellGuess);
+            var cellsToSearchAround = new List<Cell>();
+            var cellListToMakeVisible = new List<Cell>();
+            cellsToSearchAround.Add(userCellGuess);
 
-            do
+            while (cellsToSearchAround.Count > 0)
             {
-                var tempCellList = new List<Cell>();
-
-                foreach (var cell in cellListToUncover)
+                for (int i = 0; i < cellsToSearchAround.Count; i++)
                 {
-                    cell.UserGuessed = true;
-                }
-
-                for (int i = 0; i < cellListToUncover.Count; i++)
-                {
-                    for (int x = cellListToUncover[i].XCoordinate - 1; x <= cellListToUncover[i].XCoordinate + 1; x++)
+                    for (int x = cellsToSearchAround[i].XCoordinate - 1; x <= cellsToSearchAround[i].XCoordinate + 1; x++)
                     {
-                        for (int y = cellListToUncover[x].YCoordinate - 1; y <= cellListToUncover[x].YCoordinate + 1; y++)
+                        for (int y = cellsToSearchAround[i].YCoordinate - 1; y <= cellsToSearchAround[i].YCoordinate + 1; y++)
                         {
-                            if (x >= 0 && y >= 0 && x < board.BoardSize && y < board.BoardSize && board.BoardArray[x, y].IsMine != true)
+                            if (x >= 0 && y >= 0 && x < board.BoardSize && y < board.BoardSize && board.BoardArray[x, y].IsMine == false  && board.BoardArray[x, y].UserGuessed == false)
                             {
-                                tempCellList.Add(board.BoardArray[x, y]);
+                                cellListToMakeVisible.Add(board.BoardArray[x, y]);
                             }
                         }
                     }
                 }
 
+                cellsToSearchAround.Clear();
 
-            } while (cellListToUncover.Count > 0);
+                foreach (var cell in cellListToMakeVisible)
+                {
+                    if (cell.ProximityCounter == 0)
+                    {
+                        cellsToSearchAround.Add(cell);
+                    }
+                }
+
+                foreach (var cell in cellListToMakeVisible)
+                {
+                    cell.UserGuessed = true;
+                }
+
+                cellListToMakeVisible.Clear();
+
+            }
+
+
+            foreach (var cell in cellListToMakeVisible)
+            {
+                Console.WriteLine($"{cell.XCoordinate}, {cell.YCoordinate}");
+            }
+            Console.WriteLine();
+            foreach (var cell in cellsToSearchAround)
+            {
+                Console.WriteLine($"{cell.XCoordinate}, {cell.YCoordinate}");
+
+            }
 
         }
     }
