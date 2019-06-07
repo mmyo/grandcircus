@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "classNotes0606", "classNotes0606\classNotes0606.csproj", "{E00DF9AF-D226-4EBA-A1A0-C11577EF4104}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "classNotes0606", "classNotes0606\classNotes0606.csproj", "{E00DF9AF-D226-4EBA-A1A0-C11577EF4104}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "classNotes0606.Test", "classNotes0606.Test\classNotes0606.Test.csproj", "{12AC2BEE-71A6-4A1B-BAB8-71A0431E8DAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "classNotes0606.Test", "classNotes0606.Test\classNotes0606.Test.csproj", "{12AC2BEE-71A6-4A1B-BAB8-71A0431E8DAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fizzBuzzWoof.Test", "fizzBuzzWoof.Test\fizzBuzzWoof.Test.csproj", "{8C35520B-5864-47A1-91C1-33D665D53016}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzzWoof.Test", "fizzBuzzWoof.Test\FizzBuzzWoof.Test.csproj", "{8C35520B-5864-47A1-91C1-33D665D53016}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzWoof", "FizzBuzzWoof\FizzBuzzWoof.csproj", "{BB9AA43B-D7E7-4999-950E-BD5E6FFE3657}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzzWoof", "FizzBuzzWoof\FizzBuzzWoof.csproj", "{BB9AA43B-D7E7-4999-950E-BD5E6FFE3657}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

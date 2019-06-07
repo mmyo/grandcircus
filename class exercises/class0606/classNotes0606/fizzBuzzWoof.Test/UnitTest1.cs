@@ -2,7 +2,7 @@ using FizzBuzzWoof;
 using System;
 using Xunit;
 
-namespace fizzBuzzWoof.Test
+namespace FizzBuzzWoof.Test
 {
     public class UnitTest1
     {
@@ -83,8 +83,10 @@ namespace fizzBuzzWoof.Test
         [InlineData(6)]
         [InlineData(9)]
         [InlineData(12)]
+        [InlineData(33)]
+
         //[InlineData(15)]
-        public void MultipleOrContains3_ReturnsOnlyFizz(int input)
+        public void MultipleOfOrContains3_ReturnsOnlyFizz(int input)
         {
             // Arrange
 
@@ -100,7 +102,8 @@ namespace fizzBuzzWoof.Test
         [Theory]
         [InlineData(5)]
         [InlineData(10)]
-        public void MultipleOrContains5_ReturnsOnlyBuzz(int input)
+        [InlineData(100)]
+        public void MultipleOfOrContains5_ReturnsOnlyBuzz(int input)
         {
             // Arrange
 
@@ -116,7 +119,7 @@ namespace fizzBuzzWoof.Test
         [Theory]
         [InlineData(7)]
         [InlineData(14)]
-        public void MultipleOrContains7_ReturnsOnlyWoof(int input)
+        public void MultipleOfOrContains7_ReturnsOnlyWoof(int input)
         {
             // Arrange
 
