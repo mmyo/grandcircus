@@ -185,38 +185,68 @@ namespace minesweeper
             var cellListToMakeVisible = new List<Cell>();
             cellsToSearchAround.Add(userCellGuess);
 
-            while (cellsToSearchAround.Count > 0)
+
+            var cellSurroundingQueue = new Queue<Cell>();
+            if (userCellGuess.UserGuessed == false)
             {
-                for (int i = 0; i < cellsToSearchAround.Count; i++)
+            }
+            cellSurroundingQueue = Board.GetSurroundingCells(board, userCellGuess);
+
+            while (cellSurroundingQueue.Count > 0)
+            {
+                //for (int i = 0; i < cellsToSearchAround.Count; i++)
+                //{
+                //    for (int x = cellsToSearchAround[i].XCoordinate - 1; x <= cellsToSearchAround[i].XCoordinate + 1; x++)
+                //    {
+                //        for (int y = cellsToSearchAround[i].YCoordinate - 1; y <= cellsToSearchAround[i].YCoordinate + 1; y++)
+                //        {
+                //            if (x >= 0 && y >= 0 && x < board.BoardSize && y < board.BoardSize && board.BoardArray[x, y].IsMine == false && board.BoardArray[x, y].UserGuessed == false)
+                //            {
+                //                cellListToMakeVisible.Add(board.BoardArray[x, y]);
+                //            }
+                //        }
+                //    }
+                //}
+                var cellQueueToMakeVisible = new Queue<Cell>();
+
+                var shouldCellBeMadeVisible = cellSurroundingQueue.Dequeue();
+                if (shouldCellBeMadeVisible.IsMine == false && shouldCellBeMadeVisible.UserGuessed == false)
                 {
-                    for (int x = cellsToSearchAround[i].XCoordinate - 1; x <= cellsToSearchAround[i].XCoordinate + 1; x++)
+                    cellQueueToMakeVisible.Enqueue(shouldCellBeMadeVisible);
+                }
+
+                //cellsToSearchAround.Clear();
+                var tempQueue = new Queue<Cell>();
+                while (cellQueueToMakeVisible.Count > 0)
+                {
+                    var cellToMakeVisible = cellQueueToMakeVisible.Dequeue();
+
+                    if (cellToMakeVisible.ProximityCounter == 0)
                     {
-                        for (int y = cellsToSearchAround[i].YCoordinate - 1; y <= cellsToSearchAround[i].YCoordinate + 1; y++)
-                        {
-                            if (x >= 0 && y >= 0 && x < board.BoardSize && y < board.BoardSize && board.BoardArray[x, y].IsMine == false  && board.BoardArray[x, y].UserGuessed == false)
-                            {
-                                cellListToMakeVisible.Add(board.BoardArray[x, y]);
-                            }
-                        }
+                        tempQueue = Board.GetSurroundingCells(board, cellToMakeVisible);
+                        cellToMakeVisible.UserGuessed = true;
                     }
                 }
 
-                cellsToSearchAround.Clear();
-
-                foreach (var cell in cellListToMakeVisible)
+                while (tempQueue.Count > 0)
                 {
-                    if (cell.ProximityCounter == 0)
-                    {
-                        cellsToSearchAround.Add(cell);
-                    }
+                    cellSurroundingQueue.Enqueue(tempQueue.Dequeue());
                 }
 
-                foreach (var cell in cellListToMakeVisible)
-                {
-                    cell.UserGuessed = true;
-                }
+                //foreach (var cell in cellListToMakeVisible)
+                //{
+                //    if (cell.ProximityCounter == 0)
+                //    {
+                //        cellsToSearchAround.Add(cell);
+                //    }
+                //}
 
-                cellListToMakeVisible.Clear();
+                //foreach (var cell in cellListToMakeVisible)
+                //{
+                //    cell.UserGuessed = true;
+                //}
+
+                //cellListToMakeVisible.Clear();
 
             }
 

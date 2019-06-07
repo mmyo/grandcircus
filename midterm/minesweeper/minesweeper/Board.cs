@@ -26,9 +26,11 @@ namespace minesweeper
                     BoardArray[x, y] = new Cell() { XCoordinate = x, YCoordinate = y }; ;
                 }
             }
+
+            GenerateMines();
         }
 
-        public void GenerateMines()
+        private void GenerateMines()
         {
             Random rand = new Random();
             ListOfMines = new List<Cell>();
@@ -42,7 +44,7 @@ namespace minesweeper
                 {
                     BoardArray[x, y].IsMine = true;              
                     ListOfMines.Add(BoardArray[x,y]);
-                    IncrementProxCounterForSurroundingCells(BoardArray[x, y]);
+                    IncrementProxCounterForSurroundingCells(this, BoardArray[x, y]);
                 }
                 else
                 {
@@ -54,18 +56,33 @@ namespace minesweeper
 
         }
 
-        public void IncrementProxCounterForSurroundingCells(Cell mine)
+        private void IncrementProxCounterForSurroundingCells(Board board, Cell mine)
         {
-            for (int x = mine.XCoordinate - 1; x <= mine.XCoordinate + 1; x++)
+            var cellQueue = GetSurroundingCells(this, mine);
+
+            while (cellQueue.Count > 0)
             {
-                for (int y = mine.YCoordinate - 1; y <= mine.YCoordinate + 1; y++)
+                cellQueue.Dequeue().ProximityCounter++;
+            }
+
+        }
+
+        public static Queue<Cell> GetSurroundingCells(Board board, Cell cell)
+        {
+            var surroundingCellsQueue = new Queue<Cell>();
+
+            for (int x = cell.XCoordinate - 1; x <= cell.XCoordinate + 1; x++)
+            {
+                for (int y = cell.YCoordinate - 1; y <= cell.YCoordinate + 1; y++)
                 {
-                    if (x >= 0 && y >= 0 && x < BoardSize && y < BoardSize)
+                    if (x >= 0 && y >= 0 && x < board.BoardSize && y < board.BoardSize && !(x == cell.XCoordinate && y == cell.YCoordinate ))
                     {
-                        BoardArray[x, y].ProximityCounter++;
+                        surroundingCellsQueue.Enqueue(board.BoardArray[x, y]);
                     }
                 }
             }
+
+            return surroundingCellsQueue;
         }
     }
 

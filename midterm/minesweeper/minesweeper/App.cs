@@ -13,7 +13,6 @@ namespace minesweeper
             var board = new Board();
             settings.CalcBoardSizeAndNumberOfMines(board);
             board.PopulateGameBoard();
-            board.GenerateMines();
 
             bool keepPlaying = true;
             do
@@ -39,6 +38,7 @@ namespace minesweeper
 
             Console.WriteLine("Thanks for playing!");
             Console.ReadLine();
+
         }
  
     }

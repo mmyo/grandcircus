@@ -13,7 +13,7 @@ namespace exercise70
             var userWantsToContinue = false;
             do
             {
-                Console.Write("Word and transation: ");
+                Console.Write("Enter [word] [translation]. Or [q]uit: ");
                 var userInput = Console.ReadLine();
 
                 if (userInput.Equals("q", StringComparison.OrdinalIgnoreCase))
@@ -21,7 +21,7 @@ namespace exercise70
                     break;
                 }
 
-                var addSuccessful = AddToDictionary(userInput, spanishTranslationsDictionary);
+                AddToDictionary(userInput, spanishTranslationsDictionary);
 
                 Console.Write("Add more? y/n: ");
                 if (Console.ReadLine().Equals("y", StringComparison.OrdinalIgnoreCase))
@@ -40,20 +40,18 @@ namespace exercise70
             Console.ReadLine();
         }
 
-        public static bool AddToDictionary(string userInput, Dictionary<string,string> dictionary)
+        public static void AddToDictionary(string userInput, Dictionary<string,string> dictionary)
         {
             String[] userinputArray = userInput.Split(' ');
 
-            var addSuccessful = dictionary.TryAdd(userinputArray[0], userinputArray[1]);
-
-            if (addSuccessful == true)
+            if (userinputArray.Length == 2 && userinputArray[0] != "" && userinputArray[1] != "")
             {
-                return true;
+                dictionary.TryAdd(userinputArray[0], userinputArray[1]);
+                Console.WriteLine("Successfully added.");
             }
             else
             {
-                Console.WriteLine("Something bad happened. Did not add.");
-                return false;
+                Console.WriteLine("Weird input. Did not add.");
             }
 
         }
@@ -63,6 +61,8 @@ namespace exercise70
             Console.Write("Name of file to save: ");
             var saveFile = Console.ReadLine();
 
+
+
             using (StreamWriter file = new StreamWriter(saveFile))
 
             foreach (var entry in dicionary)
@@ -70,6 +70,8 @@ namespace exercise70
                 file.WriteLine($"{entry.Key},{entry.Value}");
             }
         }
+
+
 
     }
 }
