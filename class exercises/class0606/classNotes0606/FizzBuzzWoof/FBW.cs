@@ -34,8 +34,7 @@ namespace FizzBuzzWoof
             {
                 woof = "woof";
             }
-
-           
+            
             return fizz + buzz + woof;
         }
     }
