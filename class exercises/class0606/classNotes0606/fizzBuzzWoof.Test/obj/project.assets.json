@@ -5895,11 +5895,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\myo\\OneDrive - KNEX\\Documents\\grandcircus\\class exercises\\class0606\\classNotes0606\\fizzBuzzWoof.Test\\fizzBuzzWoof.Test.csproj",
-      "projectName": "fizzBuzzWoof.Test",
-      "projectPath": "C:\\Users\\myo\\OneDrive - KNEX\\Documents\\grandcircus\\class exercises\\class0606\\classNotes0606\\fizzBuzzWoof.Test\\fizzBuzzWoof.Test.csproj",
+      "projectUniqueName": "C:\\Users\\myo\\OneDrive - Knex\\Documents\\grandcircus\\class exercises\\class0606\\classNotes0606\\fizzBuzzWoof.Test\\FizzBuzzWoof.Test.csproj",
+      "projectName": "FizzBuzzWoof.Test",
+      "projectPath": "C:\\Users\\myo\\OneDrive - Knex\\Documents\\grandcircus\\class exercises\\class0606\\classNotes0606\\fizzBuzzWoof.Test\\FizzBuzzWoof.Test.csproj",
       "packagesPath": "C:\\Users\\myo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\myo\\OneDrive - KNEX\\Documents\\grandcircus\\class exercises\\class0606\\classNotes0606\\fizzBuzzWoof.Test\\obj\\",
+      "outputPath": "C:\\Users\\myo\\OneDrive - Knex\\Documents\\grandcircus\\class exercises\\class0606\\classNotes0606\\fizzBuzzWoof.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5918,8 +5918,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\myo\\OneDrive - KNEX\\Documents\\grandcircus\\class exercises\\class0606\\classNotes0606\\FizzBuzzWoof\\FizzBuzzWoof.csproj": {
-              "projectPath": "C:\\Users\\myo\\OneDrive - KNEX\\Documents\\grandcircus\\class exercises\\class0606\\classNotes0606\\FizzBuzzWoof\\FizzBuzzWoof.csproj"
+            "C:\\Users\\myo\\OneDrive - Knex\\Documents\\grandcircus\\class exercises\\class0606\\classNotes0606\\FizzBuzzWoof\\FizzBuzzWoof.csproj": {
+              "projectPath": "C:\\Users\\myo\\OneDrive - Knex\\Documents\\grandcircus\\class exercises\\class0606\\classNotes0606\\FizzBuzzWoof\\FizzBuzzWoof.csproj"
             }
           }
         }
