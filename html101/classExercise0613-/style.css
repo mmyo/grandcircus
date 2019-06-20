@@ -1,0 +1,10 @@
+.outer-box{
+    background-color: burlywood;
+    max-height: 100%;
+}
+
+.green-box{
+    background-color: darkgreen;
+    height: 100px;
+    widows: 100px;
+}
