@@ -56,3 +56,4 @@ var nameArray = [ "Jimmy", "Johns", "I'm", "hungry" ];
 var animals = [new Animal("jimmy", false, 2), new Animal()];
 
 console.log(`${animal.name} ${animal.collar}`);
+
