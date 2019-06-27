@@ -62,6 +62,9 @@ GROUP BY OrderID
 
 --13 
 
+select count(*)
+from [Order Details]
+
 
 SELECT *
 FROM Customers
@@ -74,3 +77,95 @@ WHERE Country != 'Mexico'
 SELECT *
 FROM Customers
 WHERE Country LIKE 'N%'
+
+------- BONUS 20
+
+--1
+select * from Customers
+
+--2
+select * 
+from Customers
+where City in ( 'London' , 'Paris')
+
+--3
+select distinct(City)
+from Customers
+
+--4
+select *
+from Employees
+order by FirstName
+
+--5
+-- no salaries
+
+--6
+--no salaries
+
+--7
+select * from Employees
+where Notes like '%ba%'
+
+--8
+select 
+OrderID,
+FORMAT(SUM(Quantity * UnitPrice), 'C') as SubTotal,
+FORMAT(SUM(Discount * Quantity * UnitPrice), 'C') as DiscountTotal,
+FORMAT(SUM((Quantity * UnitPrice) - (Discount * Quantity * UnitPrice)), 'C') as GrandTotal
+from [Order Details]
+group by OrderID
+order by OrderID
+
+
+--9
+select *
+from Employees
+where HireDate < GETDATE() and HireDate > '1994-01-01'
+
+--10
+select 
+SUM(DATEDIFF(YEAR, HireDate, GETDATE())) as DateDiff
+from Employees
+
+--11
+select *
+from Products
+order by UnitsInStock asc
+
+select *
+from Products
+order by UnitsInStock desc
+
+--12
+select *
+from Products
+where UnitsInStock < 6
+order by UnitsInStock asc
+
+--13
+select *
+from Products
+where Discontinued = 1
+
+--14
+select *
+from Products
+where ProductName like '%tofu%'
+
+--15
+select top 1 *
+from Products
+order by UnitPrice desc
+
+--16
+select * from Employees
+where HireDate > '1993-01-01'
+
+--17
+select * from Employees
+where TitleOfCourtesy in ('Ms.', 'Mrs.')
+
+--18
+select * from Employees
+where HomePhone like '(206)%'
