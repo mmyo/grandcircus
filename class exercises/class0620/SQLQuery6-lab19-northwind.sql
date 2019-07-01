@@ -61,6 +61,35 @@ FROM [Order Details]
 GROUP BY OrderID
 
 --13 
+select CustomerID
+from Orders
+where OrderID = '10290'
+
+--14
+select * 
+from Orders
+inner join Customers on Customers.CustomerID = Orders.CustomerID
+
+select * 
+from Orders
+left join Customers on Customers.CustomerID = Orders.CustomerID
+
+select * 
+from Orders
+right join Customers on Customers.CustomerID = Orders.CustomerID
+
+--15
+select *
+from Employees
+where ReportsTo is null
+
+--16
+select *
+from Employees
+where ReportsTo = (
+select EmployeeID from Employees where FirstName = 'Andrew'
+)
+
 
 select count(*)
 from [Order Details]
