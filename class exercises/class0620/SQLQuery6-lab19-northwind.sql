@@ -89,7 +89,7 @@ from Employees
 where ReportsTo = (
 select EmployeeID from Employees where FirstName = 'Andrew'
 )
-
+-- look up recursive CTE
 
 select count(*)
 from [Order Details]

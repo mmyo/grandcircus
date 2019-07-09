@@ -1,0 +1,17 @@
+﻿@model classNotes0708_mvc.Models.PrivacyModel
+
+
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+@if (Model.DisplayPolicy)
+{
+    <p>Use this page to detail your site's privacy policy.</p>
+    <p>As Of: @Model.AsOf</p>
+    <p>@Model.PolicyVerbiage</p>
+
+}
+
