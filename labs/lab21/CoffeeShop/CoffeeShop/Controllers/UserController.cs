@@ -23,23 +23,24 @@ namespace CoffeeShop.Controllers
             return View();
         }
 
+
         [HttpPost]
-        public IActionResult Register(int id, UserModel user)
+        public IActionResult Register(UserModel user)
         {
             _userDataRepository.Add(user);
 
-            return RedirectToAction("ViewAll", "User");
+            return RedirectToAction("ViewAll", "User", user);
             //return View();
         }
 
-        public IActionResult Edit(string userId)
+        public IActionResult Edit()
         {
             return View();
         }
 
-        public IActionResult ViewAll(int id)
+        public IActionResult ViewAll(UserModel user)
         {
-            var user = _userDataRepository.Get(id);
+            //var user = _userDataRepository.Get(id);
             return View(user);
         }
 
