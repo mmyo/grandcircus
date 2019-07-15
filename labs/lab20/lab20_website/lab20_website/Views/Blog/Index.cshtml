@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Blog</h1>
+
+@foreach (var blog in @Model)
+{
+    <h2>@blog.Title</h2>
+    <h3>@blog.Date</h3>
+    <p>@blog.Entry</p>
+    <hr />
+}
+
+
