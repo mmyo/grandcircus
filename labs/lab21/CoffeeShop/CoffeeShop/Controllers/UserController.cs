@@ -24,7 +24,7 @@ namespace CoffeeShop.Controllers
         }
 
         [HttpPost]
-        public IActionResult Register(UserModel user)
+        public IActionResult Register(int id, UserModel user)
         {
             _userDataRepository.Add(user);
 
@@ -37,9 +37,10 @@ namespace CoffeeShop.Controllers
             return View();
         }
 
-        public IActionResult ViewAll()
+        public IActionResult ViewAll(int id)
         {
-            return View(_userDataRepository);
+            var user = _userDataRepository.Get(id);
+            return View(user);
         }
 
     }
