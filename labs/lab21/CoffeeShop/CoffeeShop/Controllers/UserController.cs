@@ -11,7 +11,14 @@ namespace CoffeeShop.Controllers
     public class UserController : Controller
     {
 
-        private static UserDataRepository _userDataRepository = new UserDataRepository();
+        //private static UserDataRepository _userDataRepository = new UserDataRepository();
+
+        private readonly IUserDataRepository _userDataRepository;
+
+        public UserController(IUserDataRepository userDataRepository)
+        {
+             _userDataRepository = userDataRepository;
+        }
 
         public IActionResult Index()
         {

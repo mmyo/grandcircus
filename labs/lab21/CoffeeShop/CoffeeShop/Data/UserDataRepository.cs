@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoffeeShop.Data
 {
-    public class UserDataRepository
+    public class UserDataRepository : IUserDataRepository
     {
         private readonly Dictionary<int, UserModel> _data =
             new Dictionary<int, UserModel>
