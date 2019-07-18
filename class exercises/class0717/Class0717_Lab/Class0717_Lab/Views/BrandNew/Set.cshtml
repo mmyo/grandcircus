@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+@{
+    ViewData["Title"] = "Set";
+}
+
+<h1>Set</h1>
+
+<p>ViewData: @ViewData["DateTimeNowViewData"] </p>
+<p>TempData: @TempData["DateTimeNowTempData"] </p>
+<p>Session: @HttpContextAccessor.HttpContext.Session.GetString("DateTimeNowSession")</p>

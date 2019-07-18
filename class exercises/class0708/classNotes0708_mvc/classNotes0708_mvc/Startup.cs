@@ -31,7 +31,14 @@ namespace classNotes0708_mvc
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddSession(options =>
+            {
+                options.Cookie.Name = ".GrandCircus.Example";
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
 
+            services.AddHttpContextAccessor();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -52,7 +59,7 @@ namespace classNotes0708_mvc
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

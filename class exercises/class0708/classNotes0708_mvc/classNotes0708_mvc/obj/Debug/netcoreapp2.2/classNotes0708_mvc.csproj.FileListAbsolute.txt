@@ -30,3 +30,8 @@ C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0708\cla
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0708\classNotes0708_mvc\classNotes0708_mvc\obj\Debug\netcoreapp2.2\classNotes0708_mvc.csproj.CopyComplete
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0708\classNotes0708_mvc\classNotes0708_mvc\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Index.g.cshtml.cs
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0708\classNotes0708_mvc\classNotes0708_mvc\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Edit.g.cshtml.cs
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0708\classNotes0708_mvc\classNotes0708_mvc\obj\Debug\netcoreapp2.2\Razor\Views\Session\ViewDataExample.g.cshtml.cs
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0708\classNotes0708_mvc\classNotes0708_mvc\obj\Debug\netcoreapp2.2\Razor\Views\Session\ViewBagExample.g.cshtml.cs
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0708\classNotes0708_mvc\classNotes0708_mvc\obj\Debug\netcoreapp2.2\Razor\Views\Session\ViewDataBad.g.cshtml.cs
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0708\classNotes0708_mvc\classNotes0708_mvc\obj\Debug\netcoreapp2.2\Razor\Views\Session\SessionExampleView.g.cshtml.cs
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\class exercises\class0708\classNotes0708_mvc\classNotes0708_mvc\obj\Debug\netcoreapp2.2\Razor\Views\Session\SessionGoodView.g.cshtml.cs
