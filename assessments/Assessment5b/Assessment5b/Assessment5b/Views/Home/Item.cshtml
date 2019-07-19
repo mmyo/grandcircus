@@ -1,0 +1,22 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+@{
+    ViewData["Title"] = "Item";
+}
+
+<h1>Item</h1>
+
+<p>Item quantity: @HttpContextAccessor.HttpContext.Session.GetInt32("quantity")</p>
+
+<button class="btn btn-primary" type="button" id="addItem"
+        onclick="location.href='@Url.Action("AddItem", "Home")'">Add Item</button>
+
+<button class="btn btn-danger" type="button" id="addItem"
+        onclick="location.href='@Url.Action("DeleteItem", "Home")'">Delete Item</button>
+
+<button class="btn btn-danger" type="button" id="addItem"
+        onclick="location.href='@Url.Action("Checkout", "Home")'">
+   Checkout
+</button>
+

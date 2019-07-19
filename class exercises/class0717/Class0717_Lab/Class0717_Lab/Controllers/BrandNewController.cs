@@ -33,6 +33,7 @@ namespace Class0717_Lab.Controllers
             _session.SetString("DateTimeNowSession", DateTime.Now.ToString());
 
             return RedirectToAction("Get", "BrandNew");
+            //return View();
         }
 
         public IActionResult Get()
