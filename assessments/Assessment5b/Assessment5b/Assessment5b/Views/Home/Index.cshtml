@@ -5,11 +5,12 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to my shopping cart!</h1>
+    <div class="text-center">
+        <h1 class="display-4">Welcome to my shopping cart!</h1>
 
-    <p>Item quantity: @HttpContextAccessor.HttpContext.Session.GetInt32("quantity")</p>
+        <h1>Item quantity: @HttpContextAccessor.HttpContext.Session.GetInt32("quantity")</h1>
 
-    <p><a href="/Home/Item">Update Items</a></p>
-    <p><a href="/Home/Checkout">Checkout</a></p>
-</div>
+        <p><a href="/Home/Item">Update Items</a></p>
+        <p><a href="/Home/Checkout">Checkout</a></p>
+
+    </div>

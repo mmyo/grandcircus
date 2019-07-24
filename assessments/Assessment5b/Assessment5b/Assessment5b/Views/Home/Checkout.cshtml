@@ -7,15 +7,10 @@
 
 <h1>Checkout</h1>
 
-<p>Item quantity: @HttpContextAccessor.HttpContext.Session.GetInt32("quantity")</p>
+<h1>Item quantity: @HttpContextAccessor.HttpContext.Session.GetInt32("quantity")</h1>
 
+<button class="btn btn-primary" type="button" id="home"
+        onclick="location.href='@Url.Action("Index", "Home")'">Continue Shopping</button>
 
-<button class="btn btn-primary" type="button" id="addItem"
-        onclick="location.href='@Url.Action("Index", "Home")'">
-   Continue Shopping
-</button>
-
-<button class="btn btn-danger" type="button" id="addItem"
-        onclick="location.href='@Url.Action("EmptyCart", "Home")'">
-    Empty Cart
-</button>
+<button class="btn btn-danger" type="button" id="emptyCart"
+        onclick="location.href='@Url.Action("EmptyCart", "Home")'">Empty Cart</button>

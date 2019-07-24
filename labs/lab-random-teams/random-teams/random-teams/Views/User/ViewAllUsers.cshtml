@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "ViewAllUsers";
+}
+
+<h1>ViewAllUsers</h1>
+
+@{ 
+    foreach (var item in ViewData["UserList"] as IList<User>)
+    {
+        <p>@item.Name</p>
+    }
+}

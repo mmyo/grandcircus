@@ -75,6 +75,15 @@ namespace Assessment5b.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        [HttpPost]
+        public IActionResult UpdateQuantity(int quantity)
+        {
+            _session.SetInt32("quantity", quantity);
+
+
+            return RedirectToAction("Item", "Home");
+        }
+
         public IActionResult Privacy()
         {
             return View();

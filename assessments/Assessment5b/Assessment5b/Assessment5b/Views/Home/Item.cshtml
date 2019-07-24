@@ -5,18 +5,37 @@
     ViewData["Title"] = "Item";
 }
 
-<h1>Item</h1>
+<h1>Item quantity: @HttpContextAccessor.HttpContext.Session.GetInt32("quantity")</h1>
 
-<p>Item quantity: @HttpContextAccessor.HttpContext.Session.GetInt32("quantity")</p>
+<div>
+    <button class="btn btn-primary" type="button" id="addItem"
+            onclick="location.href='@Url.Action("AddItem", "Home")'">
+        Add One Item
+    </button>
 
-<button class="btn btn-primary" type="button" id="addItem"
-        onclick="location.href='@Url.Action("AddItem", "Home")'">Add Item</button>
+    <button class="btn btn-danger" type="button" id="deleteItem"
+            onclick="location.href='@Url.Action("DeleteItem", "Home")'">
+        Delete One Item
+    </button>
+</div>
+<p></p>
 
-<button class="btn btn-danger" type="button" id="addItem"
-        onclick="location.href='@Url.Action("DeleteItem", "Home")'">Delete Item</button>
+<div>
+    <form asp-controller="Home" asp-action="UpdateQuantity" method="post" class="form-inline">
+        <div class="form-group">
+            <label>Enter Quantity</label>
+            <input class="form-control" name="quantity" />
+        </div>
+        <button type="submit" class="btn btn-primary">Update Quantity</button>
+    </form>
+</div>
+<p></p>
+<div>
+    <button class="btn btn-success" type="button" id="checkout"
+            onclick="location.href='@Url.Action("Checkout", "Home")'">
+        Checkout
+    </button>
+</div>
 
-<button class="btn btn-danger" type="button" id="addItem"
-        onclick="location.href='@Url.Action("Checkout", "Home")'">
-   Checkout
-</button>
+
 

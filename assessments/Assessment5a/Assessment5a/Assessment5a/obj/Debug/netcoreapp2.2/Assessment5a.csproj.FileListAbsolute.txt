@@ -5,7 +5,6 @@ C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment5a\Asse
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment5a\Assessment5a\Assessment5a\bin\Debug\netcoreapp2.2\Assessment5a.pdb
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment5a\Assessment5a\Assessment5a\bin\Debug\netcoreapp2.2\Assessment5a.Views.dll
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment5a\Assessment5a\Assessment5a\bin\Debug\netcoreapp2.2\Assessment5a.Views.pdb
-C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment5a\Assessment5a\Assessment5a\obj\Debug\netcoreapp2.2\Assessment5a.csprojAssemblyReference.cache
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment5a\Assessment5a\Assessment5a\obj\Debug\netcoreapp2.2\Assessment5a.csproj.CoreCompileInputs.cache
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment5a\Assessment5a\Assessment5a\obj\Debug\netcoreapp2.2\Assessment5a.RazorAssemblyInfo.cache
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment5a\Assessment5a\Assessment5a\obj\Debug\netcoreapp2.2\Assessment5a.RazorAssemblyInfo.cs
@@ -31,3 +30,4 @@ C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment5a\Asse
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment5a\Assessment5a\Assessment5a\obj\Debug\netcoreapp2.2\Assessment5a.dll
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment5a\Assessment5a\Assessment5a\obj\Debug\netcoreapp2.2\Assessment5a.pdb
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment5a\Assessment5a\Assessment5a\obj\Debug\netcoreapp2.2\Assessment5a.csproj.CopyComplete
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\assessments\Assessment5a\Assessment5a\Assessment5a\obj\Debug\netcoreapp2.2\Assessment5a.csprojAssemblyReference.cache
