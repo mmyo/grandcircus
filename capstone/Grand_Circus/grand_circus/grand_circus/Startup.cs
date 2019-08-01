@@ -32,6 +32,15 @@ namespace grand_circus
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+            services.AddSession(options =>
+            {
+                options.Cookie.Name = ".grandCircus_capstone";
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+            services.AddHttpContextAccessor();
+            services.AddDistributedMemoryCache();
+
             var connection = @"Server=(localdb)\mssqllocaldb;Database=GrandCircus;Trusted_Connection=True;ConnectRetryCount=0";
             services.AddDbContext<GrandCircusContext>
                 (options => options.UseSqlServer(connection));
@@ -56,7 +65,7 @@ namespace grand_circus
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

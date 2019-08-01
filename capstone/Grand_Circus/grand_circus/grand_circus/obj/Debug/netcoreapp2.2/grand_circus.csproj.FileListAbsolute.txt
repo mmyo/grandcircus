@@ -44,3 +44,5 @@ C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\capstone\Grand_Circus\grand_c
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\capstone\Grand_Circus\grand_circus\grand_circus\obj\Debug\netcoreapp2.2\Razor\Views\UserCourses\Index.g.cshtml.cs
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\capstone\Grand_Circus\grand_circus\grand_circus\obj\Debug\netcoreapp2.2\Razor\Views\UserCourses\ViewCoursesByUserId.g.cshtml.cs
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\capstone\Grand_Circus\grand_circus\grand_circus\obj\Debug\netcoreapp2.2\Razor\Views\UserCourses\DisplayCoursesByUserId.g.cshtml.cs
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\capstone\Grand_Circus\grand_circus\grand_circus\obj\Debug\netcoreapp2.2\grand_circus.csprojAssemblyReference.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\capstone\Grand_Circus\grand_circus\grand_circus\obj\Debug\netcoreapp2.2\Razor\Views\Users\ViewStudentCourses.g.cshtml.cs

@@ -8,7 +8,7 @@ namespace grand_circus.Models
 {
     public class User
     {
-        [Key]
+        //[Key]
         public int UserId { get; set; }
 
         public string Type  { get; set; }

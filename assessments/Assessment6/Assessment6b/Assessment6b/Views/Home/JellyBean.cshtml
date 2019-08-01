@@ -1,0 +1,40 @@
+﻿@model IEnumerable<JellyBean>
+
+@{
+    ViewData["Title"] = "JellyBean";
+}
+
+<h4>All The JellyBeans</h4>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Style)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rating)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Style)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rating)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h4>Add New JellyBean</h4>
+<form asp-action="JellyBean">
+    <p>Enter Style: @Html.TextBox("style") Enter Rating (number): @Html.TextBox("rating")</p>
+    <input type="submit" value="Create" class="btn btn-primary" />
+</form>

@@ -6,16 +6,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using grand_circus.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace grand_circus.Controllers
 {
     public class UserCoursesController : Controller
     {
+        private readonly ISession _session;
         private readonly GrandCircusContext _context;
 
-        public UserCoursesController(GrandCircusContext context)
+        public UserCoursesController(GrandCircusContext context, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
+            _session = httpContextAccessor.HttpContext.Session;
+
         }
 
         // GET: UserCourses
@@ -173,8 +177,17 @@ namespace grand_circus.Controllers
         public IActionResult ViewCoursesByUserId(UserCourses userCourses)
         {
             //select * from userCourses where userCourses.userId = userId
-            var grandCircusContext = _context.UserCourses.Where(u => u.UserId == 2);
-            return View("DisplayCoursesByUserId",grandCircusContext);
+            
+
+            if (ModelState.IsValid)
+            {
+                var grandCircusContext = _context.UserCourses.Where(x => x.UserId == userCourses.UserId).ToList();
+                return RedirectToAction("DisplayCoursesByUserId", grandCircusContext);
+            }
+            else
+            {
+                return View();                  
+            }
 
             //return View();
             //.Where(u => u.UserId == userCourses.UserId).ToList()

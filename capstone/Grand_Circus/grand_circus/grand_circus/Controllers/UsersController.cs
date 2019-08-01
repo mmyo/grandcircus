@@ -148,5 +148,16 @@ namespace grand_circus.Controllers
         {
             return _context.User.Any(e => e.UserId == id);
         }
+
+        public IActionResult ViewStudentCourses()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult ViewStudentCourses(User userInput)
+        {
+            return View();
+        }
     }
 }
