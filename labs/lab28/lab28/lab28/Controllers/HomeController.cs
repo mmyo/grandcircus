@@ -46,6 +46,7 @@ namespace lab28.Controllers
 
             _session.SetString("deckId", content.Deck_Id);
             _session.SetInt32("remaining", content.Remaining);
+            //_session.SetString("shuffled", Convert.ToString(content.Shuffled));
 
             return RedirectToAction("Index", "Home", content);
         }

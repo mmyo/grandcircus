@@ -22,10 +22,11 @@
     
         @if (@HttpContextAccessor.HttpContext.Session.GetString("deckId") != null)
         {
-            <div class="alert alert-primary" role="alert">
-                <b>Deck Id:</b> @HttpContextAccessor.HttpContext.Session.GetString("deckId")
-                <b>Cards Remaining: </b> @HttpContextAccessor.HttpContext.Session.GetInt32("remaining")
-            </div>
+<div class="alert alert-primary" role="alert">
+    <b>Deck Id:</b> @HttpContextAccessor.HttpContext.Session.GetString("deckId")
+    <b>Cards Remaining: </b> @HttpContextAccessor.HttpContext.Session.GetInt32("remaining")
+    <b>Shuffled: </b>@HttpContextAccessor.HttpContext.Session.GetInt32("shuffled")
+</div>
         }
 
 
