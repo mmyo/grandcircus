@@ -8,12 +8,14 @@
 <h1 class="display-4">Lab 28</h1>
 
 <div class="container">
-    <div>
-        @if (@HttpContextAccessor.HttpContext.Session.GetString("deckId") == null)
-        {
+
+    @if (@HttpContextAccessor.HttpContext.Session.GetString("deckId") == null)
+    {
+        <div class="alert alert-warning" role="alert">
             <p>No deck found. Click button below for a new deck of cards.</p>
-        }
-    </div>
+        </div>
+    }
+
     <div>
         <button type="submit" class="btn btn-success" onclick="location.href='@Url.Action("NewDeck", "Home")'">Get New Deck</button>
     </div>
@@ -25,19 +27,31 @@
         }
     </div>
 
-    <div>
-        @if (ViewData["drawnCardsList"] != null)
-        {
+    @if (@HttpContextAccessor.HttpContext.Session.GetInt32("remaining") == 0)
+    {
+        <div class="alert alert-warning" role="alert">
+            <p>No cards remaining in deck.</p>
+        </div>
+    }
+
+    @if (ViewData["drawnCardsList"] != null)
+    {
+        <div>
             @foreach (var card in ViewData["drawnCardsList"] as IList<Card>)
             {
                 <img src="@card.Image" width="50">
             }
-        }
-    </div>
+        </div>
 
-    <div>
-        <button type="submit" class="btn btn-primary" onclick="location.href='@Url.Action("DrawCards", "Home")'">Draw 5 Cards</button>
-    </div>
+    }
+
+    @if (@HttpContextAccessor.HttpContext.Session.GetString("deckId") != null)
+    {
+        <div>
+            <button type="submit" class="btn btn-primary" onclick="location.href='@Url.Action("DrawCards", "Home")'">Draw 5 Cards</button>
+        </div>
+    }
+
 </div>
 
 
