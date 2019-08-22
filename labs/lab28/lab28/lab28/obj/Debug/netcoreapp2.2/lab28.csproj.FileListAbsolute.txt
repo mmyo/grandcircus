@@ -5,7 +5,6 @@ C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab28\lab28\lab28\bin\De
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab28\lab28\lab28\bin\Debug\netcoreapp2.2\lab28.pdb
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab28\lab28\lab28\bin\Debug\netcoreapp2.2\lab28.Views.dll
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab28\lab28\lab28\bin\Debug\netcoreapp2.2\lab28.Views.pdb
-C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab28\lab28\lab28\obj\Debug\netcoreapp2.2\lab28.csprojAssemblyReference.cache
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab28\lab28\lab28\obj\Debug\netcoreapp2.2\lab28.csproj.CoreCompileInputs.cache
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab28\lab28\lab28\obj\Debug\netcoreapp2.2\lab28.RazorAssemblyInfo.cache
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab28\lab28\lab28\obj\Debug\netcoreapp2.2\lab28.RazorAssemblyInfo.cs
@@ -28,3 +27,5 @@ C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab28\lab28\lab28\obj\De
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab28\lab28\lab28\obj\Debug\netcoreapp2.2\lab28.dll
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab28\lab28\lab28\obj\Debug\netcoreapp2.2\lab28.pdb
 C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab28\lab28\lab28\obj\Debug\netcoreapp2.2\lab28.csproj.CopyComplete
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab28\lab28\lab28\obj\Debug\netcoreapp2.2\lab28.csprojAssemblyReference.cache
+C:\Users\myo\OneDrive - KNEX\Documents\grandcircus\labs\lab28\lab28\lab28\obj\Debug\netcoreapp2.2\Razor\Views\Game\Index.g.cshtml.cs

@@ -16,18 +16,16 @@
         </div>
     }
 
-    <div>
-        <button type="submit" class="btn btn-success" onclick="location.href='@Url.Action("NewDeck", "Home")'">Get New Deck</button>
-    </div>
-    
-        @if (@HttpContextAccessor.HttpContext.Session.GetString("deckId") != null)
-        {
-<div class="alert alert-primary" role="alert">
-    <b>Deck Id:</b> @HttpContextAccessor.HttpContext.Session.GetString("deckId")
-    <b>Cards Remaining: </b> @HttpContextAccessor.HttpContext.Session.GetInt32("remaining")
-    <b>Shuffled: </b>@HttpContextAccessor.HttpContext.Session.GetInt32("shuffled")
-</div>
-        }
+
+
+    @if (@HttpContextAccessor.HttpContext.Session.GetString("deckId") != null)
+    {
+        <div class="alert alert-primary" role="alert">
+            <b>Deck Id:</b> @HttpContextAccessor.HttpContext.Session.GetString("deckId")
+            <b>Cards Remaining: </b> @HttpContextAccessor.HttpContext.Session.GetInt32("remaining")
+            <b>Shuffled: </b>@HttpContextAccessor.HttpContext.Session.GetString("shuffled")
+        </div>
+    }
 
 
     @if (@HttpContextAccessor.HttpContext.Session.GetInt32("remaining") == 0)
@@ -52,9 +50,25 @@
     {
         <div>
             <button type="submit" class="btn btn-primary" onclick="location.href='@Url.Action("DrawCards", "Home")'">Draw 5 Cards</button>
+            <form></form>
         </div>
     }
 
+    <div>
+        <button type="submit" class="btn btn-success" onclick="location.href='@Url.Action("NewDeck", "Home")'">Get New Deck</button>
+    </div>
+
+    @if (ViewData["orderedDeck"] != null)
+    {
+        <div>
+            @foreach (var card in ViewData["orderedDeck"] as IList<Card>)
+            {
+                <img src="@card.Image" width="50">
+            }
+        </div>
+
+    }
+    
 </div>
 
 
