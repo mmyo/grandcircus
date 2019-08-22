@@ -1,0 +1,40 @@
+﻿@using Assessment7a.AnimalApiClient
+
+@model  List<Animal>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Species</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var animal in @Model as List<Animal>)
+                {
+                    <tr>
+                        <td>@animal.name </td>
+                        <td>@animal.species.name </td>
+                        <td>@animal.weight</td>
+                        <td><a href="/Home/Species?animalSpecies=@animal.species.name">Get Species Info</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <form method="post" asp-action="Species">
+            <label title="title">Species:</label>
+            <input type="text" name="animalSpecies" />
+            <button type="submit">Get Species Information</button>
+        </form>
+
+    </div>

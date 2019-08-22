@@ -1,0 +1,45 @@
+﻿@using Assessment7a.AnimalApiClient
+
+@model Animal
+
+
+@{
+    ViewData["Title"] = "Species";
+}
+
+    <div class="text-center">
+        <h4>Species Information for: @Model.name</h4>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Diet
+                    </th>
+                    <th>
+                        Habitat
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Model.name
+                    </td>
+                    <td>
+                        @Model.diet
+                    </td>
+                    <td>
+                        @Model.habitat
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+

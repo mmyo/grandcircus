@@ -1,0 +1,16 @@
+﻿@using MovieAPI.OmdbApi
+
+@model OmdbMovie
+
+@{
+    ViewData["Title"] = "GetMovieDetails";
+}
+
+<h2>@Model.Title</h2>
+<img src="@Model.Poster" />
+<p>Plot: @Model.Plot</p>
+<p>Date Released: @Model.Released</p>
+<p>Director: @Model.Director</p>
+<p><a href="https://imdb.com/title/@Model.ImdbId">imdb.com</a></p>
+
+
