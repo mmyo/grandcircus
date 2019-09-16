@@ -22,11 +22,11 @@ namespace Assessment7a.Controllers
         public async Task<IActionResult> Species(string animalSpecies)
         {
             var animalApiClient = new AnimalApiClient.AnimalApiClient();
-            var animal = new AnimalApiClient.Animal();
+            //var animal = new AnimalApiClient.Animal();
 
             if (animalSpecies != null)
             {
-                animal = await animalApiClient.GetSpeciesDetail(animalSpecies);
+                var animal = await animalApiClient.GetSpeciesDetail(animalSpecies);
                 if (animal != null)
                 {
                     return View(animal);
